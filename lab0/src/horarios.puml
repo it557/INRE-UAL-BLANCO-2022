@@ -1,10 +1,16 @@
 @startuml	
 skinparam actorStyle Hollow
-:Estudiante: --> (Use)
-"Consultar horarios" as (Use)
-:PDI: --> (Use1)
-"Proponer cambios en los horarios" as (Use1)
-:PAS: --> (Use2)
-"Modificar horarios" as (Use2)
-"Dar de alta estudiantes" as (Use2)
+:Estudiante: --> (Consultar horarios)
+:PDI: -up-> (Proponer cambios en los horarios)
+:PAS: -left-> (Modificar horarios)
+:PAS: -down-> (Dar de alta estudiantes)
+Estudiante <|-- PAS
+Estudiante <|-- PDI
+:PAS: ..>(Validar datos) : <<include>>
+usecase UC1 as "Dar de alta estudiantes
+--
+extends point
+Buscar estudiantes en la lista de clase"
+:PDI: --> (UC1)
+(Buscar estudiantes en la lista de clase) ..> (UC1) : <<Extends>>
 @enduml
