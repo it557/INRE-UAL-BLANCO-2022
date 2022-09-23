@@ -6,3 +6,6 @@
 3. **Luca Daniel Gavriloaie** - lg330@inlumine.ual.es
 4. **Guillermo Morales Caparros** - gmc348@inlumine.ual.es
 5. **David Hernandez Carmona** - davidhdezcarmona@gmail.com
+
+
+¡[alt text](./out/lab0/src/horarios/horarios.svg)

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="176px" preserveAspectRatio="none" style="width:679px;height:176px;background:#FFFFFF;" version="1.1" viewBox="0 0 679 176" width="679px" zoomAndPan="magnify"><defs/><g><!--MD5=[7d61a013d1ed55ec04421f31c55a24ee]
+entity Estudiante--><g id="elem_Estudiante"><ellipse cx="87" cy="10.5" fill="#F1F1F1" rx="4.5" ry="4.5" style="stroke:#181818;stroke-width:0.5;"/><path d="M74.5,17 L74.5,22 L84,22 L84,24.2574 L74.5,33.7574 L78.7426,38 L87,29.7426 L95.2574,38 L99.5,33.7574 L90,24.2574 L90,22 L99.5,22 L99.5,17 L74.5,17 " fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="67" x="53.5" y="53.0332">Estudiante</text></g><g id="elem_Use"><ellipse cx="87.097" cy="143.6194" fill="#F1F1F1" rx="81.097" ry="18.6194" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="117" x="28.0843" y="147.4982">Consultar horarios</text></g><!--MD5=[a2832ad60df5520720a9858f61ea6d39]
+entity PDI--><g id="elem_PDI"><ellipse cx="327" cy="10.5" fill="#F1F1F1" rx="4.5" ry="4.5" style="stroke:#181818;stroke-width:0.5;"/><path d="M314.5,17 L314.5,22 L324,22 L324,24.2574 L314.5,33.7574 L318.7426,38 L327,29.7426 L335.2574,38 L339.5,33.7574 L330,24.2574 L330,22 L339.5,22 L339.5,17 L314.5,17 " fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="22" x="316" y="53.0332">PDI</text></g><g id="elem_Use1"><ellipse cx="326.8069" cy="143.6614" fill="#F1F1F1" rx="123.8069" ry="27.1614" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="213" x="220.3069" y="147.3899">Proponer cambios en los horarios</text></g><!--MD5=[fa2d2e0c4b22d86b46e39d4cb03bb372]
+entity PAS--><g id="elem_PAS"><ellipse cx="580" cy="10.5" fill="#F1F1F1" rx="4.5" ry="4.5" style="stroke:#181818;stroke-width:0.5;"/><path d="M567.5,17 L567.5,22 L577,22 L577,24.2574 L567.5,33.7574 L571.7426,38 L580,29.7426 L588.2574,38 L592.5,33.7574 L583,24.2574 L583,22 L592.5,22 L592.5,17 L567.5,17 " fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="27" x="566.5" y="53.0332">PAS</text></g><g id="elem_Use2"><ellipse cx="579.8753" cy="143.6751" fill="#F1F1F1" rx="93.8753" ry="21.1751" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="147" x="506.3753" y="147.4036">Dar de alta estudiantes</text></g><!--MD5=[515980dd15ee4021d8fded3d92832573]
+link Estudiante to Use--><g id="link_Estudiante_Use"><path d="M87,56.52 C87,75.31 87,101.04 87,119.45 " fill="none" id="Estudiante-to-Use" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="87,124.91,91,115.91,87,119.91,83,115.91,87,124.91" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[d53349c60dc35d1cacd733568039d347]
+link PDI to Use1--><g id="link_PDI_Use1"><path d="M327,56.52 C327,72.54 327,93.61 327,110.89 " fill="none" id="PDI-to-Use1" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="327,116.12,331,107.12,327,111.12,323,107.12,327,116.12" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[cffcc526c1829cf78fcc0483723855dd]
+link PAS to Use2--><g id="link_PAS_Use2"><path d="M580,56.52 C580,74.5 580,98.84 580,117.04 " fill="none" id="PAS-to-Use2" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="580,122.47,584,113.47,580,117.47,576,113.47,580,122.47" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[b6fdbb89d62dd8b6b6c15911fcd145c5]
+@startuml	
+skinparam actorStyle Hollow
+:Estudiante: - -> (Use)
+"Consultar horarios" as (Use)
+:PDI: - -> (Use1)
+"Proponer cambios en los horarios" as (Use1)
+:PAS: - -> (Use2)
+"Modificar horarios" as (Use2)
+"Dar de alta estudiantes" as (Use2)
+@enduml
+
+PlantUML version 1.2022.7(Mon Aug 22 19:01:30 CEST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: es
+Country: ES
+--></g></svg>

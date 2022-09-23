@@ -1,0 +1,10 @@
+@startuml	
+skinparam actorStyle Hollow
+:Estudiante: --> (Use)
+"Consultar horarios" as (Use)
+:PDI: --> (Use1)
+"Proponer cambios en los horarios" as (Use1)
+:PAS: --> (Use2)
+"Modificar horarios" as (Use2)
+"Dar de alta estudiantes" as (Use2)
+@enduml
