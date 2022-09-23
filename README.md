@@ -8,4 +8,4 @@
 5. **David Hernandez Carmona** - davidhdezcarmona@gmail.com
 
 
-¡[alt text](./out/lab0/src/horarios/horarios.svg)
+![alt text](./out/lab0/src/horarios/horarios.svg)
