@@ -1,0 +1,87 @@
+@startuml fotografiaOnline
+
+:Cliente: as Cliente
+:Actor comun: as AComun
+:Controlador de fotos: as ConFotos
+:Software facturacion: as Software
+:Gestor: as Gestor
+:Vendedor: as Vendedor
+:Administrador: as Admin
+:Gestor correo: as GCorreo
+
+
+(Consultar fotos) as ConsultarFotos
+(Denunciar foto) as DFoto
+(Introducir explicacion) as InExp
+usecase UC1 as "Visualizar fotos
+--
+**extension points**
+Denunciar foto"
+(Marcar un producto) as MProd
+(Editar informacion fotos) as EditInfo
+(Ver ofertas) as VOfertas
+(Bloquear ofertas) as BloqOFertas
+(Emitir factura) as EmitFactura
+(Editar facturas) as EditFacturas
+(Editar elemento) as EditElemento
+(Buscar detalles en fotos) as BDetalles
+(Verificar informacion de entrada) as Verif
+(Enviar correo) as EnviarCorreo
+(Editar usuarios) as EditUsuarios
+(Crear usuarios) as CrearUs
+usecase UC2 as "Hacer oferta
+--
+**extension points**
+Reducir precio productos"
+(Reducir precio productos) as Reducir
+
+
+Cliente --|> AComun
+Gestor --|> AComun
+Admin --|> Gestor
+
+Cliente -- ConsultarFotos
+Cliente -- UC1
+ConsultarFotos --|> UC1
+UC1 <.. DFoto : <<Extend>>
+DFoto ..> InExp : <<Include>>
+
+ConFotos -- EditInfo
+ConFotos -- MProd
+DFoto --|> MProd
+
+Vendedor -- BDetalles
+BDetalles --|> UC1
+BDetalles ..> Verif : <<Include>>
+Vendedor -- UC2
+UC2 <.. Reducir : <<Extend>>
+
+AComun -- VOfertas
+
+Gestor -- BloqOFertas
+Gestor -- EmitFactura
+Gestor -- EditFacturas
+EditFacturas --|> EditElemento
+
+Admin -- EditUsuarios
+EditUsuarios --|> EditElemento
+
+Software -- EmitFactura
+
+Admin -- CrearUs
+CrearUs ..> EnviarCorreo : <<Include>>
+
+GCorreo -- EnviarCorreo
+
+
+
+
+
+
+
+
+
+
+
+
+@enduml
