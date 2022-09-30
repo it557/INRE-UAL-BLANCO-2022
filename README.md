@@ -1,6 +1,6 @@
 # INRE-UAL-BLANCO-2022
 
-## **Integrantes**
+## **Integrantes** 🙋🏽‍♂️
 ---
 1. **Daniel Perez Escarcena**  - dpe422@inlumine.ual.es
 2. **Ioan Stefan Toderic** - it557@inlumine.ual.es

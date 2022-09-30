@@ -1,0 +1,68 @@
+@startuml aplicacionGD
+
+:Usuario: as Usuario
+
+(Listar integrantes equipo) as ListarIntegrantes
+(Ver caracteristicas jugadores) as VerCaracteristicas
+(Generar informes equipo) as InformeEquipo
+(Generar informe competicion) as InformeCompeticion
+(Generar informe de progreso) as InformeProgreso
+(Generar resumen de dias de juego) as GenerarResumen
+(Consultar estado de salud) as ConsultarSalud
+(Consultar lesiones) as ConsultarLesiones
+(Consultar tareas) as ConsultarTareas
+(Consultar ejercicios) as ConsultarEjercicios
+(Generar historial deportivo) as HistorialDeportivo
+(Generar historial medico) as HistorialMedico
+(Consultar calendario) as ConsultarCalendario
+(Ver entrenamientos) as VerEntrenamientos
+(Ver proximo partido) as VerProximoPartido
+(Ver lugar de juego) as VerLugar
+(Ver condiciones del campo) as VerCondicionesCampo
+(Ver tiempo) as VerTiempo
+(Ver asistencia) as VerAsistencia
+(Ver historico de partidos) as VerHistoricoPartidos
+(Consultar temporadas) as ConsultarTemporadas
+(Seleccionar partido) as SelecPartido
+(Ver informacion sobre el equipo) as VerInfoEquipo
+(Administrar los ajustes de la pagina) as AdminAjustes
+
+
+Usuario -- ListarIntegrantes
+Usuario -- VerCaracteristicas
+Usuario -- InformeEquipo
+Usuario -- InformeCompeticion
+Usuario -- InformeProgreso
+Usuario -- GenerarResumen
+Usuario -- ConsultarSalud
+Usuario -- ConsultarLesiones
+Usuario -- ConsultarTareas
+Usuario -- ConsultarEjercicios
+Usuario -- HistorialDeportivo
+Usuario -- HistorialMedico
+Usuario -- ConsultarCalendario
+Usuario -- VerEntrenamientos
+Usuario -- VerProximoPartido
+Usuario -- VerLugar
+Usuario -- VerCondicionesCampo
+Usuario -- VerTiempo
+Usuario -- VerAsistencia
+Usuario -- VerHistoricoPartidos
+Usuario -- ConsultarTemporadas
+Usuario -- SelecPartido
+Usuario -- VerInfoEquipo
+Usuario -- AdminAjustes
+
+
+
+
+
+
+
+
+
+
+
+
+
+@enduml

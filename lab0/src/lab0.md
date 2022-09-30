@@ -1,4 +1,4 @@
-### ***Diagramas de Casos de Uso con plantUML***
+### ***Actividad 2: Diagramas de Casos de Uso con plantUML***
 
 ---
 
@@ -18,3 +18,9 @@
 
 
 #### **Supuesto 5: Gestión de Incidencias**
+
+
+### ***Actividad 3: Diagramas de Casos de Uso de la aplicación del GD***
+
+---
+
