@@ -9,7 +9,7 @@ Estudiante <|-- PDI
 :PAS: ..>(Validar datos) : <<include>>
 usecase UC1 as "Dar de alta estudiantes
 --
-extends point
+**extension points**
 Buscar estudiantes en la lista de clase"
 :PDI: --> (UC1)
 (Buscar estudiantes en la lista de clase) ..> (UC1) : <<Extends>>

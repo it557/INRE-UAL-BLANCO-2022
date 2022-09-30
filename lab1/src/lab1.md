@@ -1,4 +1,4 @@
-### ***Actividad 2: Diagramas de Casos de Uso con plantUML***
+### ***Actividades***
 
 ---
 
@@ -28,19 +28,3 @@ En una aplicación de fotografía online, los clientes pueden visualizar las fot
 En un sistema de gestión de incidencias, los técnicos y los operadores pueden dar de alta incidencias, para lo cual, de forma excepcional se enviará un correo (en esta operación participa un sistema de gestión de correo). Los técnicos también atienden llamadas telefónicas y realizan informes sobre las incidencias. Por su parte, los operadores atienden llamadas telefónicas, marcan incidencias como duplicadas y ordenan incidencias. La forma de atender llamadas de los técnicos y los operadores no es exactamente igual, pero tiene similitudes. De forma específica, cuando los técnicos atienden llamadas, comprueban datos de la incidencia en el sistema. Cuando los operadores atienden llamadas, introducen nuevos datos de la incidencia. Los administradores del sistema gestionan categorías de incidencias, consultan incidencias y ordenan incidencias. La ordenación por parte de los administradores conlleva la adición de un comentario. Los técnicos y los operadores también pueden consultar incidencias. La consulta de incidencias por parte técnicos, operadores y administradores puede conllevar, de forma excepcional, la edición de los datos de la incidencia. Los usuarios invitados también pueden consultar incidencias, pero sin la posible edición de los datos. Además, los invitados informan sobre posibles incidencias, se pueden registrar para ver notificaciones y pueden acceder a un listado del histórico de notificaciones. El informe de posibles incidencias conlleva el dar de alta la localización en un mapa, la incorporación de una explicación completa en formato textual y la subida de una foto.
 
 ![Supuesto 5: Gestión de Incidencias](../../out/lab0/src/gestionDeIncidencias/gestionDeIncidencias.svg)
-
-
-### ***Actividad 3: Diagrama de Casos de Uso de la aplicación del GD***
-
----
-
-Dentro de la página del equipo de Wimu, podemos listar los integrantes del equipo y acceder a distintas características de los jugadores, estas características son: distancia, aceleración, sprints, ritmo cardíaco, impacto, pasos, FFT, carga, RPE.
-
-Se pueden generar informes diarios sobre el equipo, sobre la competición, sobre la evolución o progreso del equipo, además de resúmenes breves y extendidos de los días que juegue el equipo. Además de información técnica del equipo, también se pueden consultar el estado de salud y las lesiones de los jugadores (su condición física), si tienen tareas o ejercicios asignados y un historial deportivo y médico de los mismos.
-
-Además, la aplicación cuenta con la funcionalidad de consultar un calendario que muestra las sesiones de cada Jornada, incluyendo entrenamientos (técnicos o tácticos) y el día del partido oficial, con el lugar de juego, las condiciones del campo, el tiempo y la asistencia de la audiencia, entre otros. Asimismo, se puede ver un histórico con todos los partidos jugados por el equipo en toda la temporada actual hasta el momento, así como consultar las temporadas jugadas durante su carrera profesional. Al seleccionar un partido, podremos ver la información sobre el equipo en dicho partido, como estadísticas de juego, goles metidos, asistencias, pases, etc.
-
-Por último, la página web dispone de una opción para administrar los ajustes de la página del equipo.
-
-![Actividad 3. DCU de la aplicación del GD](/out/lab0/src/aplicacionGD/aplicacionGD.svg)
-
