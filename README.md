@@ -15,22 +15,4 @@
 1. **Lab 0 - Familiarización con MarkDown-Mermaid-PlantUML** - [Ver](/lab0/src/lab0.md)
 
 
-### ***Diagramas de Casos de Uso con plantUML***
-
----
-
-#### **Supuesto 1: Horarios**
-
-![alt text](./out/lab0/src/horarios/horarios.svg)
-
-#### **Supuesto 2: Sistema de compras**
-![Supuerto 2: Sistema de Compras](out/lab0/src/SistemaDeCompras/SistemaDeCompras.svg)
-#### **Supuesto 3: Compañía hotelera**
-
-#### **Supuesto 4: Fotografía Online**
-
-![Supuesto 4: Fotografía Online](./out/lab0/src/fotografiaOnline/fotografiaOnline.svg)
-
-
-#### **Supuesto 5: Gestión de Incidencias**
 
