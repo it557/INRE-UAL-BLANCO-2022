@@ -8,6 +8,13 @@
 4. **Guillermo Morales Caparros** - gmc348@inlumine.ual.es
 5. **David Hernandez Carmona** - davidhdezcarmona@gmail.com
 
+## **Soluciones de prácticas** 💡
+
+---
+
+1. **Lab 0 - Familiarización con MarkDown-Mermaid-PlantUML** - [Ver](/lab0/src/lab0.md)
+
+
 ### ***Diagramas de Casos de Uso con plantUML***
 
 ---
