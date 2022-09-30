@@ -1,0 +1,50 @@
+@startuml
+
+skinparam actorStyle awesome
+
+:Operador: as Op
+:Tecnico: as Tec
+:Administrador: as Admin
+:Actor Comun: as Ac
+:Actor Comun2: as Ac2
+:Usuario Invitado: as UI
+:Correo:
+
+Ac --> (Dar de alta incidencias)
+Ac <|-- Op
+Ac <|-- Tec
+
+(Enviar Correo) ..> (Dar de alta incidencias) : <Extend>
+Correo --> (Enviar Correo)
+
+Tec --> (Realizar informe)
+Op --> (Marcar incidencias)
+Op --> (Ordenar incidencias) 
+
+Tec --> (Atender llamada Tecnicos)
+Op --> (Atender llamada Operadores)
+
+(Atender llamada telefonica) <|-- (Atender llamada Tecnicos) 
+(Atender llamada telefonica) <|-- (Atender llamada Operadores)
+
+(Atender llamada Tecnicos) ..> (Comprobar datos incidencia) : <Include>
+(Atender llamada Operadores) ..> (Introducir nuevos datos incidencia) : <Include>
+
+UI --> (Informar posible incidencia)
+(Informar posible incidencia) ..> (Dar de alta localizacion mapa) : <Include>
+(Informar posible incidencia) ..> (Incorporar explicacion) : <Include>
+(Informar posible incidencia) ..> (Subir foto) : <Include>
+UI --> (Acceder listado historico)
+UI --> (Registrar para ver notificaciones)
+UI --> (Consultar incidencia Invitado)
+Ac2 --> (Consultar incidencias)
+(Consultar incidencia Invitado) <|-- (Consultar incidencias)
+(Editar datos) ..> (Consultar incidencias) : <Entend>
+Ac2 <|-- Ac
+Ac2 <|-- Admin
+
+Admin --> (Gestionar categoria)
+Admin --> (Ordenar incidencias Admin)
+
+(Ordenar incidencias) <|-- (Ordenar incidencias Admin) 
+(Ordenar incidencias Admin) ..> (Añadir comentario) : <Include>
