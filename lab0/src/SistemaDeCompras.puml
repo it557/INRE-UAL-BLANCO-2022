@@ -1,0 +1,28 @@
+@startuml
+:Administrador: -->(eliminarProducto) 
+:Comun:
+Administrador--|>Comun
+:Vendedor:
+Vendedor --|> Comun
+Comun -->(ConsultarPrecio)
+Comun -->(ConsultarOferta)
+(ConsultarPrecio)..>(BuscarProducto):<include>
+:Proveedor: --|> Comun
+Proveedor -->(AvisarFinDeOferta)
+Proveedor-->(AvisarDeNuevoProducto)
+(IncorporarOferta)..>(AvisarDeNuevoProducto)
+(IncorporarOferta)-->(AvisarProveedor)
+(AvisarProveedor)..>(EnviarNotificacion):<include>
+(AvisarFinDeOferta)..>(EliminarOferta):<include>
+(AvisarFinDeOferta)-->(AvisarProveedor)
+(ConsultarProducto)-->(BuscarProducto)
+:Comprador: --|> (ConsultarProducto)
+(ConsultarProducto)..>(VerificarDisponibilidad):<include>
+Comprador-->(FinalizarCompra)
+Comprador-->(RealizarVenta)
+(ConsultarHistorico)..>(RealizarVenta):<Extend>
+(RealizarVenta)..>(AcordarPrecio):<include>
+Vendedor--|>(RealizarVenta)
+
+
+@enduml

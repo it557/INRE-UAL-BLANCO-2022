@@ -17,7 +17,7 @@
 ![alt text](./out/lab0/src/horarios/horarios.svg)
 
 #### **Supuesto 2: Sistema de compras**
-
+![Supuerto 2: Sistema de Compras](out/lab0/src/SistemaDeCompras/SistemaDeCompras.svg)
 #### **Supuesto 3: Compañía hotelera**
 
 #### **Supuesto 4: Fotografía Online**
