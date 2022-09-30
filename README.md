@@ -14,5 +14,6 @@
 
 1. **Lab 0 - Familiarización con MarkDown-Mermaid-PlantUML** - [Ver](/lab0/src/lab0.md)
 
+2. **Lab 1 - Definición de casos de uso y requisitos de información** - [Ver](/lab1/src/lab1.md)
 
 
