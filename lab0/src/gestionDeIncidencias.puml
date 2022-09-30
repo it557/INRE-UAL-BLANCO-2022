@@ -10,16 +10,14 @@ skinparam actorStyle awesome
 :Usuario Invitado: as UI
 :Correo:
 
+(Enviar Correo) ..> (Dar de alta incidencias) : <Extend>
+Correo --> (Enviar Correo)
+
 Ac --> (Dar de alta incidencias)
 Ac <|-- Op
 Ac <|-- Tec
 
-(Enviar Correo) ..> (Dar de alta incidencias) : <Extend>
-Correo --> (Enviar Correo)
-
 Tec --> (Realizar informe)
-Op --> (Marcar incidencias)
-Op --> (Ordenar incidencias) 
 
 Tec --> (Atender llamada Tecnicos)
 Op --> (Atender llamada Operadores)
@@ -29,6 +27,9 @@ Op --> (Atender llamada Operadores)
 
 (Atender llamada Tecnicos) ..> (Comprobar datos incidencia) : <Include>
 (Atender llamada Operadores) ..> (Introducir nuevos datos incidencia) : <Include>
+
+Op --> (Ordenar incidencias) 
+Op --> (Marcar incidencias)
 
 UI --> (Informar posible incidencia)
 (Informar posible incidencia) ..> (Dar de alta localizacion mapa) : <Include>
