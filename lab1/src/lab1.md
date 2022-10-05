@@ -51,8 +51,22 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 |  **Precondiciones** | Tiene que existir el producto |
 |  **Flujo Normal** | 1. El actor selecciona el producto |
 | | 2. Darle click al boton ver detalles|
-|  **Flujo Alternativo** | 1. El actor no selecciona el producto|
+|  **Flujo Alternativo** | 1A. El actor no selecciona el producto|
 
+
+| |  |
+| ---| :---: |
+|  **ID**| UC-05 |
+|  **Nombre** | FinalizarCompra |
+|  **Fecha** | 30/09/2022 |
+|  **Autor** | Ioan Stefan Toderic|
+|  **Descripcion** | Boton que ejecuta la accion de comprar |
+|  **Actores** | Comun |
+|  **Precondiciones** | Previamente necesita haber una seleccion de productos |
+|  **Flujo Normal** | 1. El actor pulsa el boton de finalizar compra |
+| | 2. Los datos de la compra y los del comprador se guarda en la base de datos |
+|  **Flujo Alternativo** | 1A. El actor no pulsa sobre el boton de finalizar compra|
+| | 2.A Los productos se guardan en una lista llamada "Carrito"|
 #### **Supuesto 3: Compañía hotelera➡️**
 En una compañía hotelera, el administrador y el comercial pueden consultar reservas. El comercial realiza ofertas y gestiona nuevas reservas. El administrador gestiona nuevas peticiones y también realiza ofertas. La realización de ofertas por parte del comercial conlleva un recálculo de precios. Además, dicha realización de ofertas conlleva opcionalmente el bloqueo temporal de una reserva. Los clientes, los administradores y los comerciales pueden consultar disponibilidades y visualizar ofertas. La consulta de disponibilidades y la consulta de reservas tienen la funcionalidad común de buscar elementos. Por su parte, la consulta de disponibilidades conlleva una funcionalidad que muestra un calendario.
 
