@@ -12,18 +12,6 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 
 ![Supuerto 2: Sistema de Compras](/out/lab0/src/SistemaDeCompras/SistemaDeCompras.svg)
 
-|   |   |
-|---|:---:|
-|**ID**   | UC-02|
-|**Nombre**  | Incorporar oferta|
-|**Fecha**   | 30/09/2022|
-|**Descripción:**|  |
-|**Actores:**||
-|**Precondiciones:**||
-|**Flujo normal:**||
-|**Flujo alternativo**||
-|**Poscondiciones**||
-
 | |  |
 | ---| :---: |
 | **ID**| UC-01 |
@@ -35,6 +23,20 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **Precondiciones**| Deben haber ventas realizadas |
 | **Flujo Normal**|  1. El actor puede pulsar el botón de ver el historico |
 | **Flujo Alternativo** | 1A. El actor no pulsa el boton de ver el historico |
+
+|   |   |
+|---|:---:|
+|**ID**   | UC-02|
+|**Nombre**  | Incorporar oferta|
+|**Fecha**   | 30/09/2022|
+| **Autor**| Ioan Stefan Toderic |
+|**Descripción:**| Añade una oferta a un nuevo producto de forma opcional |
+|**Actores:**|Proovedores|
+|**Precondiciones:**| Debe haber un nuevo producto |
+|**Flujo normal:**| 1. El provedoor avisa de un nuevo producto|
+| | 2. El provedoor  decide aplicarle una oferta al nuevo producto |
+|| 3. El Provedor dedice aplicar la oferta al producto y se guarda la informacion de la oferta|
+|**Flujo alternativo**| 2.A El provedor no acepta aplicarle una oferta al producot|
 
 
 
