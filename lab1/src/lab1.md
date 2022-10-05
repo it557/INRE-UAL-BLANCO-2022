@@ -26,22 +26,29 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 
 | |  |
 | ---| :---: |
-| ID| 1 |
+| ID| UC-01 |
 | Nombre| ConsultarHistorico |
 | Fecha| 30/09/2022 |
 | Autor| Ioan Stefan Toderic |
 | Descripcion| Permite visualizar las ventas realizadas |
 | Actores| Comprador,Vendedor |
 | Precondiciones| Deben haber ventas realizadas |
-| Flujo Normal |  |
+| Flujo Normal |  1.El actor puede pulsar el botón de ver el historico |
+| Flujo Alternativo | 1A.El actor no pulsa el boton de ver el historico |
+
+
 
 | |  |
 | ---| :---: |
-| ID| 4 |
-| Nombre| ConsultarProducto |
-| Fecha| 30/09/2022 |
-| Autor| Comprador |
-
+| ID| UC-04 |
+| Nombre | ConsultarProducto |
+| Fecha | 30/09/2022 |
+| Autor | Ioan Stefan Toderic|
+| Descripcion | Proporciona información acerca del producto |
+| Actores | Comprador |
+| Precondiciones | Tiene que existir el producto |
+| Flujo Normal | 1. |
+| Flijo Alternativo | 2. |
 
 #### **Supuesto 3: Compañía hotelera➡️**
 En una compañía hotelera, el administrador y el comercial pueden consultar reservas. El comercial realiza ofertas y gestiona nuevas reservas. El administrador gestiona nuevas peticiones y también realiza ofertas. La realización de ofertas por parte del comercial conlleva un recálculo de precios. Además, dicha realización de ofertas conlleva opcionalmente el bloqueo temporal de una reserva. Los clientes, los administradores y los comerciales pueden consultar disponibilidades y visualizar ofertas. La consulta de disponibilidades y la consulta de reservas tienen la funcionalidad común de buscar elementos. Por su parte, la consulta de disponibilidades conlleva una funcionalidad que muestra un calendario.
