@@ -74,12 +74,7 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **Descripcion**| Permite visualizar las los productos |
 | **Actores**| Comprador |
 | **Precondiciones**| El usuario debe estar logueado como productor |
-| **Flujo Normal**|  1. El actor  pulsar el botón de Consultar productos para ver la lista de los productos |
-||2. El actor visualiza la disponibilidad del producto|
-||1. El actor busca el producto en el formulario de busqueda|
-||2. El sistema busca el prodcto en la tabla de producto|
-||3. Se comprueba la disponibildad del producto|
-||2. Si el producto esta disponible se le muestr al actor|
+| **Flujo Normal**| 1. El actor busca el producto en el formulario de busqueda <br> 2. El sistema busca el prodcto en la tabla de producto <br> 3. Se comprueba la disponibildad del producto <br> 4. Si el producto esta disponible se le muestr al actor |
 | **Flujo Alternativo** | 4B. El producto no esta disponible, por lo que se le muestra al actor un mensaje de la no disponibilidad del producto |
 |**Postcondiciones**| |
 |**Referencias**| UC-01, UC-09 |
