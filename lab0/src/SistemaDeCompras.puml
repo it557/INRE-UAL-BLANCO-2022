@@ -15,7 +15,7 @@ Proveedor-->(AvisarDeNuevoProducto)
 (AvisarFinDeOferta)..>(EliminarOferta):<include>
 (AvisarFinDeOferta)-->(AvisarProveedor)
 (ConsultarProducto)--|>(BuscarProducto)
-:Comprador: --|> (ConsultarProducto)
+:Comprador: --> (ConsultarProducto)
 (ConsultarProducto)..>(VerificarDisponibilidad):<include>
 Comprador-->(FinalizarCompra)
 Comprador-->(RealizarVenta)

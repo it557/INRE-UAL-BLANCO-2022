@@ -18,13 +18,13 @@ link AvisarProveedor to EnviarNotificacion--><g id="link_AvisarProveedor_EnviarN
 link AvisarFinDeOferta to EliminarOferta--><g id="link_AvisarFinDeOferta_EliminarOferta"><path d="M972.5,219.21 C972.5,244.23 972.5,289.82 972.5,316.34 " fill="none" id="AvisarFinDeOferta-to-EliminarOferta" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="972.5,321.38,976.5,312.38,972.5,316.38,968.5,312.38,972.5,321.38" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="57" x="973.5" y="283.9951">&lt;include&gt;</text></g><!--MD5=[1f4db6cbf0d626f5e2e6a9ba40a22bb9]
 link AvisarFinDeOferta to AvisarProveedor--><g id="link_AvisarFinDeOferta_AvisarProveedor"><path d="M995.31,218.39 C1029.56,243.75 1094.07,291.51 1129.89,318.04 " fill="none" id="AvisarFinDeOferta-to-AvisarProveedor" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1134.11,321.16,1129.2611,312.5875,1130.093,318.1828,1124.4976,319.0147,1134.11,321.16" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[0446eac066a737fe356a94e77c648c2d]
 link ConsultarProducto to BuscarProducto--><g id="link_ConsultarProducto_BuscarProducto"><path d="M86.71,219.3 C86.21,250.43 89.22,315.52 119.5,358.5 C143.39,392.4 183.58,416.39 217.31,431.78 " fill="none" id="ConsultarProducto-to-BuscarProducto" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="220.11,425.36,235.75,439.66,214.61,438.24,220.11,425.36" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[a7351c1aac2e417755d8f1cda0fe8077]
-link Comprador to ConsultarProducto--><g id="link_Comprador_ConsultarProducto"><path d="M243.84,74.11 C209.88,101.34 158.99,142.16 124.58,169.76 " fill="none" id="Comprador-to-ConsultarProducto" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="128.69,175.44,108.7,182.49,119.93,164.52,128.69,175.44" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[803e9999cdc390f8b4c1dd5ef7fc8972]
+link Comprador to ConsultarProducto--><g id="link_Comprador_ConsultarProducto"><path d="M243.84,74.11 C205.7,104.7 146.19,152.43 112.66,179.32 " fill="none" id="Comprador-to-ConsultarProducto" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="108.7,182.49,118.2232,179.9785,112.6002,179.3613,113.2173,173.7382,108.7,182.49" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[803e9999cdc390f8b4c1dd5ef7fc8972]
 link ConsultarProducto to VerificarDisponibilidad--><g id="link_ConsultarProducto_VerificarDisponibilidad"><path d="M105.36,218.66 C130.61,242.92 176.78,287.3 204.85,314.27 " fill="none" id="ConsultarProducto-to-VerificarDisponibilidad" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="208.52,317.8,204.8179,308.6734,204.9208,314.3293,199.2649,314.4322,208.52,317.8" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="57" x="176.5" y="283.9951">&lt;include&gt;</text></g><!--MD5=[520f07797bdc09c1f4a8493f172dae93]
 link Comprador to FinalizarCompra--><g id="link_Comprador_FinalizarCompra"><path d="M279.5,83.57 C279.5,113.21 279.5,153.31 279.5,177.74 " fill="none" id="Comprador-to-FinalizarCompra" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="279.5,183,283.5,174,279.5,178,275.5,174,279.5,183" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[2522cab97019644fec37fe2e7b548112]
 link Comprador to RealizarVenta--><g id="link_Comprador_RealizarVenta"><path d="M315.26,75.93 C351.94,107.13 407.83,154.69 438.49,180.77 " fill="none" id="Comprador-to-RealizarVenta" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="442.46,184.15,438.1912,175.2743,438.6496,180.9126,433.0113,181.371,442.46,184.15" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[69dbd76b1d7a3f01bdc3407d1eb5407f]
 link ConsultarHistorico to RealizarVenta--><g id="link_ConsultarHistorico_RealizarVenta"><path d="M460.5,63.17 C460.5,91.84 460.5,148.39 460.5,178.87 " fill="none" id="ConsultarHistorico-to-RealizarVenta" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="460.5,183.89,464.5,174.89,460.5,178.89,456.5,174.89,460.5,183.89" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="57" x="461.5" y="127.9951">&lt;Extend&gt;</text></g><!--MD5=[d07fd4371a404d80f3318e827c92c2a6]
 link RealizarVenta to AcordarPrecio--><g id="link_RealizarVenta_AcordarPrecio"><path d="M456.49,217.04 C450.16,241.52 437.88,289.06 430.83,316.37 " fill="none" id="RealizarVenta-to-AcordarPrecio" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="429.58,321.22,435.713,313.5138,430.8363,316.3804,427.9697,311.5037,429.58,321.22" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="57" x="443.5" y="283.9951">&lt;include&gt;</text></g><!--MD5=[9d633c0c55c2b5a9291ab7394b790c41]
-link Vendedor to RealizarVenta--><g id="link_Vendedor_RealizarVenta"><path d="M736.4,68.37 C728.75,73.6 720.47,78.96 712.5,83.5 C673.43,105.77 557.26,157.28 497.27,183.52 " fill="none" id="Vendedor-to-RealizarVenta" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="492.34,185.67,502.1888,185.7128,496.9178,183.6592,498.9714,178.3882,492.34,185.67" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[0806d17fa52e4cc1a2ea17eee88da578]
+link Vendedor to RealizarVenta--><g id="link_Vendedor_RealizarVenta"><path d="M736.4,68.37 C728.75,73.6 720.47,78.96 712.5,83.5 C673.43,105.77 557.26,157.28 497.27,183.52 " fill="none" id="Vendedor-to-RealizarVenta" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="492.34,185.67,502.1888,185.7128,496.9178,183.6592,498.9714,178.3882,492.34,185.67" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[4c5c193c16afd54191830a58fc9077a6]
 @startuml
 :Administrador: - ->(eliminarProducto) 
 :Comun:
@@ -42,7 +42,7 @@ Proveedor- ->(AvisarDeNuevoProducto)
 (AvisarFinDeOferta)..>(EliminarOferta):<include>
 (AvisarFinDeOferta)- ->(AvisarProveedor)
 (ConsultarProducto)- -|>(BuscarProducto)
-:Comprador: - -|> (ConsultarProducto)
+:Comprador: - -> (ConsultarProducto)
 (ConsultarProducto)..>(VerificarDisponibilidad):<include>
 Comprador- ->(FinalizarCompra)
 Comprador- ->(RealizarVenta)
@@ -54,8 +54,8 @@ Vendedor- ->(RealizarVenta)
 
 PlantUML version 1.2022.7(Mon Aug 22 19:01:30 CEST 2022)
 (GPL source distribution)
-Java Runtime: Java(TM) SE Runtime Environment
-JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
 Default Encoding: Cp1252
 Language: es
 Country: ES

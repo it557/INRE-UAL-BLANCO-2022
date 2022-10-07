@@ -146,8 +146,8 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 |  **Descripcion** | Permite realizar un venta |
 |  **Actores** | Comprador, Vendedor |
 |  **Precondiciones** | El comprador y el vendedor deben estar autenticados en el Sistema |
-|  **Flujo Normal** | 1. asdf |
-|                   | 2.  |
+|  **Flujo Normal** | 1. El comprador elige el producto que desea comprar|
+|                   | 2. El vendedor  |
 |  **Flujo Alternativo** | |
 | | |
 
