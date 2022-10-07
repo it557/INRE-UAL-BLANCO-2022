@@ -12,6 +12,38 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 
 ![Supuerto 2: Sistema de Compras](/out/lab0/src/SistemaDeCompras/SistemaDeCompras.svg)
 
+| | |
+| ----------- | :-----------: |
+| Identificador: | UC-03 |
+| Nombre: | EliminarProducto |
+| Fecha: | 30/09/2022 |
+| Autor: | Guillermo Morales Caparros |
+| Descripcion: | Permite eliminar un producto  |
+| Actores: | Administrador |
+| Precondiciones: | Debe existir el producto |
+| Flujo normal: | 1- El actor pulsa el boton para eliminar el producto|
+| | 2- Aparece un mensaje de "producto eliminado"|
+| | 3- El administrador selecciona "aceptar" y vuelve la pantalla inicial|
+| Flujo alternativo: | Ninguno |
+| Postcondiciones: | El producto debe desaparecer |
+
+
+| | |
+| ----------- | :-----------: |
+| Identificador: | UC-05 |
+| Nombre: | FinalizarCompra |
+| Fecha: | 30/09/2022 |
+| Autor: | Guillermo Morales Caparros |
+| Descripcion: | Termina la compra y da informacion sobre la compra realizada |
+| Actores: | Comprador |
+| Precondiciones: | Debe existir el producto |
+| Flujo normal: | 1- |
+| | 2- |
+| | 3- |
+| Flujo alternativo: | Ninguno |
+| Postcondiciones: |  |
+
+
 #### **Supuesto 3: Compañía hotelera➡️**
 En una compañía hotelera, el administrador y el comercial pueden consultar reservas. El comercial realiza ofertas y gestiona nuevas reservas. El administrador gestiona nuevas peticiones y también realiza ofertas. La realización de ofertas por parte del comercial conlleva un recálculo de precios. Además, dicha realización de ofertas conlleva opcionalmente el bloqueo temporal de una reserva. Los clientes, los administradores y los comerciales pueden consultar disponibilidades y visualizar ofertas. La consulta de disponibilidades y la consulta de reservas tienen la funcionalidad común de buscar elementos. Por su parte, la consulta de disponibilidades conlleva una funcionalidad que muestra un calendario.
 
