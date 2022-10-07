@@ -10,19 +10,17 @@ Comun -->(ConsultarOferta)
 :Proveedor: --|> Comun
 Proveedor -->(AvisarFinDeOferta)
 Proveedor-->(AvisarDeNuevoProducto)
-(IncorporarOferta)..>(AvisarDeNuevoProducto)
-(IncorporarOferta)-->(AvisarProveedor)
+(IncorporarOferta)..>(AvisarDeNuevoProducto):<extend>
 (AvisarProveedor)..>(EnviarNotificacion):<include>
 (AvisarFinDeOferta)..>(EliminarOferta):<include>
 (AvisarFinDeOferta)-->(AvisarProveedor)
-(ConsultarProducto)-->(BuscarProducto)
+(ConsultarProducto)--|>(BuscarProducto)
 :Comprador: --|> (ConsultarProducto)
 (ConsultarProducto)..>(VerificarDisponibilidad):<include>
 Comprador-->(FinalizarCompra)
 Comprador-->(RealizarVenta)
 (ConsultarHistorico)..>(RealizarVenta):<Extend>
 (RealizarVenta)..>(AcordarPrecio):<include>
-Vendedor--|>(RealizarVenta)
-
+Vendedor-->(RealizarVenta)
 
 @enduml

@@ -66,10 +66,67 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 
 ![Supuerto 2: Sistema de Compras](/out/lab0/src/SistemaDeCompras/SistemaDeCompras.svg)
 
+| |  |
+| ---| :---: |
+| **ID**| UC-01 |
+| **Nombre**| ConsultarHistorico |
+| **Fecha**| 30/09/2022 |
+| **Autor**| Ioan Stefan Toderic |
+| **Descripcion**| Permite visualizar las ventas realizadas |
+| **Actores**| Comprador,Vendedor |
+| **Precondiciones**| Deben haber ventas realizadas |
+| **Flujo Normal**|  1. El actor puede pulsar el botón de ver el historico |
+| **Flujo Alternativo** | 1A. El actor no pulsa el boton de ver el historico |
+
+|   |   |
+|---|:---:|
+|**ID**   | UC-02|
+|**Nombre**  | Incorporar oferta|
+|**Fecha**   | 30/09/2022|
+| **Autor**| Ioan Stefan Toderic |
+|**Descripción:**| Añade una oferta a un nuevo producto de forma opcional |
+|**Actores:**|Proovedores|
+|**Precondiciones:**| Debe haber un nuevo producto |
+|**Flujo normal:**| 1. El provedoor avisa de un nuevo producto|
+| | 2. El provedoor  decide aplicarle una oferta al nuevo producto |
+|| 3. El Provedor dedice aplicar la oferta al producto y se guarda la informacion de la oferta|
+|**Flujo alternativo**| 2.A El provedor no acepta aplicarle una oferta al producot|
+
+
+
+| |  |
+| ---| :---: |
+|  **ID**| UC-04 |
+|  **Nombre** | ConsultarProducto |
+|  **Fecha** | 30/09/2022 |
+|  **Autor** | Ioan Stefan Toderic|
+|  **Descripcion** | Proporciona información acerca del producto |
+|  **Actores** | Comprador |
+|  **Precondiciones** | Tiene que existir el producto |
+|  **Flujo Normal** | 1. El actor selecciona el producto |
+| | 2. Darle click al boton ver detalles|
+|  **Flujo Alternativo** | 1A. El actor no selecciona el producto|
+
+
+| |  |
+| ---| :---: |
+|  **ID**| UC-05 |
+|  **Nombre** | FinalizarCompra |
+|  **Fecha** | 30/09/2022 |
+|  **Autor** | Ioan Stefan Toderic|
+|  **Descripcion** | Boton que ejecuta la accion de comprar |
+|  **Actores** | Comun |
+|  **Precondiciones** | Previamente necesita haber una seleccion de productos |
+|  **Flujo Normal** | 1. El actor pulsa el boton de finalizar compra |
+| | 2. Los datos de la compra y los del comprador se guarda en la base de datos |
+|  **Flujo Alternativo** | 1A. El actor no pulsa sobre el boton de finalizar compra|
+| | 2.A Los productos se guardan en una lista llamada "Carrito"|
+
 #### **Supuesto 3: Compañía hotelera➡️**
 En una compañía hotelera, el administrador y el comercial pueden consultar reservas. El comercial realiza ofertas y gestiona nuevas reservas. El administrador gestiona nuevas peticiones y también realiza ofertas. La realización de ofertas por parte del comercial conlleva un recálculo de precios. Además, dicha realización de ofertas conlleva opcionalmente el bloqueo temporal de una reserva. Los clientes, los administradores y los comerciales pueden consultar disponibilidades y visualizar ofertas. La consulta de disponibilidades y la consulta de reservas tienen la funcionalidad común de buscar elementos. Por su parte, la consulta de disponibilidades conlleva una funcionalidad que muestra un calendario.
 
 ![Supuesto 3: Compañía hotelera](/out/lab0/src/companiaHotelera/companiaHotelera.svg)
+
 
 
 #### **Supuesto 4: Fotografía Online➡️**

@@ -1,0 +1,39 @@
+Nombre y apellido: Ioan Stefan Toderic
+
+Contrato=Numero de Contrato + datos cliente + caracteristicas de los inmuebles +caracteristicas del contrato  + (apartado de observaciones)
+
+Datos Sucursal=Codigo sucursal + situacion + datos empleado
+
+situacion=calle + ciudad + codigo postal + telefono + fax
+
+DatosEmpleado=nombre + apellido
+datosCliente=nombre + apellidos + direccion + (telefono)
+caracteristicas del contrato=[ compra | venta] + comision sucursal + pagador, forma de pago
+pagador= [comprador | vendedor ]
+forma de pago = [ contado | tarjeta | talon]
+caracteristicas del inmueble= [comprar | vender] + [Tipo inmueble | numero] +tipo=piso+bungalow+chalets+parcela+terreno rustico
+
+
+
+
+
+
+----------------------------------------------------------------
+
+Describir una fecha:
+
+fecha= dia + mes +año
+dia=numero
+
+numero="1"- "31"
+
+mes={caracter}
+
+caracter=[{"a"-" z" | "A"-"Z"}]
+
+
+Año=[+ | - ] + {ConjNum}
+
+ConjNum={CaracteresNumericos}
+CaracteresNumerios="0"-"9"
+
