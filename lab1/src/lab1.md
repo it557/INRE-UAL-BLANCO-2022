@@ -67,7 +67,7 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 ![Supuerto 2: Sistema de Compras](/out/lab0/src/SistemaDeCompras/SistemaDeCompras.svg)
 | |  |
 | ---| :---: |
-| **ID**| UC-01 |
+| **ID**| UC-03 |
 | **Nombre**| ConsultarProducto |
 | **Fecha**| 07/10/2022 |
 | **Autor**| Ioan Stefan Toderic |
@@ -82,66 +82,41 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 ||2. Si el producto esta disponible se le muestr al actor|
 | **Flujo Alternativo** | 4B. El producto no esta disponible, por lo que se le muestra al actor un mensaje de la no disponibilidad del producto |
 |**Postcondiciones**| |
-|**Referencias**| BuscarProducto, VerificarDisponibilidad |
-
-|   |   |
-|---|:---:|
-|**ID**   | UC-02|
-|**Nombre**  | Incorporar oferta|
-|**Fecha**   | 30/09/2022|
-| **Autor**| Ioan Stefan Toderic |
-|**Descripción:**| Añade una oferta a un nuevo producto de forma opcional |
-|**Actores:**|Proovedores|
-|**Precondiciones:**| Debe haber un nuevo producto |
-|**Flujo normal:**| 1. El provedoor avisa de un nuevo producto|
-| | 2. El provedoor  decide aplicarle una oferta al nuevo producto |
-|| 3. El Provedor dedice aplicar la oferta al producto y se guarda la informacion de la oferta|
-|**Flujo alternativo**| 2.A El provedor no acepta aplicarle una oferta al producot|
+|**Referencias**| UC-01, UC-09 |
 
 
 | | |
 | ----------- | :-----------: |
-| Identificador: | UC-03 |
-| Nombre: | EliminarProducto |
-| Fecha: | 30/09/2022 |
-| Autor: | Guillermo Morales Caparros |
-| Descripcion: | Permite eliminar un producto  |
-| Actores: | Administrador |
-| Precondiciones: | Debe existir el producto |
-| Flujo normal: | 1- El actor pulsa el boton para eliminar el producto|
+| **Identificador**: | UC-03 |
+| **Nombre:** | EliminarProducto |
+| **Fecha:** | 30/09/2022 |
+|  **Autor:** | Guillermo Morales Caparros |
+|  **Descripcion:** | Permite eliminar un producto  |
+|  **Actores:** | Administrador |
+|  **Precondiciones:** | Debe existir el producto |
+|  **Flujo normal:** | 1- El actor pulsa el boton para eliminar el producto|
 | | 2- Aparece un mensaje de "producto eliminado"|
 | | 3- El administrador selecciona "aceptar" y vuelve la pantalla inicial|
-| Flujo alternativo: | Ninguno |
-| Postcondiciones: | El producto debe desaparecer |
+|  **Flujo alternativo:** | Ninguno |
+|  **Postcondiciones:** | El producto debe desaparecer |
+| **Referencias**||
 
-| |  |
-| ---| :---: |
-|  **ID**| UC-04 |
-|  **Nombre** | ConsultarProducto |
-|  **Fecha** | 30/09/2022 |
-|  **Autor** | Ioan Stefan Toderic|
-|  **Descripcion** | Proporciona información acerca del producto |
-|  **Actores** | Comprador |
-|  **Precondiciones** | Tiene que existir el producto |
-|  **Flujo Normal** | 1. El actor selecciona el producto |
-| | 2. Darle click al boton ver detalles|
-|  **Flujo Alternativo** | 1A. El actor no selecciona el producto|
 
 
 | | |
 | ----------- | :-----------: |
-| Identificador: | UC-05 |
-| Nombre: | FinalizarCompra |
-| Fecha: | 30/09/2022 |
-| Autor: | Guillermo Morales Caparros |
-| Descripcion: | Termina la compra y da informacion sobre la compra realizada |
-| Actores: | Comprador |
-| Precondiciones: | Debe existir el producto |
-| Flujo normal: | 1- El comprador pulsa el boton de finalizar|
+|  **Identificador:**| UC-05 |
+|  **Nombre:** | FinalizarCompra |
+|  **Fecha:** | 30/09/2022 |
+|  **Autor:** | Guillermo Morales Caparros |
+|  **Descripcion:**| Termina la compra y da informacion sobre la compra realizada |
+|  **Actores:**| Comprador |
+|  **Precondiciones:** | Debe existir el producto |
+|  **Flujo normal:** | 1- El comprador pulsa el boton de finalizar|
 | | 2- El sistema cierra la vision de compra|
 | | 3- Se muestra una pestaña nueva con los productos comprados y su precio correspondiente|
-| Flujo alternativo: | Ninguno |
-| Postcondiciones: |  |
+|  **Flujo alternativo:** | Ninguno |
+|  **Postcondiciones:** |  |
 
 
 | |  |
