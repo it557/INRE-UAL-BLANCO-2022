@@ -6,11 +6,12 @@ skinparam actorStyle Hollow
 :PAS: -down-> (Dar de alta estudiantes)
 Estudiante <|-- PAS
 Estudiante <|-- PDI
-:PAS: ..>(Validar datos) : <<include>>
+:Dar de alta estudiantes: .right.>(Validar datos) : <<include>>
 usecase UC1 as "Dar de alta estudiantes
 --
 **extension points**
 Buscar estudiantes en la lista de clase"
 :PDI: --> (UC1)
-(Buscar estudiantes en la lista de clase) ..> (UC1) : <<Extends>>
+(Buscar estudiantes en la lista de clase) .left.> (UC1) : <<Extends>>
+(Dar de alta estudiantes) <|-- UC1
 @enduml
