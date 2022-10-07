@@ -69,6 +69,32 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, proveedor y administrador. Los compradores pueden agregar productos, consultar precios, finalizar la compra y consultar ofertas. Agregar productos implica marcar esos productos como bloqueados. Los vendedores también pueden consultar ofertas y consultar precios. Los proveedores pueden consultar precios, avisar de nuevos productos y consultar ofertas. Avisar de nuevos productos, de forma excepcional, realiza la incorporación de una oferta. Los proveedores también tienen una funcionalidad para avisar del fin de una oferta. Cuando se avisa del fin de una oferta, se ejecuta la funcionalidad de eliminar la oferta. Ambas funcionalidades de avisar del proveedor tienen en común que se encarga de enviar una notificación. Los administradores pueden consultar precios, consultar ofertas y eliminar productos. La funcionalidad de consultar precios incluye una funcionalidad de buscar productos que es similar a la funcionalidad de consultar productos de los compradores. Sin embargo, la funcionalidad de consultar productos añade una funcionalidad para verificar la disponibilidad. Para realizar una venta, un comprador y un vendedor participan de forma conjunta. En dicha operación, se lleva a cabo el acuerdo de un precio; excepcionalmente, durante la realización de la venta, se consultará el histórico de ventas.
 
 ![Supuerto 2: Sistema de Compras](/out/lab0/src/SistemaDeCompras/SistemaDeCompras.svg)
+| |  |
+| ---| :---: |
+| **ID**| UC-01 |
+| **Nombre**| ConsultarHistorico |
+| **Fecha**| 30/09/2022 |
+| **Autor**| Ioan Stefan Toderic |
+| **Descripcion**| Permite visualizar las ventas realizadas |
+| **Actores**| Comprador,Vendedor |
+| **Precondiciones**| Deben haber ventas realizadas |
+| **Flujo Normal**|  1. El actor puede pulsar el botón de ver el historico |
+| **Flujo Alternativo** | 1A. El actor no pulsa el boton de ver el historico |
+
+|   |   |
+|---|:---:|
+|**ID**   | UC-02|
+|**Nombre**  | Incorporar oferta|
+|**Fecha**   | 30/09/2022|
+| **Autor**| Ioan Stefan Toderic |
+|**Descripción:**| Añade una oferta a un nuevo producto de forma opcional |
+|**Actores:**|Proovedores|
+|**Precondiciones:**| Debe haber un nuevo producto |
+|**Flujo normal:**| 1. El provedoor avisa de un nuevo producto|
+| | 2. El provedoor  decide aplicarle una oferta al nuevo producto |
+|| 3. El Provedor dedice aplicar la oferta al producto y se guarda la informacion de la oferta|
+|**Flujo alternativo**| 2.A El provedor no acepta aplicarle una oferta al producot|
+
 
 | | |
 | ----------- | :-----------: |
@@ -84,6 +110,19 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | | 3- El administrador selecciona "aceptar" y vuelve la pantalla inicial|
 | Flujo alternativo: | Ninguno |
 | Postcondiciones: | El producto debe desaparecer |
+
+| |  |
+| ---| :---: |
+|  **ID**| UC-04 |
+|  **Nombre** | ConsultarProducto |
+|  **Fecha** | 30/09/2022 |
+|  **Autor** | Ioan Stefan Toderic|
+|  **Descripcion** | Proporciona información acerca del producto |
+|  **Actores** | Comprador |
+|  **Precondiciones** | Tiene que existir el producto |
+|  **Flujo Normal** | 1. El actor selecciona el producto |
+| | 2. Darle click al boton ver detalles|
+|  **Flujo Alternativo** | 1A. El actor no selecciona el producto|
 
 
 | | |
