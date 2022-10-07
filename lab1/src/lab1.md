@@ -6,9 +6,6 @@
 En una universidad, el personal del PDI, el personal del PAS y los estudiantes pueden consultar horarios. Por su parte, el personal del PAS puede modificar horarios y dar de alta estudiantes. El personal de PDI puede proponer cambios en los horarios y dar de alta estudiantes. La funcionalidad de dar de alta estudiantes del PAS realiza una verificación de los datos del estudiante. Sin embargo, la funcionalidad de dar de alta estudiantes del PDI, además de verificar los datos también permite de forma excepcional realizar la búsqueda en las listas de clase de sus asignaturas.
 
 ![Supuesto 1: Horarios](/out/lab0/src/horarios/horarios.svg)
-<<<<<<< HEAD
-
-=======
 || |
 |-|:-:|
 |**ID:**|UC-00|
@@ -64,7 +61,6 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 |**Flujo aternativo:**|Ninguno|
 |**Postcondiciones:**|Ninguna|
 ||
->>>>>>> 7d587b7a59e04558d53627f9414a29b1f97c31ce
 #### **Supuesto 2: Sistema de compras➡️**
 En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, proveedor y administrador. Los compradores pueden agregar productos, consultar precios, finalizar la compra y consultar ofertas. Agregar productos implica marcar esos productos como bloqueados. Los vendedores también pueden consultar ofertas y consultar precios. Los proveedores pueden consultar precios, avisar de nuevos productos y consultar ofertas. Avisar de nuevos productos, de forma excepcional, realiza la incorporación de una oferta. Los proveedores también tienen una funcionalidad para avisar del fin de una oferta. Cuando se avisa del fin de una oferta, se ejecuta la funcionalidad de eliminar la oferta. Ambas funcionalidades de avisar del proveedor tienen en común que se encarga de enviar una notificación. Los administradores pueden consultar precios, consultar ofertas y eliminar productos. La funcionalidad de consultar precios incluye una funcionalidad de buscar productos que es similar a la funcionalidad de consultar productos de los compradores. Sin embargo, la funcionalidad de consultar productos añade una funcionalidad para verificar la disponibilidad. Para realizar una venta, un comprador y un vendedor participan de forma conjunta. En dicha operación, se lleva a cabo el acuerdo de un precio; excepcionalmente, durante la realización de la venta, se consultará el histórico de ventas.
 
@@ -149,9 +145,9 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 |  **Autor** | Luca Daniel Gavriloaie|
 |  **Descripcion** | Permite realizar un venta |
 |  **Actores** | Comprador, Vendedor |
-|  **Precondiciones** | El comprador debe estar |
-|  **Flujo Normal** |  |
-| |  |
+|  **Precondiciones** | El comprador y el vendedor deben estar autenticados en el Sistema |
+|  **Flujo Normal** | 1. asdf |
+|                   | 2.  |
 |  **Flujo Alternativo** | |
 | | |
 
