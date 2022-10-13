@@ -67,6 +67,21 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 ![Supuerto 2: Sistema de Compras](/out/lab0/src/SistemaDeCompras/SistemaDeCompras.svg)
 | |  |
 | ---| :---: |
+| **ID**| UC-01 |
+| **Nombre**| ConsultarHistorico |
+| **Fecha**| 07/10/2022 |
+| **Autor**| Luca Daniel Gavriloaie |
+| **Descripcion**| Permite consultar el historico  |
+| **Actores**| Comprador |
+| **Precondiciones**| El usuario debe estar logueado como productor |
+| **Flujo Normal**|  1. El actor  pulsar el botón de Consultar productos para ver la lista de los productos <br> 2. El actor visualiza la disponibilidad del producto <br> 3. El actor busca el producto en el formulario de busqueda <br> 4. El sistema busca el prodcto en la tabla de producto <br> 5. Se comprueba la disponibildad del producto <br> 6. Si el producto esta disponible se le muestr al actor|
+| **Flujo Alternativo** | 4B. El producto no esta disponible, por lo que se le muestra al actor un mensaje de la no disponibilidad del producto |
+|**Postcondiciones**| |
+|**Referencias**| UC-01, UC-09 |
+
+
+| |  |
+| ---| :---: |
 | **ID**| UC-03 |
 | **Nombre**| ConsultarProducto |
 | **Fecha**| 07/10/2022 |
@@ -101,6 +116,7 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | | |
 | ----------- | :-----------: |
 |  **Identificador:**| UC-05 |
+|  **Identificador:**| UC-04 |
 |  **Nombre:** | FinalizarCompra |
 |  **Fecha:** | 30/09/2022 |
 |  **Autor:** | Guillermo Morales Caparros |
@@ -127,6 +143,22 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 |  **Flujo Alternativo** | |
 | | |
 
+
+| | |
+| ----------- | :-----------: |
+| **Identificador**: | UC-06 |
+| **Nombre:** | EliminarProducto |
+| **Fecha:** | 30/09/2022 |
+|  **Autor:** | Guillermo Morales Caparros |
+|  **Descripcion:** | Permite eliminar un producto  |
+|  **Actores:** | Administrador |
+|  **Precondiciones:** | Debe existir el producto |
+|  **Flujo normal:** | 1- El actor pulsa el boton para eliminar el producto|
+| | 2- Aparece un mensaje de "producto eliminado"|
+| | 3- El administrador selecciona "aceptar" y vuelve la pantalla inicial|
+|  **Flujo alternativo:** | Ninguno |
+|  **Postcondiciones:** | El producto debe desaparecer |
+| **Referencias**||
 
 
 #### **Supuesto 3: Compañía hotelera➡️**
