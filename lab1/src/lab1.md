@@ -97,6 +97,25 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 
 | | |
 | ----------- | :-----------: |
+| **Identificador**: | UC-02 |
+| **Nombre:** | IncorporarOferta |
+| **Fecha:** | 30/09/2022 |
+|  **Autor:** | Toderic Ioan Stefan |
+|  **Descripcion:** |   |
+|  **Actores:** | Administrador |
+|  **Precondiciones:** | Debe existir el producto |
+|  **Flujo normal:** | 1- El actor pulsa el boton para eliminar el producto|
+| | 2- Aparece un mensaje de "producto eliminado"|
+| | 3- El administrador selecciona "aceptar" y vuelve la pantalla inicial|
+|  **Flujo alternativo:** | Ninguno |
+|  **Postcondiciones:** | El producto debe desaparecer |
+| **Referencias**||
+
+
+
+| | |
+| ----------- | :-----------: |
+|  **Identificador:**| UC-05 |
 |  **Identificador:**| UC-04 |
 |  **Nombre:** | FinalizarCompra |
 |  **Fecha:** | 30/09/2022 |
