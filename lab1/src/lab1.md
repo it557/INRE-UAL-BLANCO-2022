@@ -67,8 +67,8 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 ![Supuerto 2: Sistema de Compras](/out/lab0/src/SistemaDeCompras/SistemaDeCompras.svg)
 | |  |
 | ---| :---: |
-| **ID**| UC-01 |
-| **Nombre**| ConsultarHistorico |
+| **ID**| UC-03 |
+| **Nombre**| ConsultarProducto|
 | **Fecha**| 07/10/2022 |
 | **Autor**| Ioan Stefan Toderic |
 | **Descripcion**| Permite consultar el historico de ventas  |
@@ -80,20 +80,6 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 |**Referencias**| UC-01, UC-09 |
 
 
-| |  |
-| ---| :---: |
-| **ID**| UC-03 |
-| **Nombre**| ConsultarProducto |
-| **Fecha**| 07/10/2022 |
-| **Autor**| Ioan Stefan Toderic |
-| **Descripcion**| Permite visualizar las los productos |
-| **Actores**| Comprador |
-| **Precondiciones**| El usuario debe estar logueado como productor |
-| **Flujo Normal**| 1. El actor busca el producto en el formulario de busqueda <br> 2. El sistema busca el prodcto en la tabla de producto <br> 3. Se comprueba la disponibildad del producto <br> 4. Si el producto esta disponible se le muestr al actor |
-| **Flujo Alternativo** | 4B. El producto no esta disponible, por lo que se le muestra al actor un mensaje de la no disponibilidad del producto |
-|**Postcondiciones**| |
-|**Referencias**| UC-01, UC-09 |
-
 
 | | |
 | ----------- | :-----------: |
@@ -101,21 +87,18 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **Nombre:** | IncorporarOferta |
 | **Fecha:** | 30/09/2022 |
 |  **Autor:** | Toderic Ioan Stefan |
-|  **Descripcion:** |   |
+|  **Descripcion:** | Boton opcional para incorporar una oferta   |
 |  **Actores:** | Administrador |
-|  **Precondiciones:** | Debe existir el producto |
-|  **Flujo normal:** | 1- El actor pulsa el boton para eliminar el producto|
-| | 2- Aparece un mensaje de "producto eliminado"|
-| | 3- El administrador selecciona "aceptar" y vuelve la pantalla inicial|
-|  **Flujo alternativo:** | Ninguno |
-|  **Postcondiciones:** | El producto debe desaparecer |
-| **Referencias**||
+|  **Precondiciones:** | El usuario debe estar logueado como administrador|
+|  **Flujo normal:** | 1. El actor busca el producto en el formulario <br> 2. Si se le incorpora la oferta, el producto se vera modificado el precio y se guarda con oferta|
+|  **Flujo alternativo:** | 2.B Si no se incorpora la oferta el producto se guarda sin oferta |
+|  **Postcondiciones:** | Modificar el precio del producto |
+| **Referencias**|UC-08|
 
 
 
 | | |
 | ----------- | :-----------: |
-|  **Identificador:**| UC-05 |
 |  **Identificador:**| UC-04 |
 |  **Nombre:** | FinalizarCompra |
 |  **Fecha:** | 30/09/2022 |
@@ -174,6 +157,8 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 |  **Flujo Alternativo** | 4A. Si el producto no está disponible, el vendedor recibe una notificación de la circunstancia y se lo notifica al comprador. El proceso termina <br> 4B. Los actores pueden consultar si lo desean el histórico de ventas del producto <br> 5A. Si no se llega a un acuerdo con respecto al precio, el proceso se cancela. |
 | **Postcondiciones** | El stock del producto vendido disminuye y se actualiza el histórico de ventas del mismo |
 | **Referencias** | UC-01, UC-10 |
+
+
 
 
 #### **Supuesto 3: Compañía hotelera➡️**
