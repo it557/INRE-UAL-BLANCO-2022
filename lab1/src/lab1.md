@@ -115,7 +115,6 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 
 | | |
 | ----------- | :-----------: |
-|  **Identificador:**| UC-05 |
 |  **Identificador:**| UC-04 |
 |  **Nombre:** | FinalizarCompra |
 |  **Fecha:** | 30/09/2022 |
@@ -169,11 +168,11 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 |  **Autor** | Luca Daniel Gavriloaie|
 |  **Descripcion** | El proveedor avisará a los usuarios del sistema sobre el fin de una oferta |
 |  **Actores** | Proveedor |
-|  **Precondiciones** | El proveedor debe |
-|  **Flujo Normal** | 1. El comprador elige el producto que desea comprar y lo anade al carrito de compra <br> 2. El comprador comienza el proceso de tramitación del pedido <br> 3. El vendedor busca el producto en el sistema <br> 4. El vendedor verifica la disponibilidad del producto <br> 5. El comprador y el vendedor se ponen de acuerdo en un precio <br> 6. El comprador y el vendedor finalizan el trámite del pedido |
-|  **Flujo Alternativo** | 4A. Si el producto no está disponible, el vendedor recibe una notificación de la circunstancia y se lo notifica al comprador. El proceso termina <br> 4B. Los actores pueden consultar si lo desean el histórico de ventas del producto <br> 5A. Si no se llega a un acuerdo con respecto al precio, el proceso se cancela. |
-| **Postcondiciones** | El stock del producto vendido disminuye y se actualiza el histórico de ventas del mismo |
-| **Referencias** | UC-01, UC-10 |
+|  **Precondiciones** | El proveedor debe estar autenticado en el sistema |
+|  **Flujo Normal** | 1. El proveedor comprueba el estado de la oferta <br> 2. Si la fecha del fin de la oferta está cerca, el proveedor emitirá un aviso para todos los usuarios en forma de notificación <br> 3. El proveedor eliminará la oferta |
+|  **Flujo Alternativo** |  |
+| **Postcondiciones** |  |
+| **Referencias** |  |
 
 
 #### **Supuesto 3: Compañía hotelera➡️**
