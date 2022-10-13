@@ -70,8 +70,8 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **ID**| UC-01 |
 | **Nombre**| ConsultarHistorico |
 | **Fecha**| 07/10/2022 |
-| **Autor**| Luca Daniel Gavriloaie |
-| **Descripcion**| Permite consultar el historico  |
+| **Autor**| Ioan Stefan Toderic |
+| **Descripcion**| Permite consultar el historico de ventas  |
 | **Actores**| Comprador |
 | **Precondiciones**| El usuario debe estar logueado como productor |
 | **Flujo Normal**|  1. El actor  pulsar el botón de Consultar productos para ver la lista de los productos <br> 2. El actor visualiza la disponibilidad del producto <br> 3. El actor busca el producto en el formulario de busqueda <br> 4. El sistema busca el prodcto en la tabla de producto <br> 5. Se comprueba la disponibildad del producto <br> 6. Si el producto esta disponible se le muestr al actor|
@@ -115,15 +115,15 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | ---| :---: |
 |  **ID**| UC-05|
 |  **Nombre** | RealizarVenta |
-|  **Fecha** | 07/10/2022 |
+|  **Fecha** | 13/10/2022 |
 |  **Autor** | Luca Daniel Gavriloaie|
 |  **Descripcion** | Permite realizar un venta |
 |  **Actores** | Comprador, Vendedor |
 |  **Precondiciones** | El comprador y el vendedor deben estar autenticados en el Sistema |
-|  **Flujo Normal** | 1. El comprador elige el producto que desea comprar|
-|                   | 2. El vendedor  |
-|  **Flujo Alternativo** | |
-| | |
+|  **Flujo Normal** | 1. El comprador elige el producto que desea comprar y lo anade al carrito de compra <br> 2. El comprador comienza el proceso de tramitación del pedido <br> 3. El vendedor busca el producto en el sistema <br> 4. El vendedor verifica la disponibilidad del producto <br> 5. El comprador y el vendedor se ponen de acuerdo en un precio <br> 6. El comprador y el vendedor finalizan el trámite del pedido |
+|  **Flujo Alternativo** | 4A. Si el producto no está disponible, el vendedor recibe una notificación de la circunstancia y se lo notifica al comprador. El proceso termina <br> 4B. Los actores pueden consultar si lo desean el histórico de ventas del producto <br> 5A. Si no se llega a un acuerdo con respecto al precio, el proceso se cancela. |
+| **Postcondiciones** | El stock del producto vendido disminuye y se actualiza el histórico de ventas del mismo |
+| **Referencias** | UC-01, UC-10 |
 
 
 | | |
@@ -141,6 +141,20 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 |  **Flujo alternativo:** | Ninguno |
 |  **Postcondiciones:** | El producto debe desaparecer |
 | **Referencias**||
+
+| |  |
+| ---| :---: |
+|  **ID**| UC-07|
+|  **Nombre** | AvisarFinDeOferta |
+|  **Fecha** | 13/10/2022 |
+|  **Autor** | Luca Daniel Gavriloaie|
+|  **Descripcion** | El proveedor avisará a los usuarios del sistema sobre el fin de una oferta |
+|  **Actores** | Proveedor |
+|  **Precondiciones** | El proveedor debe |
+|  **Flujo Normal** | 1. El comprador elige el producto que desea comprar y lo anade al carrito de compra <br> 2. El comprador comienza el proceso de tramitación del pedido <br> 3. El vendedor busca el producto en el sistema <br> 4. El vendedor verifica la disponibilidad del producto <br> 5. El comprador y el vendedor se ponen de acuerdo en un precio <br> 6. El comprador y el vendedor finalizan el trámite del pedido |
+|  **Flujo Alternativo** | 4A. Si el producto no está disponible, el vendedor recibe una notificación de la circunstancia y se lo notifica al comprador. El proceso termina <br> 4B. Los actores pueden consultar si lo desean el histórico de ventas del producto <br> 5A. Si no se llega a un acuerdo con respecto al precio, el proceso se cancela. |
+| **Postcondiciones** | El stock del producto vendido disminuye y se actualiza el histórico de ventas del mismo |
+| **Referencias** | UC-01, UC-10 |
 
 
 #### **Supuesto 3: Compañía hotelera➡️**
