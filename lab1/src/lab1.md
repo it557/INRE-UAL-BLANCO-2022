@@ -82,11 +82,11 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 
 | | |
 | ----------- | :-----------: |
-| **Identificador**: | UC-03 |
-| **Nombre:** | EliminarProducto |
+| **Identificador**: | UC-02 |
+| **Nombre:** | IncorporarOferta |
 | **Fecha:** | 30/09/2022 |
-|  **Autor:** | Guillermo Morales Caparros |
-|  **Descripcion:** | Permite eliminar un producto  |
+|  **Autor:** | Toderic Ioan Stefan |
+|  **Descripcion:** |   |
 |  **Actores:** | Administrador |
 |  **Precondiciones:** | Debe existir el producto |
 |  **Flujo normal:** | 1- El actor pulsa el boton para eliminar el producto|
@@ -116,15 +116,14 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 
 | |  |
 | ---| :---: |
-|  **ID**| UC-06|
+|  **ID**| UC-05|
 |  **Nombre** | RealizarVenta |
 |  **Fecha** | 07/10/2022 |
 |  **Autor** | Luca Daniel Gavriloaie|
 |  **Descripcion** | Permite realizar un venta |
 |  **Actores** | Comprador, Vendedor |
 |  **Precondiciones** | El comprador y el vendedor deben estar autenticados en el Sistema |
-|  **Flujo Normal** | 1. El comprador elige el producto que desea comprar|
-|                   | 2. El vendedor  |
+|  **Flujo Normal** | 1. El comprador elige el producto que desea comprar <br> |
 |  **Flujo Alternativo** | |
 | | |
 
