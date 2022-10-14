@@ -3,7 +3,7 @@
 #### **Supuesto 1: Incendio➡️**
 Después de un incendio, por un lado se necesita obtener información de nuestra compañía de seguro. Por otro lado, es posible que necesitemos información adicional del departamento de bomberos, pero solo si los bomberos participaron durante el apagado del incendio. Cuando se tenga toda la información, se necesita escribir un informe consolidado.
 
-
+![Supuesto 1: Incendio](../out/lab0/src/lab2/supuesto1/Supuesto1.drawio.svg)
 
 #### **Supuesto 2: Aprobación de fondos➡️**
 1.Un proceso cliente envía una petición para que se realice una solicitud y aprobación de fondos
