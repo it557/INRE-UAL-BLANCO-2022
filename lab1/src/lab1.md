@@ -68,36 +68,6 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, proveedor y administrador. Los compradores pueden agregar productos, consultar precios, finalizar la compra y consultar ofertas. Agregar productos implica marcar esos productos como bloqueados. Los vendedores también pueden consultar ofertas y consultar precios. Los proveedores pueden consultar precios, avisar de nuevos productos y consultar ofertas. Avisar de nuevos productos, de forma excepcional, realiza la incorporación de una oferta. Los proveedores también tienen una funcionalidad para avisar del fin de una oferta. Cuando se avisa del fin de una oferta, se ejecuta la funcionalidad de eliminar la oferta. Ambas funcionalidades de avisar del proveedor tienen en común que se encarga de enviar una notificación. Los administradores pueden consultar precios, consultar ofertas y eliminar productos. La funcionalidad de consultar precios incluye una funcionalidad de buscar productos que es similar a la funcionalidad de consultar productos de los compradores. Sin embargo, la funcionalidad de consultar productos añade una funcionalidad para verificar la disponibilidad. Para realizar una venta, un comprador y un vendedor participan de forma conjunta. En dicha operación, se lleva a cabo el acuerdo de un precio; excepcionalmente, durante la realización de la venta, se consultará el histórico de ventas.
 
 ![Supuerto 2: Sistema de Compras](/out/lab0/src/SistemaDeCompras/SistemaDeCompras.svg)
-<<<<<<< HEAD
-
-| |  |
-| ---| :---: |
-| **ID**| UC-01 |
-| **Nombre**| ConsultarHistorico |
-| **Fecha**| 30/09/2022 |
-| **Autor**| Ioan Stefan Toderic |
-| **Descripcion**| Permite visualizar las ventas realizadas |
-| **Actores**| Comprador,Vendedor |
-| **Precondiciones**| Deben haber ventas realizadas |
-| **Flujo Normal**|  1. El actor puede pulsar el botón de ver el historico |
-| **Flujo Alternativo** | 1A. El actor no pulsa el boton de ver el historico |
-
-|   |   |
-|---|:---:|
-|**ID**   | UC-02|
-|**Nombre**  | Incorporar oferta|
-|**Fecha**   | 30/09/2022|
-| **Autor**| Ioan Stefan Toderic |
-|**Descripción:**| Añade una oferta a un nuevo producto de forma opcional |
-|**Actores:**|Proovedores|
-|**Precondiciones:**| Debe haber un nuevo producto |
-|**Flujo normal:**| 1. El provedoor avisa de un nuevo producto|
-| | 2. El provedoor  decide aplicarle una oferta al nuevo producto |
-|| 3. El Provedor dedice aplicar la oferta al producto y se guarda la informacion de la oferta|
-|**Flujo alternativo**| 2.A El provedor no acepta aplicarle una oferta al producot|
-
-
-=======
 
 | | |
 | ----------- | :-----------: |
@@ -112,7 +82,6 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 |  **Flujo alternativo:** | 2.B Si no se incorpora la oferta el producto se guarda sin oferta |
 |  **Postcondiciones:** | Modificar el precio del producto |
 | **Referencias**|UC-08|
->>>>>>> 5cee01324fd08a3d845ef6585aa2e928ea49e8cf
 
 | |  |
 | ---| :---: |
@@ -128,21 +97,6 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 |**Postcondiciones**| |
 |**Referencias**| UC-01, UC-09 |
 
-<<<<<<< HEAD
-| |  |
-| ---| :---: |
-|  **ID**| UC-05 |
-|  **Nombre** | FinalizarCompra |
-|  **Fecha** | 30/09/2022 |
-|  **Autor** | Ioan Stefan Toderic|
-|  **Descripcion** | Boton que ejecuta la accion de comprar |
-|  **Actores** | Comun |
-|  **Precondiciones** | Previamente necesita haber una seleccion de productos |
-|  **Flujo Normal** | 1. El actor pulsa el boton de finalizar compra |
-| | 2. Los datos de la compra y los del comprador se guarda en la base de datos |
-|  **Flujo Alternativo** | 1A. El actor no pulsa sobre el boton de finalizar compra|
-| | 2.A Los productos se guardan en una lista llamada "Carrito"|
-=======
 | | |
 | ----------- | :-----------: |
 |  **Identificador:**| UC-04 |
@@ -274,7 +228,6 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **Postcondiciones** |  |
 | **Referencias** |  |
 
->>>>>>> 5cee01324fd08a3d845ef6585aa2e928ea49e8cf
 
 #### **Supuesto 3: Compañía hotelera➡️**
 En una compañía hotelera, el administrador y el comercial pueden consultar reservas. El comercial realiza ofertas y gestiona nuevas reservas. El administrador gestiona nuevas peticiones y también realiza ofertas. La realización de ofertas por parte del comercial conlleva un recálculo de precios. Además, dicha realización de ofertas conlleva opcionalmente el bloqueo temporal de una reserva. Los clientes, los administradores y los comerciales pueden consultar disponibilidades y visualizar ofertas. La consulta de disponibilidades y la consulta de reservas tienen la funcionalidad común de buscar elementos. Por su parte, la consulta de disponibilidades conlleva una funcionalidad que muestra un calendario.
