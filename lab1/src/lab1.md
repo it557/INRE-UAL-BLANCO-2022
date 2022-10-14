@@ -186,6 +186,24 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **Postcondiciones** |  |
 | **Referencias** | UC-05 |
 
+
+| | |
+| ----------- | :-----------: |
+| **Identificador:** | UC-11 |
+| **Nombre:** | ConsultarOferta |
+| **Fecha:** | 07/10/2022 |
+| **Autor:** | Guillermo Morales Caparros |
+| **Descripcion:** | Debe mostrar una serie de datos relacionados con la oferta |
+| **Actores:** | Comun, Administrador, Vendedor, Proveedor |
+| **Precondiciones:** | El usuario debe estar registrado como alguno de los actores permitidos|
+| **Flujo normal:** | 1- El usuario selecciona la opcion para consultar oferta|
+| | 2- Se abre una pestana que muestra los datos de la oferta|
+| | 3- El usuario puede cerrar esa pestana volviendo al estado anterior|
+| **Flujo alternativo:** | Ninguno |
+| **Postcondiciones:** | Ninguna |
+| **Referencias:** | Administrador Vendedor y Proveedor heredan de Comun |
+
+
 | |  |
 | ---| :---: |
 |  **ID**| UC-13|
