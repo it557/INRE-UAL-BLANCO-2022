@@ -65,6 +65,21 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, proveedor y administrador. Los compradores pueden agregar productos, consultar precios, finalizar la compra y consultar ofertas. Agregar productos implica marcar esos productos como bloqueados. Los vendedores también pueden consultar ofertas y consultar precios. Los proveedores pueden consultar precios, avisar de nuevos productos y consultar ofertas. Avisar de nuevos productos, de forma excepcional, realiza la incorporación de una oferta. Los proveedores también tienen una funcionalidad para avisar del fin de una oferta. Cuando se avisa del fin de una oferta, se ejecuta la funcionalidad de eliminar la oferta. Ambas funcionalidades de avisar del proveedor tienen en común que se encarga de enviar una notificación. Los administradores pueden consultar precios, consultar ofertas y eliminar productos. La funcionalidad de consultar precios incluye una funcionalidad de buscar productos que es similar a la funcionalidad de consultar productos de los compradores. Sin embargo, la funcionalidad de consultar productos añade una funcionalidad para verificar la disponibilidad. Para realizar una venta, un comprador y un vendedor participan de forma conjunta. En dicha operación, se lleva a cabo el acuerdo de un precio; excepcionalmente, durante la realización de la venta, se consultará el histórico de ventas.
 
 ![Supuerto 2: Sistema de Compras](/out/lab0/src/SistemaDeCompras/SistemaDeCompras.svg)
+
+| | |
+| ----------- | :-----------: |
+| **Identificador**: | UC-02 |
+| **Nombre:** | IncorporarOferta |
+| **Fecha:** | 30/09/2022 |
+|  **Autor:** | Toderic Ioan Stefan |
+|  **Descripcion:** | Boton opcional para incorporar una oferta   |
+|  **Actores:** | Proveedor |
+|  **Precondiciones:** | El usuario debe estar logueado como proveedor|
+|  **Flujo normal:** | 1. El actor busca el producto en el formulario <br> 2. Si se le incorpora la oferta, el producto se vera modificado el precio y se guarda con oferta|
+|  **Flujo alternativo:** | 2.B Si no se incorpora la oferta el producto se guarda sin oferta |
+|  **Postcondiciones:** | Modificar el precio del producto |
+| **Referencias**|UC-08|
+
 | |  |
 | ---| :---: |
 | **ID**| UC-03 |
@@ -78,24 +93,6 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **Flujo Alternativo** | 4B. El producto no esta disponible, por lo que se le muestra al actor un mensaje de la no disponibilidad del producto |
 |**Postcondiciones**| |
 |**Referencias**| UC-01, UC-09 |
-
-
-
-| | |
-| ----------- | :-----------: |
-| **Identificador**: | UC-02 |
-| **Nombre:** | IncorporarOferta |
-| **Fecha:** | 30/09/2022 |
-|  **Autor:** | Toderic Ioan Stefan |
-|  **Descripcion:** | Boton opcional para incorporar una oferta   |
-|  **Actores:** | Administrador |
-|  **Precondiciones:** | El usuario debe estar logueado como administrador|
-|  **Flujo normal:** | 1. El actor busca el producto en el formulario <br> 2. Si se le incorpora la oferta, el producto se vera modificado el precio y se guarda con oferta|
-|  **Flujo alternativo:** | 2.B Si no se incorpora la oferta el producto se guarda sin oferta |
-|  **Postcondiciones:** | Modificar el precio del producto |
-| **Referencias**|UC-08|
-
-
 
 | | |
 | ----------- | :-----------: |
@@ -153,12 +150,68 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 |  **Descripcion** | El proveedor avisará a los usuarios del sistema sobre el fin de una oferta |
 |  **Actores** | Proveedor |
 |  **Precondiciones** | El proveedor debe estar autenticado en el sistema |
-|  **Flujo Normal** | 1. El proveedor comprueba el estado de la oferta <br> 2. Si la fecha del fin de la oferta está cerca, el proveedor emitirá un aviso para todos los usuarios en forma de notificación <br> 3. El proveedor eliminará la oferta |
+|  **Flujo Normal** | 1. El proveedor comprueba el estado de la oferta <br> 2. Si la fecha del fin de la oferta está cerca (menos de 3 días), el proveedor emitirá un aviso para todos los usuarios en forma de notificación <br> 3. El proveedor eliminará la oferta |
+|  **Flujo Alternativo** | 2A. Si para el fin de la oferta faltan más de 3 días, el proveedor no podrá avisar del fin de la oferta |
+| **Postcondiciones** | Ninguna |
+| **Referencias** | UC-13, UC-14, UC-16 |
+
+| |  |
+| ---| :---: |
+|  **ID**| UC-08|
+|  **Nombre** | AvisarDeNuevoProducto |
+|  **Fecha** | 14/10/2022 |
+|  **Autor** | Luca Daniel Gavriloaie|
+|  **Descripcion** | Permite avisar de la disponibilidad de un nuevo producto a los usuarios del sistema de compras |
+|  **Actores** | Proveedor |
+|  **Precondiciones** | El proveedor debe estar autenticado en el sistema |
+|  **Flujo Normal** | 1. El proveedor busca el nuevo producto <br> 2. El proveedor marca el nuevo producto como disponible <br> 3. El proveedor emite un aviso para los usuarios del sistema de la disponibilidad del nuevo producto y de su precio |
+|  **Flujo Alternativo** | 1A. Si el sistema no encuentra el producto, le notificará del error al actor <br> 3A. Opcionalmente, el proveedor podrá crear una oferta para el nuevo producto |
+| **Postcondiciones** | Ninguna |
+| **Referencias** | UC-02 |
+
+
+
+| |  |
+| ---| :---: |
+|  **ID**| UC-13|
+|  **Nombre** | EliminarOferta |
+|  **Fecha** | 14/10/2022 |
+|  **Autor** | Luca Daniel Gavriloaie|
+|  **Descripcion** | Permite eliminar la oferta del sistema de compras, actualizando el precio de los productos afectados por esta oferta |
+|  **Actores** | Proveedor |
+|  **Precondiciones** | El proveedor debe estar autenticado en el sistema |
+|  **Flujo Normal** | 1. El proveedor solicita al sistema el listado de ofertas activas <br> 2. El sistema muestra todas las ofertas <br> 3. El proveedor selecciona la oferta que desea eliminar <br> 4. El proveedor elimina la oferta |
+|  **Flujo Alternativo** | 4A. La oferta no se podrá eliminar sin haber avisado previamente su finalización |
+| **Postcondiciones** | Se actualiza el conjunto de ofertas activas y los productos afectados por la oferta eliminada vuelven a su precio anterior |
+| **Referencias** | UC-07 |
+
+| |  |
+| ---| :---: |
+|  **ID**| UC-17 |
+|  **Nombre** |  |
+|  **Fecha** |  |
+|  **Autor** |  |
+|  **Descripcion** |  |
+|  **Actores** |  |
+|  **Precondiciones** |  |
+|  **Flujo Normal** |  |
 |  **Flujo Alternativo** |  |
 | **Postcondiciones** |  |
 | **Referencias** |  |
 
-
+| |  |
+| ---| :---: |
+|  **ID**| UC-18 |
+|  **Nombre** |  |
+|  **Fecha** |  |
+|  **Autor** |  |
+|  **Descripcion** |  |
+|  **Actores** |  |
+|  **Precondiciones** |  |
+|  **Flujo Normal** |  |
+|  **Flujo Alternativo** |  |
+| **Postcondiciones** |  |
+| **Referencias** |  |
 
 
 #### **Supuesto 3: Compañía hotelera➡️**
