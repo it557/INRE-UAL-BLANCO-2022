@@ -172,7 +172,19 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **Postcondiciones** | Ninguna |
 | **Referencias** | UC-02 |
 
-
+| |  |
+| ---| :---: |
+|  **ID**| UC-10 |
+|  **Nombre** | AcordarPrecio |
+|  **Fecha** | 14/10/2022 |
+|  **Autor** | Luca Daniel Gavriloaie |
+|  **Descripcion** |  |
+|  **Actores** | Comprador, Vendedor |
+|  **Precondiciones** | Comprador y Vendedor deben estar autenticados en el sistema |
+|  **Flujo Normal** |  |
+|  **Flujo Alternativo** |  |
+| **Postcondiciones** |  |
+| **Referencias** | UC-05 |
 
 | |  |
 | ---| :---: |
@@ -191,7 +203,7 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | |  |
 | ---| :---: |
 |  **ID**| UC-17 |
-|  **Nombre** |  |
+|  **Nombre** | Agregar productos |
 |  **Fecha** |  |
 |  **Autor** |  |
 |  **Descripcion** |  |
@@ -205,7 +217,7 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | |  |
 | ---| :---: |
 |  **ID**| UC-18 |
-|  **Nombre** |  |
+|  **Nombre** | Bloquear productos |
 |  **Fecha** |  |
 |  **Autor** |  |
 |  **Descripcion** |  |
