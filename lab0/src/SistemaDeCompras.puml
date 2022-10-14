@@ -9,13 +9,22 @@ Comun -->(ConsultarOferta)
 (ConsultarPrecio)..>(BuscarProducto):<include>
 :Proveedor: --|> Comun
 Proveedor -->(AvisarFinDeOferta)
-Proveedor-->(AvisarDeNuevoProducto)
-(IncorporarOferta)..>(AvisarDeNuevoProducto):<extend>
+
+usecase UC1 as "AvisarDeNuevoProducto
+--
+**extension points**
+IncorporarOferta"
+
+Proveedor-->UC1
+(IncorporarOferta)..>UC1:<extend>
 (AvisarProveedor)..>(EnviarNotificacion):<include>
 (AvisarFinDeOferta)..>(EliminarOferta):<include>
-(AvisarFinDeOferta)-->(AvisarProveedor)
+(AvisarFinDeOferta)--|>(AvisarProveedor)
 (ConsultarProducto)--|>(BuscarProducto)
-:Comprador: --|> (ConsultarProducto)
+:Comprador: --> (ConsultarProducto)
+(Agregar productos) as AgregarProductos
+Comprador --> AgregarProductos
+AgregarProductos ..> (Bloquear productos) : <<Include>>
 (ConsultarProducto)..>(VerificarDisponibilidad):<include>
 Comprador-->(FinalizarCompra)
 Comprador-->(RealizarVenta)
