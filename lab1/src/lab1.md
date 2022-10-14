@@ -15,9 +15,10 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 |**Descripcion:**|Permite al actor PAS modificar el horario|
 |**Actor:**|PAS|
 |**Precondiciones:**|Pertenecer al PAS de esta institucion|
-|**Flujo normal:**|Acceder al horario <br> hola|
+|**Flujo normal:**|1.Accedo a la web de la universidad<br>2.Entro como PAS<br>3.Accedo al horario<br>4.Modifico el horario|
 |**Flujo aternativo:**|Ninguno|
 |**Postcondiciones:**|Ninguna|
+|**Referencias:**|Ninguna|
 ||
 
 
@@ -30,9 +31,11 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 |**Descripcion:**|Permite al actor PAS <br> dar de alta a los estudiantes|
 |**Actor:**|PAS|
 |**Precondiciones:**|Pertenecer al PAS de esta institucion|
-|**Flujo normal:**|Dar de alta estudiantes|
+|**Flujo normal:**|1.Accedo a la web de la universidad<br>2.Entro como PAS <br>3.Accedo al listado de estudiantes<br>4.Doy de alta al estudiante seleccionado|
 |**Flujo aternativo:**|No existe el estudiante|
 |**Postcondiciones:**|El estudiante ya no esta registrado|
+|**Referencias:**|
+||
 
 || |
 |-|:-:|
@@ -43,7 +46,7 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 |**Descripcion:**|Permite al actor PAS modificar el horario|
 |**Actor:**|PAS|
 |**Precondiciones:**|Pertenecer al PAS de esta institucion|
-|**Flujo normal:**|1 Dar de alta estudiantes <br> 2 Validar los datos|
+|**Flujo normal:**|1. Accede a la web de la universidad <br> 2.Entrar como PAS<br>3.Acceder a los datos de los estudiantes<br>4.Validar los datos|
 |**Flujo aternativo:**|Ninguno|
 |**Postcondiciones:**|Ninguna|
 ||
@@ -57,7 +60,7 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 |**Descripcion:**|Permite al actor PAS modificar el horario|
 |**Actor:**|Estudiante|
 |**Precondiciones:**|Ser un estudiante de esta institucion|
-|**Flujo normal:**|Consultar el horario|
+|**Flujo normal:**|1.Accedo a la web de la universidad<br>2.Entro como PAS<br>3.Accedo al horario<br>4.Consultar el horario|
 |**Flujo aternativo:**|Ninguno|
 |**Postcondiciones:**|Ninguna|
 ||
@@ -65,6 +68,36 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, proveedor y administrador. Los compradores pueden agregar productos, consultar precios, finalizar la compra y consultar ofertas. Agregar productos implica marcar esos productos como bloqueados. Los vendedores también pueden consultar ofertas y consultar precios. Los proveedores pueden consultar precios, avisar de nuevos productos y consultar ofertas. Avisar de nuevos productos, de forma excepcional, realiza la incorporación de una oferta. Los proveedores también tienen una funcionalidad para avisar del fin de una oferta. Cuando se avisa del fin de una oferta, se ejecuta la funcionalidad de eliminar la oferta. Ambas funcionalidades de avisar del proveedor tienen en común que se encarga de enviar una notificación. Los administradores pueden consultar precios, consultar ofertas y eliminar productos. La funcionalidad de consultar precios incluye una funcionalidad de buscar productos que es similar a la funcionalidad de consultar productos de los compradores. Sin embargo, la funcionalidad de consultar productos añade una funcionalidad para verificar la disponibilidad. Para realizar una venta, un comprador y un vendedor participan de forma conjunta. En dicha operación, se lleva a cabo el acuerdo de un precio; excepcionalmente, durante la realización de la venta, se consultará el histórico de ventas.
 
 ![Supuerto 2: Sistema de Compras](/out/lab0/src/SistemaDeCompras/SistemaDeCompras.svg)
+<<<<<<< HEAD
+
+| |  |
+| ---| :---: |
+| **ID**| UC-01 |
+| **Nombre**| ConsultarHistorico |
+| **Fecha**| 30/09/2022 |
+| **Autor**| Ioan Stefan Toderic |
+| **Descripcion**| Permite visualizar las ventas realizadas |
+| **Actores**| Comprador,Vendedor |
+| **Precondiciones**| Deben haber ventas realizadas |
+| **Flujo Normal**|  1. El actor puede pulsar el botón de ver el historico |
+| **Flujo Alternativo** | 1A. El actor no pulsa el boton de ver el historico |
+
+|   |   |
+|---|:---:|
+|**ID**   | UC-02|
+|**Nombre**  | Incorporar oferta|
+|**Fecha**   | 30/09/2022|
+| **Autor**| Ioan Stefan Toderic |
+|**Descripción:**| Añade una oferta a un nuevo producto de forma opcional |
+|**Actores:**|Proovedores|
+|**Precondiciones:**| Debe haber un nuevo producto |
+|**Flujo normal:**| 1. El provedoor avisa de un nuevo producto|
+| | 2. El provedoor  decide aplicarle una oferta al nuevo producto |
+|| 3. El Provedor dedice aplicar la oferta al producto y se guarda la informacion de la oferta|
+|**Flujo alternativo**| 2.A El provedor no acepta aplicarle una oferta al producot|
+
+
+=======
 
 | | |
 | ----------- | :-----------: |
@@ -79,6 +112,7 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 |  **Flujo alternativo:** | 2.B Si no se incorpora la oferta el producto se guarda sin oferta |
 |  **Postcondiciones:** | Modificar el precio del producto |
 | **Referencias**|UC-08|
+>>>>>>> 5cee01324fd08a3d845ef6585aa2e928ea49e8cf
 
 | |  |
 | ---| :---: |
@@ -94,6 +128,21 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 |**Postcondiciones**| |
 |**Referencias**| UC-01, UC-09 |
 
+<<<<<<< HEAD
+| |  |
+| ---| :---: |
+|  **ID**| UC-05 |
+|  **Nombre** | FinalizarCompra |
+|  **Fecha** | 30/09/2022 |
+|  **Autor** | Ioan Stefan Toderic|
+|  **Descripcion** | Boton que ejecuta la accion de comprar |
+|  **Actores** | Comun |
+|  **Precondiciones** | Previamente necesita haber una seleccion de productos |
+|  **Flujo Normal** | 1. El actor pulsa el boton de finalizar compra |
+| | 2. Los datos de la compra y los del comprador se guarda en la base de datos |
+|  **Flujo Alternativo** | 1A. El actor no pulsa sobre el boton de finalizar compra|
+| | 2.A Los productos se guardan en una lista llamada "Carrito"|
+=======
 | | |
 | ----------- | :-----------: |
 |  **Identificador:**| UC-04 |
@@ -213,12 +262,54 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **Postcondiciones** |  |
 | **Referencias** |  |
 
+>>>>>>> 5cee01324fd08a3d845ef6585aa2e928ea49e8cf
 
 #### **Supuesto 3: Compañía hotelera➡️**
 En una compañía hotelera, el administrador y el comercial pueden consultar reservas. El comercial realiza ofertas y gestiona nuevas reservas. El administrador gestiona nuevas peticiones y también realiza ofertas. La realización de ofertas por parte del comercial conlleva un recálculo de precios. Además, dicha realización de ofertas conlleva opcionalmente el bloqueo temporal de una reserva. Los clientes, los administradores y los comerciales pueden consultar disponibilidades y visualizar ofertas. La consulta de disponibilidades y la consulta de reservas tienen la funcionalidad común de buscar elementos. Por su parte, la consulta de disponibilidades conlleva una funcionalidad que muestra un calendario.
 
 ![Supuesto 3: Compañía hotelera](/out/lab0/src/companiaHotelera/companiaHotelera.svg)
 
+|| |
+|-|:-:|
+|**ID:**|UC-00|
+|**Nombre:**|Visualizar ofertas|
+|**Fecha:**|07/10/2022|
+|**Autor:**|Daniel Perez|
+|**Descripcion:**|Permite al cliente visualizar las ofertas del hotel|
+|**Actor:**|Cliente|
+|**Precondiciones:**|Ser un cliente del hotel|
+|**Flujo normal:**|1 Hospedarse en el hotel|
+|**Flujo aternativo:**|Ninguno|
+|**Postcondiciones:**|Ninguna|
+||
+
+|| |
+|-|:-:|
+|**ID:**|UC-01|
+|**Nombre:**|Consultar disponibilidades|
+|**Fecha:**|07/10/2022|
+|**Autor:**|Daniel Perez|
+|**Descripcion:**|Permite al cliente ver si hay plazas disponibles|
+|**Actor:**|Cliente|
+|**Precondiciones:**|Hereda de consultar|
+|**Flujo normal:**|1 Querer hospedarse en el hotel<br> 2. Consultar las disponibilidades|
+|**Flujo aternativo:**|Ninguno|
+|**Postcondiciones:**|Ninguna|
+||
+
+|| |
+|-|:-:|
+|**ID:**|UC-02|
+|**Nombre:**|Consultar reservas|
+|**Fecha:**|07/10/2022|
+|**Autor:**|Daniel Perez|
+|**Descripcion:**|Hereda de consultar|
+|**Actor:**|Actor comun|
+|**Precondiciones:**|Ser un cliente del hotel|
+|**Flujo normal:**|1 Hospedarse en el hotel|
+|**Flujo aternativo:**|Ninguno|
+|**Postcondiciones:**|Ninguna|
+||
 
 #### **Supuesto 4: Fotografía Online➡️**
 En una aplicación de fotografía online, los clientes pueden visualizar las fotos, donde de forma excepcional se puede realizar una denuncia sobre la foto. Al denunciar una foto, se ha de introducir una explicación sobre la denuncia. Los clientes también pueden llevar a cabo consultas sobre las fotos, operación que es un caso particular de visualizar las fotos. Los controladores de fotos pueden indicar que una foto debe ser revisada. Esta funcionalidad es un caso general de la funcionalidad de denunciar foto. Además, los controladores también pueden editar la información de las fotos. En esta aplicación también participan usuarios de tipo vendedor. Los vendedores pueden escribir a los clientes para hacerles ofertas sobre los productos de la aplicación. De forma excepcional, al hacer una oferta pueden reducir el precio de un producto. Los vendedores también pueden buscar detalles en las fotos, operación que es un caso particular de visualizar fotos. Pero esa búsqueda conlleva la verificación de los datos introducidos. Por otro lado, los gestores de la aplicación pueden ver ofertas, bloquear ofertas, emitir facturas y editar facturas. La emisión de facturas requiere la participación de un software de facturación. El administrador de la tienda puede ver ofertas, emitir facturas, editar facturas, bloquear ofertas, crear usuarios y editar usuarios. Esta funcionalidad de ver ofertas también la pueden realizar los clientes. Editar usuarios tiene características en común con editar facturas. Crear usuarios conlleva el envío de un email en el que es necesario el uso de un gestor de correo.
