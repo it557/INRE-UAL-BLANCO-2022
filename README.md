@@ -16,4 +16,5 @@
 
 2. **Lab 1 - Definición de casos de uso y requisitos de información** - [Ver](/lab1/src/lab1.md)
 
+3. **Lab 2 - BPMN** - [Ver](lab2/lab2.md)
 
