@@ -9,7 +9,7 @@ Adm --> (gestionar peticion)
 Adm --> (realizar oferta)
 Cli --> (visualizar ofertas)
 Cli --> (consultar disponibilidad)
-Act --> (consultar reserva)
+Act --> (consultar reservas)
 Com --> (gestionar nueva reserva)
 
 usecase UC1 as "      realizar oferta del comercial
