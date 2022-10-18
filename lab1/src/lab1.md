@@ -8,7 +8,7 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 ![Supuesto 1: Horarios](/out/lab0/src/horarios/horarios.svg)
 || |
 |-|:-:|
-|**ID:**|UC-00|
+|**ID:**|UC-01|
 |**Nombre:**|Modificar Horario|
 |**Fecha:**|30/09/2022|
 |**Autor:**|Daniel Perez|
@@ -24,7 +24,7 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 
 || |
 |-|:-:|
-|**ID:**|UC-01|
+|**ID:**|UC-02|
 |**Nombre:**|Dar de alta estudiantes|
 |**Fecha:**|30/09/2022|
 |**Autor:**|Daniel Perez|
@@ -34,12 +34,27 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 |**Flujo normal:**|1.Accedo a la web de la universidad<br>2.Entro como PAS <br>3.Accedo al listado de estudiantes<br>4.Doy de alta al estudiante seleccionado|
 |**Flujo aternativo:**|No existe el estudiante|
 |**Postcondiciones:**|El estudiante ya no esta registrado|
-|**Referencias:**|
+|**Referencias:**|Validar datos<br>Dar de alta estudiantes(PDI)|
 ||
 
 || |
 |-|:-:|
 |**ID:**|UC-03|
+|**Nombre:**|Proponer cambios en los horarios|
+|**Fecha:**|30/09/2022|
+|**Autor:**|Daniel Perez|
+|**Descripcion:**|Permite al actor PDI proponer cambios en los horarios|
+|**Actor:**|PDI|
+|**Precondiciones:**|Pertenecer al PDI de esta institucion|
+|**Flujo normal:**|1. Accede a la web de la universidad <br> 2.Entrar como PDI<br>3.Acceder a informacion del horario<br>4.Sugerir un cambio en el horario a la espera de ser aprobado|
+|**Flujo aternativo:**|Ninguno|
+|**Postcondiciones:**|Ninguna|
+|**Referencias:**|Ninguna|
+||
+
+|| |
+|-|:-:|
+|**ID:**|UC-04|
 |**Nombre:**|Validar datos|
 |**Fecha:**|30/09/2022|
 |**Autor:**|Daniel Perez|
@@ -49,20 +64,52 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 |**Flujo normal:**|1. Accede a la web de la universidad <br> 2.Entrar como PAS<br>3.Acceder a los datos de los estudiantes<br>4.Validar los datos|
 |**Flujo aternativo:**|Ninguno|
 |**Postcondiciones:**|Ninguna|
+|**Referencias:**|Dar de alta estudiantes|
+||
+
+|| |
+|-|:-:|
+|**ID:**|UC-05|
+|**Nombre:**|Dar de alta estudiantes (PDI)|
+|**Fecha:**|30/09/2022|
+|**Autor:**|Daniel Perez|
+|**Descripcion:**|Permite al actor PDI <br> dar de alta a los estudiantes|
+|**Actor:**|PDI|
+|**Precondiciones:**|Pertenecer al PDI de esta institucion|
+|**Flujo normal:**|1.Accedo a la web de la universidad<br>2.Entro como PAS <br>3.Accedo al listado de estudiantes<br>4.Doy de alta al estudiante seleccionado|
+|**Flujo aternativo:**|No existe el estudiante|
+|**Postcondiciones:**|El estudiante ya no esta registrado|
+|**Referencias:**|Dar de alta estudiantes<br>Buscar estudiantes en la lista de clase|
 ||
 
 || |
 |-|:-:|
 |**ID:**|UC-06|
+|**Nombre:**|Buscar estudiantes en la lista de clase|
+|**Fecha:**|30/09/2022|
+|**Autor:**|Daniel Perez|
+|**Descripcion:**|Permite al actor PDI <br> buscar estudiantes en la lista de clase|
+|**Actor:**|PDI|
+|**Precondiciones:**|Pertenecer al PDI de esta institucion|
+|**Flujo normal:**|1.Accedo a la web de la universidad<br>2.Entro como PAS <br>3.Accedo al listado de estudiantes<br>4.Busco al estudiante seleccionado|
+|**Flujo aternativo:**|No existe el estudiante|
+|**Postcondiciones:**|El estudiante ya no esta registrado|
+|**Referencias:**|Dar de alta estudiantes (PDI)|
+||
+
+|| |
+|-|:-:|
+|**ID:**|UC-07|
 |**Nombre:**|Consultar Horario|
 |**Fecha:**|30/09/2022|
 |**Autor:**|Daniel Perez|
 |**Descripcion:**|Permite al actor PAS modificar el horario|
-|**Actor:**|Estudiante|
+|**Actor:**|Estudiante, PDI, PAS|
 |**Precondiciones:**|Ser un estudiante de esta institucion|
 |**Flujo normal:**|1.Accedo a la web de la universidad<br>2.Entro como PAS<br>3.Accedo al horario<br>4.Consultar el horario|
 |**Flujo aternativo:**|Ninguno|
 |**Postcondiciones:**|Ninguna|
+|**Referencias:**|Ninguna|
 ||
 #### **Supuesto 2: Sistema de compras➡️**
 En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, proveedor y administrador. Los compradores pueden agregar productos, consultar precios, finalizar la compra y consultar ofertas. Agregar productos implica marcar esos productos como bloqueados. Los vendedores también pueden consultar ofertas y consultar precios. Los proveedores pueden consultar precios, avisar de nuevos productos y consultar ofertas. Avisar de nuevos productos, de forma excepcional, realiza la incorporación de una oferta. Los proveedores también tienen una funcionalidad para avisar del fin de una oferta. Cuando se avisa del fin de una oferta, se ejecuta la funcionalidad de eliminar la oferta. Ambas funcionalidades de avisar del proveedor tienen en común que se encarga de enviar una notificación. Los administradores pueden consultar precios, consultar ofertas y eliminar productos. La funcionalidad de consultar precios incluye una funcionalidad de buscar productos que es similar a la funcionalidad de consultar productos de los compradores. Sin embargo, la funcionalidad de consultar productos añade una funcionalidad para verificar la disponibilidad. Para realizar una venta, un comprador y un vendedor participan de forma conjunta. En dicha operación, se lleva a cabo el acuerdo de un precio; excepcionalmente, durante la realización de la venta, se consultará el histórico de ventas.
@@ -349,6 +396,68 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 |**Flujo aternativo:**|Ninguno|
 |**Postcondiciones:**|Ninguna|
 ||
+
+
+|| |
+|-|:-:|
+|**ID:**|UC-03|
+|**Nombre:**|Consultar disponibilidades|
+|**Fecha:**|18/10/2022|
+|**Autor:**|Guillermo Morales|
+|**Descripcion:**|Permite al cliente ver si hay plazas disponibles|
+|**Actor:**|Cliente|
+|**Precondiciones:**|Ninguna|
+|**Flujo normal:**|1-Clickar la opcion para mostrar las disponibilidades 
+2-El sistema muestra las distintas opciones disponibles|
+|**Flujo aternativo:**|1-No queda ninguna opcion disponible, por lo que se muestra un mensaje informativo|
+|**Postcondiciones:**|Ninguna|
+| **Referencias**|UC-01|
+
+
+|| |
+|-|:-:|
+|**ID:**|UC-04|
+|**Nombre:**|Consultar reservas|
+|**Fecha:**|18/10/2022|
+|**Autor:**|Guillermo Morales|
+|**Descripcion:**|Permite al cliente ver si hay reservas realizadas a su nombre|
+|**Actor:**|Cliente|
+|**Precondiciones:**|El cliente debe estar registrado con su nombre de usuario o ID|
+|**Flujo normal:**|1-Acceder al apartado de reservas
+2-Seleccionar la opcion de mostrar reservas
+3-El sistema muestra una tabla con las reservas realizadas|
+|**Flujo aternativo:**|1-No hay ninguna reserva realizada, por lo que se muestra un mensaje informativo|
+|**Postcondiciones:**|Ninguna|
+| **Referencias**|UC-01|
+
+|| |
+|-|:-:|
+|**ID:**|UC-05|
+|**Nombre:**|Buscar elemento|
+|**Fecha:**|18/10/2022|
+|**Autor:**|Guillermo Morales|
+|**Descripcion:**|Permite al cliente buscar un elemento en concreto para agilizar busqueda|
+|**Actor:**|Cliente|
+|**Precondiciones:**|Ninguna|
+|**Flujo normal:**|1-El cliente escribe en el buscador el nombre del elemento
+2-El sistema muestra todos los elementos que contengan la cadena introducida en el buscador|
+|**Flujo aternativo:**|1-No hay ningun elemento, por lo que se muestra un mensaje informativo|
+|**Postcondiciones:**|Ninguna|
+| **Referencias**|UC-01|
+
+|| |
+|-|:-:|
+|**ID:**|UC-06|
+|**Nombre:**|Mostrar calendario|
+|**Fecha:**|18/10/2022|
+|**Autor:**|Guillermo Morales|
+|**Descripcion:**|Permite al cliente ver el calendario para consultar la disponibilidad|
+|**Actor:**|Cliente|
+|**Precondiciones:**|Ninguna|
+|**Flujo normal:**|1-Al acceder a la consulta de disponibilidades se muestra el calendario|
+|**Flujo aternativo:**|1-Si no hay disponibilidades no se muestra el calendario|
+|**Postcondiciones:**|Ninguna|
+| **Referencias**|UC-01, UC-03|
 
 #### **Supuesto 4: Fotografía Online➡️**
 En una aplicación de fotografía online, los clientes pueden visualizar las fotos, donde de forma excepcional se puede realizar una denuncia sobre la foto. Al denunciar una foto, se ha de introducir una explicación sobre la denuncia. Los clientes también pueden llevar a cabo consultas sobre las fotos, operación que es un caso particular de visualizar las fotos. Los controladores de fotos pueden indicar que una foto debe ser revisada. Esta funcionalidad es un caso general de la funcionalidad de denunciar foto. Además, los controladores también pueden editar la información de las fotos. En esta aplicación también participan usuarios de tipo vendedor. Los vendedores pueden escribir a los clientes para hacerles ofertas sobre los productos de la aplicación. De forma excepcional, al hacer una oferta pueden reducir el precio de un producto. Los vendedores también pueden buscar detalles en las fotos, operación que es un caso particular de visualizar fotos. Pero esa búsqueda conlleva la verificación de los datos introducidos. Por otro lado, los gestores de la aplicación pueden ver ofertas, bloquear ofertas, emitir facturas y editar facturas. La emisión de facturas requiere la participación de un software de facturación. El administrador de la tienda puede ver ofertas, emitir facturas, editar facturas, bloquear ofertas, crear usuarios y editar usuarios. Esta funcionalidad de ver ofertas también la pueden realizar los clientes. Editar usuarios tiene características en común con editar facturas. Crear usuarios conlleva el envío de un email en el que es necesario el uso de un gestor de correo.
