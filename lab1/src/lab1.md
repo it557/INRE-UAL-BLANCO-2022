@@ -307,7 +307,22 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **Postcondiciones** | Se actualiza el conjunto de ofertas activas y los productos afectados por la oferta eliminada vuelven a su precio anterior |
 | **Referencias** | UC-07 |
 
-| |  |
+|  |  |
+| --- | :---: |
+|  **ID**| UC-14 |
+|  **Nombre** | AvisarProveedor |
+|  **Fecha** | 18/10/2022 |
+|  **Autor** | Luca Daniel Gavriloaie |
+|  **Descripcion** | El proveedor podrá realizar avisos visibles en el sistema para determinados fines |
+|  **Actores** | Proveedor |
+|  **Precondiciones** | El proveedor debe estar autenticado en el sistema |
+|  **Flujo Normal** | 1. El proveedor pulsa crear un aviso <br> 2. El sistema lleva al proveedor a la interfaz de creación del aviso <br> 3. El proveedor debe configurar el aviso (información, fecha y hora, duración...) <br> 4. El proveedor crea el aviso <br> 5. El proveedor envía una notificación con el aviso |
+|  **Flujo Alternativo** | 3A. Si el proveedor pulsa enviar aviso sin completar la configuración necesaria, el sistema dará error y volverá a la vista de creación del aviso <br> 3B. Si la fecha y/o la hora seleccionadas ya vencieron, el sistema dará error |
+| **Postcondiciones** | Ninguna |
+| **Referencias** | UC-07, UC-16 |
+
+
+|  |  |
 | ---| :---: |
 |  **ID**| UC-15 |
 |  **Nombre** | BuscarProducto |
@@ -320,17 +335,6 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 |  **Flujo Alternativo** |  |
 | **Postcondiciones** |  |
 | **Referencias** | UC-03, UC-12 |
-|  **ID**| UC-14 |
-|  **Nombre** | AvisarProveedor |
-|  **Fecha** | 18/10/2022 |
-|  **Autor** | Luca Daniel Gavriloaie |
-|  **Descripcion** | El proveedor podrá realizar avisos visibles en el sistema para determinados fines |
-|  **Actores** | Proveedor |
-|  **Precondiciones** | El proveedor debe estar autenticado en el sistema |
-|  **Flujo Normal** | 1. El proveedor pulsa crear un aviso <br> 2. El sistema lleva al proveedor a la interfaz de creación del aviso <br> 3. El proveedor debe configurar el aviso (información, fecha y hora, duración...) <br> 4. El proveedor crea el aviso <br> 5. El proveedor envía una notificación con el aviso |
-|  **Flujo Alternativo** | 3A. Si el proveedor pulsa enviar aviso sin completar la configuración necesaria, el sistema dará error y volverá a la vista de creación del aviso <br> 3B. Si la fecha y/o la hora seleccionadas ya vencieron, el sistema dará error |
-| **Postcondiciones** | Ninguna |
-| **Referencias** | UC-07, UC-16 |
 
 | |  |
 | ---| :---: |
@@ -352,10 +356,10 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 |  **Nombre** | Agregar productos |
 |  **Fecha** | 18/10/2022 |
 |  **Autor** | Luca Daniel Gavriloaie |
-|  **Descripcion** | El comprador puede  |
-|  **Actores** |  |
-|  **Precondiciones** |  |
-|  **Flujo Normal** |  |
+|  **Descripcion** | El comprador puede agregar productos a la cesta de compra |
+|  **Actores** | Comprador |
+|  **Precondiciones** | El comprador debe estar autenticado en el sistema |
+|  **Flujo Normal** | 1. El comprador  |
 |  **Flujo Alternativo** |  |
 | **Postcondiciones** |  |
 | **Referencias** |  |
