@@ -153,8 +153,8 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 |  **Descripcion** | El proveedor avisará a los usuarios del sistema sobre el fin de una oferta |
 |  **Actores** | Proveedor |
 |  **Precondiciones** | El proveedor debe estar autenticado en el sistema |
-|  **Flujo Normal** | 1. El proveedor comprueba el estado de la oferta <br> 2. Si la fecha del fin de la oferta está cerca (menos de 3 días), el proveedor emitirá un aviso para todos los usuarios en forma de notificación <br> 3. El proveedor eliminará la oferta |
-|  **Flujo Alternativo** | 2A. Si para el fin de la oferta faltan más de 3 días, el proveedor no podrá avisar del fin de la oferta |
+|  **Flujo Normal** | 1. El proveedor comprueba el estado de la oferta <br> 2. El proveedor emitirá un aviso para todos los usuarios en forma de notificación <br> 3. El proveedor eliminará la oferta |
+|  **Flujo Alternativo** | 2A. El proveedor no podrá avisar del fin de la oferta si esta no va a finalizar |
 | **Postcondiciones** | Ninguna |
 | **Referencias** | UC-13, UC-14, UC-16 |
 
@@ -220,11 +220,39 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 
 | |  |
 | ---| :---: |
+|  **ID**| UC-14 |
+|  **Nombre** | AvisarProveedor |
+|  **Fecha** | 18/10/2022 |
+|  **Autor** | Luca Daniel Gavriloaie |
+|  **Descripcion** | El proveedor podrá realizar avisos visibles en el sistema para determinados fines |
+|  **Actores** | Proveedor |
+|  **Precondiciones** | El proveedor debe estar autenticado en el sistema |
+|  **Flujo Normal** | 1. El proveedor pulsa crear un aviso <br> 2. El sistema lleva al proveedor a la interfaz de creación del aviso <br> 3. El proveedor debe configurar el aviso (información, fecha y hora, duración...) <br> 4. El proveedor crea el aviso <br> 5. El proveedor envía una notificación con el aviso |
+|  **Flujo Alternativo** | 3A. Si el proveedor pulsa enviar aviso sin completar la configuración necesaria, el sistema dará error y volverá a la vista de creación del aviso <br> 3B. Si la fecha y/o la hora seleccionadas ya vencieron, el sistema dará error |
+| **Postcondiciones** | Ninguna |
+| **Referencias** | UC-07, UC-16 |
+
+| |  |
+| ---| :---: |
+| **ID**| UC-16 |
+| **Nombre** | EnviarNotificacion |
+| **Fecha** | 18/10/2022 |
+| **Autor** | Luca Daniel Gavriloaie |
+| **Descripcion** | Permite enviar una notificación a los usuarios del sistema |
+| **Actores** | Proveedor |
+| **Precondiciones** | El proveedor debe estar autenticado |
+| **Flujo Normal** | 1. El actor selecciona un aviso a notificar <br> 2. El actor solicita al sistema enviar una notificación <br> 3. El sistema consulta la información del aviso necesaria para generar la notificación <br> 4. El sistema envía la notificación |
+| **Flujo Alternativo** | 1A. Si no existe ningún aviso a notificar, el proceso termina |
+| **Postcondiciones** | Ninguna |
+| **Referencias** | UC-14 |
+
+| |  |
+| ---| :---: |
 |  **ID**| UC-17 |
 |  **Nombre** | Agregar productos |
-|  **Fecha** |  |
-|  **Autor** |  |
-|  **Descripcion** |  |
+|  **Fecha** | 18/10/2022 |
+|  **Autor** | Luca Daniel Gavriloaie |
+|  **Descripcion** | El comprador puede  |
 |  **Actores** |  |
 |  **Precondiciones** |  |
 |  **Flujo Normal** |  |
