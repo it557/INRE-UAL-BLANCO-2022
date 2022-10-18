@@ -341,6 +341,68 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 |**Postcondiciones:**|Ninguna|
 ||
 
+
+|| |
+|-|:-:|
+|**ID:**|UC-03|
+|**Nombre:**|Consultar disponibilidades|
+|**Fecha:**|18/10/2022|
+|**Autor:**|Guillermo Morales|
+|**Descripcion:**|Permite al cliente ver si hay plazas disponibles|
+|**Actor:**|Cliente|
+|**Precondiciones:**|Ninguna|
+|**Flujo normal:**|1-Clickar la opcion para mostrar las disponibilidades 
+2-El sistema muestra las distintas opciones disponibles|
+|**Flujo aternativo:**|1-No queda ninguna opcion disponible, por lo que se muestra un mensaje informativo|
+|**Postcondiciones:**|Ninguna|
+| **Referencias**|UC-01|
+
+
+|| |
+|-|:-:|
+|**ID:**|UC-04|
+|**Nombre:**|Consultar reservas|
+|**Fecha:**|18/10/2022|
+|**Autor:**|Guillermo Morales|
+|**Descripcion:**|Permite al cliente ver si hay reservas realizadas a su nombre|
+|**Actor:**|Cliente|
+|**Precondiciones:**|El cliente debe estar registrado con su nombre de usuario o ID|
+|**Flujo normal:**|1-Acceder al apartado de reservas
+2-Seleccionar la opcion de mostrar reservas
+3-El sistema muestra una tabla con las reservas realizadas|
+|**Flujo aternativo:**|1-No hay ninguna reserva realizada, por lo que se muestra un mensaje informativo|
+|**Postcondiciones:**|Ninguna|
+| **Referencias**|UC-01|
+
+|| |
+|-|:-:|
+|**ID:**|UC-05|
+|**Nombre:**|Buscar elemento|
+|**Fecha:**|18/10/2022|
+|**Autor:**|Guillermo Morales|
+|**Descripcion:**|Permite al cliente buscar un elemento en concreto para agilizar busqueda|
+|**Actor:**|Cliente|
+|**Precondiciones:**|Ninguna|
+|**Flujo normal:**|1-El cliente escribe en el buscador el nombre del elemento
+2-El sistema muestra todos los elementos que contengan la cadena introducida en el buscador|
+|**Flujo aternativo:**|1-No hay ningun elemento, por lo que se muestra un mensaje informativo|
+|**Postcondiciones:**|Ninguna|
+| **Referencias**|UC-01|
+
+|| |
+|-|:-:|
+|**ID:**|UC-06|
+|**Nombre:**|Mostrar calendario|
+|**Fecha:**|18/10/2022|
+|**Autor:**|Guillermo Morales|
+|**Descripcion:**|Permite al cliente ver el calendario para consultar la disponibilidad|
+|**Actor:**|Cliente|
+|**Precondiciones:**|Ninguna|
+|**Flujo normal:**|1-Al acceder a la consulta de disponibilidades se muestra el calendario|
+|**Flujo aternativo:**|1-Si no hay disponibilidades no se muestra el calendario|
+|**Postcondiciones:**|Ninguna|
+| **Referencias**|UC-01, UC-03|
+
 #### **Supuesto 4: Fotografía Online➡️**
 En una aplicación de fotografía online, los clientes pueden visualizar las fotos, donde de forma excepcional se puede realizar una denuncia sobre la foto. Al denunciar una foto, se ha de introducir una explicación sobre la denuncia. Los clientes también pueden llevar a cabo consultas sobre las fotos, operación que es un caso particular de visualizar las fotos. Los controladores de fotos pueden indicar que una foto debe ser revisada. Esta funcionalidad es un caso general de la funcionalidad de denunciar foto. Además, los controladores también pueden editar la información de las fotos. En esta aplicación también participan usuarios de tipo vendedor. Los vendedores pueden escribir a los clientes para hacerles ofertas sobre los productos de la aplicación. De forma excepcional, al hacer una oferta pueden reducir el precio de un producto. Los vendedores también pueden buscar detalles en las fotos, operación que es un caso particular de visualizar fotos. Pero esa búsqueda conlleva la verificación de los datos introducidos. Por otro lado, los gestores de la aplicación pueden ver ofertas, bloquear ofertas, emitir facturas y editar facturas. La emisión de facturas requiere la participación de un software de facturación. El administrador de la tienda puede ver ofertas, emitir facturas, editar facturas, bloquear ofertas, crear usuarios y editar usuarios. Esta funcionalidad de ver ofertas también la pueden realizar los clientes. Editar usuarios tiene características en común con editar facturas. Crear usuarios conlleva el envío de un email en el que es necesario el uso de un gestor de correo.
 
