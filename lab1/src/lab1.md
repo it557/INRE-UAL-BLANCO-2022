@@ -8,7 +8,7 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 ![Supuesto 1: Horarios](/out/lab0/src/horarios/horarios.svg)
 || |
 |-|:-:|
-|**ID:**|UC-00|
+|**ID:**|UC-01|
 |**Nombre:**|Modificar Horario|
 |**Fecha:**|30/09/2022|
 |**Autor:**|Daniel Perez|
@@ -24,7 +24,7 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 
 || |
 |-|:-:|
-|**ID:**|UC-01|
+|**ID:**|UC-02|
 |**Nombre:**|Dar de alta estudiantes|
 |**Fecha:**|30/09/2022|
 |**Autor:**|Daniel Perez|
@@ -34,12 +34,27 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 |**Flujo normal:**|1.Accedo a la web de la universidad<br>2.Entro como PAS <br>3.Accedo al listado de estudiantes<br>4.Doy de alta al estudiante seleccionado|
 |**Flujo aternativo:**|No existe el estudiante|
 |**Postcondiciones:**|El estudiante ya no esta registrado|
-|**Referencias:**|
+|**Referencias:**|Validar datos<br>Dar de alta estudiantes(PDI)|
 ||
 
 || |
 |-|:-:|
 |**ID:**|UC-03|
+|**Nombre:**|Proponer cambios en los horarios|
+|**Fecha:**|30/09/2022|
+|**Autor:**|Daniel Perez|
+|**Descripcion:**|Permite al actor PDI proponer cambios en los horarios|
+|**Actor:**|PDI|
+|**Precondiciones:**|Pertenecer al PDI de esta institucion|
+|**Flujo normal:**|1. Accede a la web de la universidad <br> 2.Entrar como PDI<br>3.Acceder a informacion del horario<br>4.Sugerir un cambio en el horario a la espera de ser aprobado|
+|**Flujo aternativo:**|Ninguno|
+|**Postcondiciones:**|Ninguna|
+|**Referencias:**|Ninguna|
+||
+
+|| |
+|-|:-:|
+|**ID:**|UC-04|
 |**Nombre:**|Validar datos|
 |**Fecha:**|30/09/2022|
 |**Autor:**|Daniel Perez|
@@ -49,20 +64,52 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 |**Flujo normal:**|1. Accede a la web de la universidad <br> 2.Entrar como PAS<br>3.Acceder a los datos de los estudiantes<br>4.Validar los datos|
 |**Flujo aternativo:**|Ninguno|
 |**Postcondiciones:**|Ninguna|
+|**Referencias:**|Dar de alta estudiantes|
+||
+
+|| |
+|-|:-:|
+|**ID:**|UC-05|
+|**Nombre:**|Dar de alta estudiantes (PDI)|
+|**Fecha:**|30/09/2022|
+|**Autor:**|Daniel Perez|
+|**Descripcion:**|Permite al actor PDI <br> dar de alta a los estudiantes|
+|**Actor:**|PDI|
+|**Precondiciones:**|Pertenecer al PDI de esta institucion|
+|**Flujo normal:**|1.Accedo a la web de la universidad<br>2.Entro como PAS <br>3.Accedo al listado de estudiantes<br>4.Doy de alta al estudiante seleccionado|
+|**Flujo aternativo:**|No existe el estudiante|
+|**Postcondiciones:**|El estudiante ya no esta registrado|
+|**Referencias:**|Dar de alta estudiantes<br>Buscar estudiantes en la lista de clase|
 ||
 
 || |
 |-|:-:|
 |**ID:**|UC-06|
+|**Nombre:**|Buscar estudiantes en la lista de clase|
+|**Fecha:**|30/09/2022|
+|**Autor:**|Daniel Perez|
+|**Descripcion:**|Permite al actor PDI <br> buscar estudiantes en la lista de clase|
+|**Actor:**|PDI|
+|**Precondiciones:**|Pertenecer al PDI de esta institucion|
+|**Flujo normal:**|1.Accedo a la web de la universidad<br>2.Entro como PAS <br>3.Accedo al listado de estudiantes<br>4.Busco al estudiante seleccionado|
+|**Flujo aternativo:**|No existe el estudiante|
+|**Postcondiciones:**|El estudiante ya no esta registrado|
+|**Referencias:**|Dar de alta estudiantes (PDI)|
+||
+
+|| |
+|-|:-:|
+|**ID:**|UC-07|
 |**Nombre:**|Consultar Horario|
 |**Fecha:**|30/09/2022|
 |**Autor:**|Daniel Perez|
 |**Descripcion:**|Permite al actor PAS modificar el horario|
-|**Actor:**|Estudiante|
+|**Actor:**|Estudiante, PDI, PAS|
 |**Precondiciones:**|Ser un estudiante de esta institucion|
 |**Flujo normal:**|1.Accedo a la web de la universidad<br>2.Entro como PAS<br>3.Accedo al horario<br>4.Consultar el horario|
 |**Flujo aternativo:**|Ninguno|
 |**Postcondiciones:**|Ninguna|
+|**Referencias:**|Ninguna|
 ||
 #### **Supuesto 2: Sistema de compras➡️**
 En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, proveedor y administrador. Los compradores pueden agregar productos, consultar precios, finalizar la compra y consultar ofertas. Agregar productos implica marcar esos productos como bloqueados. Los vendedores también pueden consultar ofertas y consultar precios. Los proveedores pueden consultar precios, avisar de nuevos productos y consultar ofertas. Avisar de nuevos productos, de forma excepcional, realiza la incorporación de una oferta. Los proveedores también tienen una funcionalidad para avisar del fin de una oferta. Cuando se avisa del fin de una oferta, se ejecuta la funcionalidad de eliminar la oferta. Ambas funcionalidades de avisar del proveedor tienen en común que se encarga de enviar una notificación. Los administradores pueden consultar precios, consultar ofertas y eliminar productos. La funcionalidad de consultar precios incluye una funcionalidad de buscar productos que es similar a la funcionalidad de consultar productos de los compradores. Sin embargo, la funcionalidad de consultar productos añade una funcionalidad para verificar la disponibilidad. Para realizar una venta, un comprador y un vendedor participan de forma conjunta. En dicha operación, se lleva a cabo el acuerdo de un precio; excepcionalmente, durante la realización de la venta, se consultará el histórico de ventas.

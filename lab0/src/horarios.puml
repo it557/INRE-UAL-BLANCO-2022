@@ -7,7 +7,7 @@ skinparam actorStyle Hollow
 Estudiante <|-- PAS
 Estudiante <|-- PDI
 :Dar de alta estudiantes: .right.>(Validar datos) : <<include>>
-usecase UC1 as "Dar de alta estudiantes
+usecase UC1 as "Dar de alta estudiantes (PDI)
 --
 **extension points**
 Buscar estudiantes en la lista de clase"
