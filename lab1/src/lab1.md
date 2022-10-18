@@ -69,6 +69,21 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 
 ![Supuerto 2: Sistema de Compras](/out/lab0/src/SistemaDeCompras/SistemaDeCompras.svg)
 
+| |  |
+| ---| :---: |
+|  **ID**| UC-01 |
+|  **Nombre** | ConsultarHistorico |
+|  **Fecha** | 18/10/2022 |
+|  **Autor** | Toderic Ioan Stefan |
+|  **Descripcion** | El actor comprador y vendedor pueden acceder a un historico de ventas realizadas  |
+|  **Actores** | Comprador, Vendedor |
+|  **Precondiciones** | |
+|  **Flujo Normal** | 1.El usuario actor o comprador accede al historial <br> 2.Se carga la seccion de la base de datos de los hisotricos <br> 3.Si existen ventas realizadas, devuelve un documento con todos los historicos hasta el momento |
+|  **Flujo Alternativo** | 3A. Si no existen ventas realizadas hasta el momento, el sistema devuelve un mensaje de "Sin ventas" |
+| **Postcondiciones** |  |
+| **Referencias** | UC-05 |
+
+
 | | |
 | ----------- | :-----------: |
 | **Identificador**: | UC-02 |
@@ -92,10 +107,10 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **Descripcion**| Permite consultar el historico de ventas  |
 | **Actores**| Comprador |
 | **Precondiciones**| El usuario debe estar logueado como comprador |
-| **Flujo Normal**|  1. El actor  pulsar el botón de Consultar productos para ver la lista de los productos <br> 2. El actor visualiza la disponibilidad del producto <br> 3. El actor busca el producto en el formulario de busqueda <br> 4. El sistema busca el prodcto en la tabla de producto <br> 5. Se comprueba la disponibildad del producto <br> 6. Si el producto esta disponible se le muestr al actor|
+| **Flujo Normal**|  1. El actor  pulsar el botón de Consultar productos para ver la lista de los productos <br> 2. El actor visualiza la disponibilidad del producto <br> 3. El actor busca el producto en el formulario de busqueda <br> 4. El sistema busca el prodcto en la tabla de producto <br> 5. Se comprueba la disponibildad del producto <br> 6. Si el producto esta disponible se le muestra al actor|
 | **Flujo Alternativo** | 4B. El producto no esta disponible, por lo que se le muestra al actor un mensaje de la no disponibilidad del producto |
 |**Postcondiciones**| |
-|**Referencias**| UC-01, UC-09 |
+|**Referencias**| UC-15, UC-09 |
 
 | | |
 | ----------- | :-----------: |
@@ -111,7 +126,7 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | | 3- Se muestra una pestaña nueva con los productos comprados y su precio correspondiente|
 |  **Flujo alternativo:** | Ninguno |
 |  **Postcondiciones:** |  |
-
+|**Referencias**|  |
 
 | |  |
 | ---| :---: |
@@ -174,15 +189,29 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 
 | |  |
 | ---| :---: |
+|  **ID**| UC-09 |
+|  **Nombre** | VerificarDisponibilidad |
+|  **Fecha** | 18/10/2022 |
+|  **Autor** | Ioan Stefan Toderic |
+|  **Descripcion** | Permite comprobar si el producto esta disponible o no  |
+|  **Actores** | Comprador |
+|  **Precondiciones** | Debe estar logueado como un comprador y consultar el producto |
+|  **Flujo Normal** | 1. Busca en la base de datos el producto seleccionado y devuelve el producto en caso de que este disponible |
+|  **Flujo Alternativo** | 1B. Busca en la base de datos el producto seleccionado y devuelve un mensaje en caso de que no este disponible |
+| **Postcondiciones** |  |
+| **Referencias** | UC-03 |
+
+| |  |
+| ---| :---: |
 |  **ID**| UC-10 |
 |  **Nombre** | AcordarPrecio |
 |  **Fecha** | 14/10/2022 |
-|  **Autor** | Luca Daniel Gavriloaie |
-|  **Descripcion** |  |
+|  **Autor** | Toderic Ioan Stefan  |
+|  **Descripcion** | El comprador y el vendedor se ponen de acuerdo en un precio común |
 |  **Actores** | Comprador, Vendedor |
 |  **Precondiciones** | Comprador y Vendedor deben estar autenticados en el sistema |
-|  **Flujo Normal** |  |
-|  **Flujo Alternativo** |  |
+|  **Flujo Normal** | 1.El vendedor establece un precio y lo envia a la base de datos del sistema <br> 2.El sistema establece el precio a dicho producto <br> 3.El comprador recibe una notificacion con el precio ajustado por el vendedor y decide si comprarlo <br> 4.Si acepta el precio, hace click sobre el boton Acordar <br> 5.El Sistema abre una pestaña con un formulario para poder comprar dicho producto <br> 6.El comprador acepta y envia el formulario <br> 7.Se realiza una petición de precio acordado al sistema |
+|  **Flujo Alternativo** | 4A. En caso que el comprador decida rechazar el precio propuesto por el vendedor, el sistema envia una petición al sistema "Precio denegado" |
 | **Postcondiciones** |  |
 | **Referencias** | UC-05 |
 
@@ -203,6 +232,19 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **Postcondiciones:** | Ninguna |
 | **Referencias:** | Administrador Vendedor y Proveedor heredan de Comun |
 
+| |  |
+| ---| :---: |
+|  **ID**| UC-12 |
+|  **Nombre** | ConsultarPrecio |
+|  **Fecha** | 18/10/2022 |
+|  **Autor** | Toderic Ioan Stefan |
+|  **Descripcion** | El sistema muestra el precio del producto seleccionado por el actor |
+|  **Actores** | Administrador, Vendedor, Proveedor |
+|  **Precondiciones** | Debe de ser uno  |
+|  **Flujo Normal** | 1. El actor envia una solicitud a la base de datos del producto <br> 2. El sistema devuelve la peticion con el precio del producto seleccionado |
+|  **Flujo Alternativo** |  |
+| **Postcondiciones** |  |
+| **Referencias** | UC-15 |
 
 | |  |
 | ---| :---: |
@@ -217,6 +259,20 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 |  **Flujo Alternativo** | 4A. La oferta no se podrá eliminar sin haber avisado previamente su finalización |
 | **Postcondiciones** | Se actualiza el conjunto de ofertas activas y los productos afectados por la oferta eliminada vuelven a su precio anterior |
 | **Referencias** | UC-07 |
+
+| |  |
+| ---| :---: |
+|  **ID**| UC-15 |
+|  **Nombre** | BuscarProducto |
+|  **Fecha** |  |
+|  **Autor** |  |
+|  **Descripcion** |  |
+|  **Actores** |  |
+|  **Precondiciones** |  |
+|  **Flujo Normal** |  |
+|  **Flujo Alternativo** |  |
+| **Postcondiciones** |  |
+| **Referencias** | UC-03, UC-12 |
 
 | |  |
 | ---| :---: |
