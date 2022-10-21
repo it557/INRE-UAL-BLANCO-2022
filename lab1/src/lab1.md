@@ -359,24 +359,24 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 |  **Descripcion** | El comprador puede agregar productos a la cesta de compra |
 |  **Actores** | Comprador |
 |  **Precondiciones** | El comprador debe estar autenticado en el sistema |
-|  **Flujo Normal** | 1. El comprador  |
-|  **Flujo Alternativo** |  |
-| **Postcondiciones** |  |
-| **Referencias** |  |
+|  **Flujo Normal** | 1. El comprador selecciona el producto deseado <br> 2. El comprador solicita al sistema agregar el producto a la cesta de compra pulsando un botón <br> 3. El sistema añade el producto a la cesta de compra del comprador <br> 4. El comprador bloquea el producto |
+|  **Flujo Alternativo** | 2A. Si no hay stock del producto, el sistema devuelve un error |
+| **Postcondiciones** | La lista con los productos en la cesta de la compra se actualiza |
+| **Referencias** | UC-18 |
 
 | |  |
 | ---| :---: |
 |  **ID**| UC-18 |
 |  **Nombre** | Bloquear productos |
-|  **Fecha** |  |
-|  **Autor** |  |
-|  **Descripcion** |  |
-|  **Actores** |  |
-|  **Precondiciones** |  |
-|  **Flujo Normal** |  |
-|  **Flujo Alternativo** |  |
-| **Postcondiciones** |  |
-| **Referencias** |  |
+|  **Fecha** | 21/10/2022 |
+|  **Autor** | Luca Daniel Gavriloaie |
+|  **Descripcion** | Permite bloquear una unidad de un producto reservandola para un comprador |
+|  **Actores** | Comprador |
+|  **Precondiciones** | El Comprador debe estar autenticado en el sistema |
+|  **Flujo Normal** | 1. El Comprador solicita al sistema bloquear un producto <br> 2. El Sistema registra dicho producto como bloqueado en la base de datos <br> 3. El Sistema marca el producto como reservado |
+|  **Flujo Alternativo** | 1A. Si el producto ya está bloqueado o reservado por otro comprador, se notificará de la circunstancia |
+| **Postcondiciones** | El producto se marca en la base de datos como bloqueado |
+| **Referencias** | UC-17 |
 
 
 #### **Supuesto 3: Compañía hotelera➡️**
