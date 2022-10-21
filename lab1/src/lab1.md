@@ -29,9 +29,23 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 | **Versión** | Versión 1 (21/10/2022) |
 | **Autores** | Daniel Pérez Escarcena |
 | **Fuentes** |  |
-| **Referencias** | - Buscar estudiantes <br> - Dar de alta estudiantes <br> - Validar estudiantes|
-| **Descripción** | El sistema deberá almacenar información correspondiente a los horarios de los estudiantes |
-| **Datos específicos** | - Identificador del horario <br> - Nombre del horario <br> - Fecha de incorporación  |
+| **Referencias** | - Buscar estudiantes en la lista de clase <br> - Dar de alta estudiantes <br> - Validar estudiantes|
+| **Descripción** | El sistema deberá almacenar información de los estudiantes |
+| **Datos específicos** | - Identificador del estudiante <br> - Nombre del estudiante <br> - Fecha de incorporación <br> - Fecha de nacimiento <br> -DNI |
+| **Importancia** | Muy importante |
+| **Estado** | Aceptado |
+| **Comentarios** | Ninguno |
+
+| |  |
+| ---| :---: |
+|  **ID** | IR-01 |
+| **Nombre** | Lista de clase |
+| **Versión** | Versión 1 (21/10/2022) |
+| **Autores** | Daniel Pérez Escarcena |
+| **Fuentes** |  |
+| **Referencias** | - Buscar estudiante en la lista de clase |
+| **Descripción** | El sistema deberá almacenar información correspondiente a los listados de clase de los estudiantes |
+| **Datos específicos** | - Identificador del listado <br> - Nombre del listado <br> - Fecha de incorporación <br> - Numero de estudiantes  |
 | **Importancia** | Muy importante |
 | **Estado** | Aceptado |
 | **Comentarios** | Ninguno |
