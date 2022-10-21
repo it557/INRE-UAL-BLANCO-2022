@@ -55,6 +55,21 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 | **Comentarios** | Ninguno |
 ||
 
+| |  |
+| ---| :---: |
+|  **ID** | IR-04 |
+| **Nombre** | Asignatura |
+| **Versión** | Versión 1 (21/10/2022) |
+| **Autores** | Daniel Pérez Escarcena |
+| **Fuentes** |  |
+| **Referencias** | - Buscar estudiante en la lista de clase |
+| **Descripción** | El sistema deberá almacenar información correspondiente a los listados de clase de los estudiantes para cada asignatura |
+| **Datos específicos** | - Identificador de la asignatura <br> - Nombre de la asignatura <br> - Fecha de incorporación <br> - Numero de estudiantes  |
+| **Importancia** | Muy importante |
+| **Estado** | Aceptado |
+| **Comentarios** | Ninguno |
+||
+
 <br>
 
 >#### **Definición de casos de uso**
