@@ -158,6 +158,8 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 |**Postcondiciones:**|Ninguna|
 |**Referencias:**|Ninguna|
 ||
+
+
 ### **Supuesto 2: Sistema de compras➡️**
 En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, proveedor y administrador. Los compradores pueden agregar productos, consultar precios, finalizar la compra y consultar ofertas. Agregar productos implica marcar esos productos como bloqueados. Los vendedores también pueden consultar ofertas y consultar precios. Los proveedores pueden consultar precios, avisar de nuevos productos y consultar ofertas. Avisar de nuevos productos, de forma excepcional, realiza la incorporación de una oferta. Los proveedores también tienen una funcionalidad para avisar del fin de una oferta. Cuando se avisa del fin de una oferta, se ejecuta la funcionalidad de eliminar la oferta. Ambas funcionalidades de avisar del proveedor tienen en común que se encarga de enviar una notificación. Los administradores pueden consultar precios, consultar ofertas y eliminar productos. La funcionalidad de consultar precios incluye una funcionalidad de buscar productos que es similar a la funcionalidad de consultar productos de los compradores. Sin embargo, la funcionalidad de consultar productos añade una funcionalidad para verificar la disponibilidad. Para realizar una venta, un comprador y un vendedor participan de forma conjunta. En dicha operación, se lleva a cabo el acuerdo de un precio; excepcionalmente, durante la realización de la venta, se consultará el histórico de ventas.
 
@@ -537,69 +539,50 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 |**Postcondiciones:**|Ninguna|
 ||
 
-
-
-|| |
-|-|:-:|
-|**ID:**|UC-02|
-|**Nombre:**|Consultar reservas|
-|**Fecha:**|07/10/2022|
-|**Autor:**|Daniel Perez|
-|**Descripcion:**|Hereda de consultar|
-|**Actor:**|Actor comun|
-|**Precondiciones:**|Ser un cliente del hotel|
-|**Flujo normal:**|1 Hospedarse en el hotel|
-|**Flujo aternativo:**|Ninguno|
-|**Postcondiciones:**|Ninguna|
-||
-
-
 || |
 |-|:-:|
 |**ID:**|UC-03|
-|**Nombre:**|Consultar disponibilidades|
-|**Fecha:**|18/10/2022|
-|**Autor:**|Guillermo Morales|
+|**Nombre:**|Consultar disponibilidad|
+|**Fecha:**|07/10/2022|
+|**Autor:**|Daniel Perez|
 |**Descripcion:**|Permite al cliente ver si hay plazas disponibles|
 |**Actor:**|Cliente|
 |**Precondiciones:**|Ninguna|
-|**Flujo normal:**|1-Clickar la opcion para mostrar las disponibilidades 
-2-El sistema muestra las distintas opciones disponibles|
+|**Flujo normal:**|1-Clickar la opcion para mostrar las disponibilidades <br>2-El sistema muestra las distintas opciones disponibles|
 |**Flujo aternativo:**|1-No queda ninguna opcion disponible, por lo que se muestra un mensaje informativo|
 |**Postcondiciones:**|Ninguna|
 | **Referencias**|UC-01|
-
+||
 
 || |
 |-|:-:|
 |**ID:**|UC-04|
-|**Nombre:**|Consultar reservas|
-|**Fecha:**|18/10/2022|
-|**Autor:**|Guillermo Morales|
-|**Descripcion:**|Permite al cliente ver si hay reservas realizadas a su nombre|
+|**Nombre:**|Buscar elemento|
+|**Fecha:**|07/10/2022|
+|**Autor:**|Daniel Perez|
+|**Descripcion:**|Permite al cliente buscar un elemento en concreto para agilizar busqueda|
 |**Actor:**|Cliente|
-|**Precondiciones:**|El cliente debe estar registrado con su nombre de usuario o ID|
-|**Flujo normal:**|1-Acceder al apartado de reservas
-2-Seleccionar la opcion de mostrar reservas
-3-El sistema muestra una tabla con las reservas realizadas|
-|**Flujo aternativo:**|1-No hay ninguna reserva realizada, por lo que se muestra un mensaje informativo|
+|**Precondiciones:**|Ninguna|
+|**Flujo normal:**|1-El cliente escribe en el buscador el nombre del elemento<br>2-El sistema muestra todos los elementos que contengan la cadena introducida en el buscador|
+|**Flujo aternativo:**|1-No hay ningun elemento, por lo que se muestra un mensaje informativo|
 |**Postcondiciones:**|Ninguna|
 | **Referencias**|UC-01|
+||
 
 || |
 |-|:-:|
 |**ID:**|UC-05|
-|**Nombre:**|Buscar elemento|
-|**Fecha:**|18/10/2022|
-|**Autor:**|Guillermo Morales|
-|**Descripcion:**|Permite al cliente buscar un elemento en concreto para agilizar busqueda|
+|**Nombre:**|Consultar reservas|
+|**Fecha:**|07/10/2022|
+|**Autor:**|Daniel Perez|
+|**Descripcion:**|Permite al cliente ver si hay reservas realizadas a su nombre|
 |**Actor:**|Cliente|
-|**Precondiciones:**|Ninguna|
-|**Flujo normal:**|1-El cliente escribe en el buscador el nombre del elemento
-2-El sistema muestra todos los elementos que contengan la cadena introducida en el buscador|
-|**Flujo aternativo:**|1-No hay ningun elemento, por lo que se muestra un mensaje informativo|
+|**Precondiciones:**|El cliente debe estar registrado con su nombre de usuario o ID|
+|**Flujo normal:**|1-Acceder al apartado de reservas<br>2-Seleccionar la opcion de mostrar reservas<br>3-El sistema muestra una tabla con las reservas realizadas|
+|**Flujo aternativo:**|1-No hay ninguna reserva realizada, por lo que se muestra un mensaje informativo|
 |**Postcondiciones:**|Ninguna|
 | **Referencias**|UC-01|
+||
 
 || |
 |-|:-:|
@@ -614,6 +597,98 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 |**Flujo aternativo:**|1-Si no hay disponibilidades no se muestra el calendario|
 |**Postcondiciones:**|Ninguna|
 | **Referencias**|UC-01, UC-03|
+||
+
+|| |
+|-|:-:|
+|**ID:**|UC-07|
+|**Nombre:**|Realizar ofertas|
+|**Fecha:**|07/10/2022|
+|**Autor:**|Daniel Perez|
+|**Descripcion:**|Permite al administrador ver si hay ofertas disponibles|
+|**Actor:**|Administrador|
+|**Precondiciones:**|El administrador debe estar registrado con su nombre de usuario o ID|
+|**Flujo normal:**|1-Acceder al apartado de ofertas<br>2-Seleccionar la opcion de mostrar ofertas<br>3-El sistema muestra una tabla con las ofertas disponibles|
+|**Flujo aternativo:**|1-No hay ninguna oferta disponible, por lo que se muestra un mensaje informativo|
+|**Postcondiciones:**|Ninguna|
+| **Referencias**||
+||
+
+|| |
+|-|:-:|
+|**ID:**|UC-08|
+|**Nombre:**|Gestionar peticion|
+|**Fecha:**|07/10/2022|
+|**Autor:**|Daniel Perez|
+|**Descripcion:**|Permite al administrador ver las peticiones realizadas|
+|**Actor:**|Administrador|
+|**Precondiciones:**|El administrador debe estar registrado con su nombre de usuario o ID|
+|**Flujo normal:**|1-Acceder al apartado de peticiones<br>2-Seleccionar la opcion de mostrar peticiones<br>3-El sistema muestra una tabla con las peticiones realizadas|
+|**Flujo aternativo:**|1-No hay ninguna peticion realizada, por lo que se muestra un mensaje informativo|
+|**Postcondiciones:**|Ninguna|
+| **Referencias**||
+||
+
+|| |
+|-|:-:|
+|**ID:**|UC-09|
+|**Nombre:**|Bloquear temporalmente una reserva|
+|**Fecha:**|07/10/2022|
+|**Autor:**|Daniel Perez|
+|**Descripcion:**|Permite al administrador bloquear una reserva temporalmente|
+|**Actor:**|Administrador|
+|**Precondiciones:**|El administrador debe estar registrado con su nombre de usuario o ID|
+|**Flujo normal:**|1-Acceder al apartado de reservas <br> 2- Seleccionar la opcion de mostrar reservas <br> 3-El sistema muestra una tabla con las reservas actuales <br> 4-Selecciona la que quiere bloquear temporalmente|
+|**Flujo aternativo:**|1-No hay ninguna reserva, por lo que se muestra un mensaje informativo|
+|**Postcondiciones:**|Ninguna|
+| **Referencias**|UC-11, UC-07|
+||
+
+|| |
+|-|:-:|
+|**ID:**|UC-10|
+|**Nombre:**|Gestionar nueva reserva|
+|**Fecha:**|07/10/2022|
+|**Autor:**|Daniel Perez|
+|**Descripcion:**|Permite al comercial gestionar una nueva reserva|
+|**Actor:**|Comercial|
+|**Precondiciones:**|El comercial debe estar registrado con su nombre de usuario o ID|
+|**Flujo normal:**|1-Acceder al apartado de reservas <br> 2- Seleccionar la opcion de mostrar reservas <br> 3-El sistema muestra una tabla con las reservas actuales <br> 4-Selecciona la opcion de añadir una nueva reserva|
+|**Flujo aternativo:**||
+|**Postcondiciones:**|Ninguna|
+| **Referencias**||
+||
+
+|| |
+|-|:-:|
+|**ID:**|UC-11|
+|**Nombre:**|Realizar oferta del comercial|
+|**Fecha:**|07/10/2022|
+|**Autor:**|Daniel Perez|
+|**Descripcion:**|Permite al administrador realizar una oferta|
+|**Actor:**|Administrador|
+|**Precondiciones:**|El administrador debe estar registrado con su nombre de usuario o ID|
+|**Flujo normal:**|1-Acceder al apartado de ofertas<br>2-Seleccionar la opcion de mostrar ofertas<br>3-El sistema muestra una tabla con las ofertas disponibles<br>4-Realizar una nueva oferta|
+|**Flujo aternativo:**||
+|**Postcondiciones:**|Ninguna|
+| **Referencias**|UC-07, UC-09, UC-12|
+||
+
+|| |
+|-|:-:|
+|**ID:**|UC-12|
+|**Nombre:**|Recalcular precio|
+|**Fecha:**|07/10/2022|
+|**Autor:**|Daniel Perez|
+|**Descripcion:**|Permite al administrador modificar el precio que ofrece una oferta|
+|**Actor:**|Administrador|
+|**Precondiciones:**|El administrador debe estar registrado con su nombre de usuario o ID|
+|**Flujo normal:**|1-Acceder al apartado de ofertas<br>2-Seleccionar la opcion de mostrar ofertas<br>3-El sistema muestra una tabla con las ofertas disponibles<br>4-Seleccionar una oferta concreta<br>5-Cambiar el precio de la oferta|
+|**Flujo aternativo:**||
+|**Postcondiciones:**|Ninguna|
+| **Referencias**|UC-07, UC-09, UC-11|
+||
+
 
 ### **Supuesto 4: Fotografía Online➡️**
 En una aplicación de fotografía online, los clientes pueden visualizar las fotos, donde de forma excepcional se puede realizar una denuncia sobre la foto. Al denunciar una foto, se ha de introducir una explicación sobre la denuncia. Los clientes también pueden llevar a cabo consultas sobre las fotos, operación que es un caso particular de visualizar las fotos. Los controladores de fotos pueden indicar que una foto debe ser revisada. Esta funcionalidad es un caso general de la funcionalidad de denunciar foto. Además, los controladores también pueden editar la información de las fotos. En esta aplicación también participan usuarios de tipo vendedor. Los vendedores pueden escribir a los clientes para hacerles ofertas sobre los productos de la aplicación. De forma excepcional, al hacer una oferta pueden reducir el precio de un producto. Los vendedores también pueden buscar detalles en las fotos, operación que es un caso particular de visualizar fotos. Pero esa búsqueda conlleva la verificación de los datos introducidos. Por otro lado, los gestores de la aplicación pueden ver ofertas, bloquear ofertas, emitir facturas y editar facturas. La emisión de facturas requiere la participación de un software de facturación. El administrador de la tienda puede ver ofertas, emitir facturas, editar facturas, bloquear ofertas, crear usuarios y editar usuarios. Esta funcionalidad de ver ofertas también la pueden realizar los clientes. Editar usuarios tiene características en común con editar facturas. Crear usuarios conlleva el envío de un email en el que es necesario el uso de un gestor de correo.
