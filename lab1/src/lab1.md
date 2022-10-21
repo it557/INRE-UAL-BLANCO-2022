@@ -32,7 +32,7 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 | **Versión** | Versión 1 (21/10/2022) |
 | **Autores** | Daniel Pérez Escarcena |
 | **Fuentes** |  |
-| **Referencias** | - Buscar estudiantes en la lista de clase <br> - Dar de alta estudiantes <br> - Validar estudiantes|
+| **Referencias** | - Consultar horario|
 | **Descripción** | El sistema deberá almacenar información de los estudiantes |
 | **Datos específicos** | - Identificador del estudiante <br> - Nombre del estudiante <br> - Fecha de incorporación <br> - Fecha de nacimiento <br> -DNI |
 | **Importancia** | Muy importante |
@@ -70,6 +70,36 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 | **Comentarios** | Ninguno |
 ||
 
+| |  |
+| ---| :---: |
+|  **ID** | IR-05 |
+| **Nombre** |PAS|
+| **Versión** | Versión 1 (21/10/2022) |
+| **Autores** | Daniel Pérez Escarcena |
+| **Fuentes** |  |
+| **Referencias** | - Modificar horario  <br> - Dar de alta estudiantes <br> - Validar datos|
+| **Descripción** | El sistema deberá almacenar la informacion de cada PAS |
+| **Datos específicos** | - Identificador del PAS <br> - Nombre del PAS <br> - Fecha de incorporación |
+| **Importancia** | Muy importante |
+| **Estado** | Aceptado |
+| **Comentarios** | Ninguno |
+||
+
+| |  |
+| ---| :---: |
+|  **ID** | IR-06 |
+| **Nombre** |PDI|
+| **Versión** | Versión 1 (21/10/2022) |
+| **Autores** | Daniel Pérez Escarcena |
+| **Fuentes** |  |
+| **Referencias** | - Proponer cambios en los horarios <br> - Dar de alta estudiantes <br> - Buscar estudiantes en la lista de clase |
+| **Descripción** | El sistema deberá almacenar la informacion de cada PDI |
+| **Datos específicos** | - Identificador del PDI <br> - Nombre del PDI <br> - Fecha de incorporación |
+| **Importancia** | Muy importante |
+| **Estado** | Aceptado |
+| **Comentarios** | Ninguno |
+||
+
 <br>
 
 >#### **Definición de casos de uso**
@@ -84,7 +114,7 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 |**Actor:**|PAS|
 |**Precondiciones:**|Pertenecer al PAS de esta institucion|
 |**Flujo normal:**|1.Accedo a la web de la universidad<br>2.Entro como PAS<br>3.Accedo al horario<br>4.Modifico el horario|
-|**Flujo aternativo:**|Ninguno|
+|**Flujo aternativo:**|No existe horario buscado|
 |**Postcondiciones:**|Ninguna|
 |**Referencias:**|Ninguna|
 ||
