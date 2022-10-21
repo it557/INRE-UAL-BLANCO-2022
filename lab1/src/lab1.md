@@ -263,7 +263,7 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 
 | |  |
 | ---| :---: |
-|  **ID** | IR-03 |
+|  **ID** | IR-04 |
 | **Nombre** | Avisos |
 | **Versión** | Versión 1 (21/10/2022) |
 | **Autores** | Luca Daniel Gavriloaie |
@@ -277,7 +277,7 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 
 | |  |
 | ---| :---: |
-|  **ID** | IR-04 |
+|  **ID** | IR-05 |
 | **Nombre** | Notificaciones |
 | **Versión** | Versión 1 (21/10/2022) |
 | **Autores** | Luca Daniel Gavriloaie |
@@ -285,6 +285,62 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **Referencias** | - Avisar fin de oferta <br> - Avisar (Proveedor) <br> - Enviar notificación |
 | **Descripción** | El sistema deberá almacenar información correspondiente a las notificaciones enviadas en el sistema de compras. En concreto: |
 | **Datos específicos** | - Fecha de la notificación <br> - Emisor de la notificación <br> - Aviso relacionado <br> - Destinatarios |
+| **Importancia** | Muy importante |
+| **Estado** | Aceptado |
+| **Comentarios** | Ninguno |
+
+| |  |
+| ---| :---: |
+|  **ID** | IR-06 |
+| **Nombre** | Comprador |
+| **Versión** | Versión 1 (21/10/2022) |
+| **Autores** | Daniel Perez Escarcena |
+| **Fuentes** |  |
+| **Referencias** | - Consultar producto <br> - Finalizar compra <br> -Realizar venta <br> - Verificar disponibilidad <br> - Acordar precio <br> -Consultar historico |
+| **Descripción** | El sistema deberá almacenar información correspondiente al comprador |
+| **Datos específicos** | - Nombre del comprador <br> - Nombre del producto  <br> - Precio <br> - En oferta (si o no) |
+| **Importancia** | Muy importante |
+| **Estado** | Aceptado |
+| **Comentarios** | Ninguno |
+
+| |  |
+| ---| :---: |
+|  **ID** | IR-07 |
+| **Nombre** | Administrador |
+| **Versión** | Versión 1 (21/10/2022) |
+| **Autores** | Daniel Perez Escarcena |
+| **Fuentes** |  |
+| **Referencias** | - Eliminar producto <br>- Consultar oferta<br> - Consultar precio<br>-Buscar producto |
+| **Descripción** | El sistema deberá almacenar información correspondiente al administrador |
+| **Datos específicos** | - Nombre del administrador <br> - Nombre del producto  <br> - Precio <br> - En oferta (si o no) |
+| **Importancia** | Muy importante |
+| **Estado** | Aceptado |
+| **Comentarios** | Ninguno |
+
+| |  |
+| ---| :---: |
+|  **ID** | IR-08 |
+| **Nombre** | Vendedor |
+| **Versión** | Versión 1 (21/10/2022) |
+| **Autores** | Daniel Perez Escarcena |
+| **Fuentes** |  |
+| **Referencias** | - Realizar venta <br> - Consultar historico <br>- Acordar precio <br>- Consultar oferta<br> - Consultar precio<br>-Buscar producto  |
+| **Descripción** | El sistema deberá almacenar información correspondiente al vendedor |
+| **Datos específicos** | - Nombre del vendedor <br> - Nombre del producto  <br> - Precio <br> - En oferta (si o no) <br> -Historico de ventas|
+| **Importancia** | Muy importante |
+| **Estado** | Aceptado |
+| **Comentarios** | Ninguno |
+
+| |  |
+| ---| :---: |
+|  **ID** | IR-09 |
+| **Nombre** | Proveedor |
+| **Versión** | Versión 1 (21/10/2022) |
+| **Autores** | Daniel Perez Escarcena |
+| **Fuentes** |  |
+| **Referencias** | - Avisar fin de oferta <br>- Avisar de nuevo producto<br>- Incorporar oferta<br> - Eliminar oferta<br> - Avisar proveedor<br>- Enviar notificacion <br>- Consultar oferta<br> - Consultar precio<br>-Buscar producto  |
+| **Descripción** | El sistema deberá almacenar información correspondiente al proveedor |
+| **Datos específicos** | - Nombre del proveedor <br> - Nombre del producto  <br> - Precio <br> - En oferta (si o no)|
 | **Importancia** | Muy importante |
 | **Estado** | Aceptado |
 | **Comentarios** | Ninguno |
