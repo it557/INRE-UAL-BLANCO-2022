@@ -301,7 +301,21 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 
 || |
 |-|:-:|
-|**ID:**|UC-00|
+|**ID:**|UC-01|
+|**Nombre:**|Consultar|
+|**Fecha:**|07/10/2022|
+|**Autor:**|Daniel Perez|
+|**Descripcion:**|Permite al cliente ver si hay plazas disponibles|
+|**Actor:**|Cliente|
+|**Precondiciones:**|Hereda de consultar|
+|**Flujo normal:**|1 Querer hospedarse en el hotel<br> 2. Consultar las disponibilidades|
+|**Flujo aternativo:**|Ninguno|
+|**Postcondiciones:**|Ninguna|
+||
+
+|| |
+|-|:-:|
+|**ID:**|UC-02|
 |**Nombre:**|Visualizar ofertas|
 |**Fecha:**|07/10/2022|
 |**Autor:**|Daniel Perez|
@@ -313,19 +327,7 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 |**Postcondiciones:**|Ninguna|
 ||
 
-|| |
-|-|:-:|
-|**ID:**|UC-01|
-|**Nombre:**|Consultar disponibilidades|
-|**Fecha:**|07/10/2022|
-|**Autor:**|Daniel Perez|
-|**Descripcion:**|Permite al cliente ver si hay plazas disponibles|
-|**Actor:**|Cliente|
-|**Precondiciones:**|Hereda de consultar|
-|**Flujo normal:**|1 Querer hospedarse en el hotel<br> 2. Consultar las disponibilidades|
-|**Flujo aternativo:**|Ninguno|
-|**Postcondiciones:**|Ninguna|
-||
+
 
 || |
 |-|:-:|

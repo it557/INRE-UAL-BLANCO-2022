@@ -1,0 +1,24 @@
+Nombre: Daniel Pérez Escarcena
+
+EJERCICIO DE CLASE 1
+CONTRATO: Nr contrato + Datos sucursal + Datos cliente + Características inmuebles + Características contrato + (Observaciones)
+DATOS SUCURSAL: Código sucursal + Situación + Datos empleado
+SITUACIÓN: Calle + Ciudad + CP + Teléfonos + Fax
+DATOS EMPLEADO: Nombre + Apellidos
+DATOS CLIENTE: Nombre + Apellidos + Dirección + (Teléfono)
+CARACTERÍSTICAS CONTRATO: [Compra | Venta] + Comisión + Paga comisión + Forma pago
+PAGA COMISIÓN: [Comprador | Vendedor]
+FORMA PAGO: Contado + Tarjeta + Talón
+CARACTERÍSTICAS INMUEBLE: Tipo inmueble + Nr habitaciones + Dotaciones deportivas + m2 + Precio
+TIPO INMUEBLE: Piso + Bungalow + Chalet + Parcela + Terreno rústico
+DOTACIONES DEPORTIVAS: Pistas de tenis + Squash + Polideportiva + Paddle + Piscina
+
+EJERCICIO DE CLASE 2
+FECHA = DIA + MES + AÑO
+DIA = NUM
+NUM = “1” – “31”
+MES = {CARÁCTER}
+CARÁCTER = [“A” – “Z” | “a” – “z”]
+AÑO = [- | +] + {CONNUM}
+CONNUM = {CARACTNUM}
+CARACTNUM = “0” – “9”
