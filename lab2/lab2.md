@@ -30,6 +30,7 @@ c.Rechazar basados en la información contable proporcionada por el director
 
 9.Si el departamento de finanzas aprobó, el proceso finaliza enviando un mensaje al proceso cliente.
 
+![Supuesto2](Supuesto2.svg)
 
 #### **Supuesto 3: Información revisada➡️**
 Un empleado envía una información para ser revisada. A un gerente se le envía la información para su revisión, quien tiene la potestad de aprobarla o rechazarla. Si se aprueba, el empleado recibe una notificación y el proceso culmina. De lo contrario al empleado se le envía la información para su corrección. El empleado procede a realizar los cambios y a enviar la información de vuelta. Luego se envía una notificación al gerente y el proceso culmina.

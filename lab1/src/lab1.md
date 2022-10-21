@@ -7,6 +7,8 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 
 ![Supuesto 1: Horarios](/out/lab0/src/horarios/horarios.svg)
 
+<br>
+
 >#### **Definición de requisitos de información**
 | |  |
 | ---| :---: |
@@ -17,7 +19,7 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 | **Fuentes** |  |
 | **Referencias** | - Consultar horario <br> - Modificar horario <br> - Proponer cambios en los horarios|
 | **Descripción** | El sistema deberá almacenar información correspondiente a los horarios de los estudiantes |
-| **Datos específicos** | - Identificador del horario <br> - Nombre del horario <br> - Fecha de incorporación  |
+| **Datos específicos** | - Identificador del horario <br> - Nombre del horario <br> - Fecha de incorporación <br> - Fecha de validez  |
 | **Importancia** | Muy importante |
 | **Estado** | Aceptado |
 | **Comentarios** | Ninguno |
@@ -53,6 +55,7 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 | **Comentarios** | Ninguno |
 ||
 
+<br>
 
 >#### **Definición de casos de uso**
 
