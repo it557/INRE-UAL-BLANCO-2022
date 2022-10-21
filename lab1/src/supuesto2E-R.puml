@@ -1,0 +1,75 @@
+@startuml
+
+entity "Productos"{
+    * idProducto: number
+    nombre: texto
+    precio: number
+}
+
+entity "Compradores"{
+    * idComprador: number
+    nombre: texto
+}
+
+entity "Comprador_agrega_Producto"{
+    * idProducto: number
+    * idComprador: number
+}
+
+entity "Vendedor_vende_Producto"{
+    * idProducto: number
+    * idVendedor: number
+}
+
+entity "Oferta_tiene_Producto"{
+    * idProducto: number
+    * idOferta: number
+}
+
+entity "Vendedores"{
+    * idVendedor: number
+    nombre: texto
+}
+
+entity "Proveedores"{
+    * idProveedor: number
+    nombre: texto
+}
+
+entity "Ofertas"{
+    * idOferta: number
+    nombre: texto
+    fechaInicio: date 
+    fechaFin: date 
+    activa: boolean
+}
+
+entity "Notificaciones"{
+    * idNotificacion: number
+    texto: texto
+}
+
+entity "Ventas" {
+    * idVenta: number
+    productos: texto
+    idComprador: number
+    idVendedor: number
+    fechaVenta: date
+}
+
+
+Productos }|..|| Comprador_agrega_Producto
+Comprador_agrega_Producto ||..|{ Compradores
+
+Productos }|..|| Oferta_tiene_Producto
+Oferta_tiene_Producto ||..|{ Ofertas
+
+Productos }|..|| Vendedor_vende_Producto
+Vendedor_vende_Producto ||..|{ Vendedores
+
+Productos }|..|| Proveedores
+Proveedores ||..|{ Notificaciones
+
+Productos }|..|| Ventas
+Ventas ||..|{ Vendedores
+Ventas ||..|{ Compradores
