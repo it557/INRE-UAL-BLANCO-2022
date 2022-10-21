@@ -287,7 +287,7 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 |  **Autor** | Toderic Ioan Stefan |
 |  **Descripcion** | El sistema muestra el precio del producto seleccionado por el actor |
 |  **Actores** | Administrador, Vendedor, Proveedor |
-|  **Precondiciones** | Debe de ser uno  |
+|  **Precondiciones** | Debe de ser estar logueado en el sistema como un administrador, un vendedor o un proveedor  |
 |  **Flujo Normal** | 1. El actor envia una solicitud a la base de datos del producto <br> 2. El sistema devuelve la peticion con el precio del producto seleccionado |
 |  **Flujo Alternativo** |  |
 | **Postcondiciones** |  |
@@ -307,19 +307,7 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **Postcondiciones** | Se actualiza el conjunto de ofertas activas y los productos afectados por la oferta eliminada vuelven a su precio anterior |
 | **Referencias** | UC-07 |
 
-| |  |
-| ---| :---: |
-|  **ID**| UC-15 |
-|  **Nombre** | BuscarProducto |
-|  **Fecha** |  |
-|  **Autor** |  |
-|  **Descripcion** |  |
-|  **Actores** |  |
-|  **Precondiciones** |  |
-|  **Flujo Normal** |  |
-|  **Flujo Alternativo** |  |
-| **Postcondiciones** |  |
-| **Referencias** | UC-03, UC-12 |
+
 |  **ID**| UC-14 |
 |  **Nombre** | AvisarProveedor |
 |  **Fecha** | 18/10/2022 |
@@ -331,6 +319,20 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 |  **Flujo Alternativo** | 3A. Si el proveedor pulsa enviar aviso sin completar la configuración necesaria, el sistema dará error y volverá a la vista de creación del aviso <br> 3B. Si la fecha y/o la hora seleccionadas ya vencieron, el sistema dará error |
 | **Postcondiciones** | Ninguna |
 | **Referencias** | UC-07, UC-16 |
+
+| |  |
+| ---| :---: |
+|  **ID**| UC-15 |
+|  **Nombre** | BuscarProducto |
+|  **Fecha** | 18/10/2022 |
+|  **Autor** | Toderic Ioan Stefan  |
+|  **Descripcion** | El comprador busca un producto en el sistema |
+|  **Actores** | Comprador |
+|  **Precondiciones** | El usuario debe estar logueado en el sistema como comprador |
+|  **Flujo Normal** | 1.El actor introduce en la barra de busqueda del sistema un nombre del producto <br> 2.El sistema devuelve un listado con los productos con el nombre similar disponibles en el sistema <br>  |
+|  **Flujo Alternativo** |  |
+| **Postcondiciones** |  |
+| **Referencias** | UC-03, UC-12 |
 
 | |  |
 | ---| :---: |
