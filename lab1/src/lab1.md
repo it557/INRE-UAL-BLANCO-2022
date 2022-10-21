@@ -21,6 +21,7 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 | **Importancia** | Muy importante |
 | **Estado** | Aceptado |
 | **Comentarios** | Ninguno |
+||
 
 | |  |
 | ---| :---: |
@@ -35,6 +36,7 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 | **Importancia** | Muy importante |
 | **Estado** | Aceptado |
 | **Comentarios** | Ninguno |
+||
 
 | |  |
 | ---| :---: |
@@ -49,6 +51,7 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 | **Importancia** | Muy importante |
 | **Estado** | Aceptado |
 | **Comentarios** | Ninguno |
+||
 
 
 >#### **Definición de casos de uso**
@@ -511,6 +514,39 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 
 ![Supuesto 3: Compañía hotelera](/out/lab0/src/companiaHotelera/companiaHotelera.svg)
 
+>#### **Definición de requisitos de información**
+| |  |
+| ---| :---: |
+|  **ID** | IR-01 |
+| **Nombre** | Reservas |
+| **Versión** | Versión 1 (21/10/2022) |
+| **Autores** | Daniel Pérez Escarcena |
+| **Fuentes** |  |
+| **Referencias** | - Consultar reservas <br> - Gestionar nueva reserva  <br> - Bloquear temporalmente una reserva|
+| **Descripción** | El sistema deberá almacenar información correspondiente a las ofertas disponibles|
+| **Datos específicos** | - Identificador de la oferta<br> - Nombre de la oferta <br> - Fecha de incorporación <br>- Precio de la oferta  |
+| **Importancia** | Muy importante |
+| **Estado** | Aceptado |
+| **Comentarios** | Ninguno |
+||
+
+| |  |
+| ---| :---: |
+|  **ID** | IR-02 |
+| **Nombre** | Ofertas |
+| **Versión** | Versión 1 (21/10/2022) |
+| **Autores** | Daniel Pérez Escarcena |
+| **Fuentes** |  |
+| **Referencias** | - Realizar oferta <br> - Visualizar oferta  <br> - Bloquear temporalmente una reserva|
+| **Descripción** | El sistema deberá almacenar información correspondiente a las ofertas disponibles|
+| **Datos específicos** | - Identificador de la oferta<br> - Nombre de la oferta <br> - Fecha de incorporación <br>- Precio de la oferta  |
+| **Importancia** | Muy importante |
+| **Estado** | Aceptado |
+| **Comentarios** | Ninguno |
+||
+
+>#### **Definición de casos de uso**
+
 || |
 |-|:-:|
 |**ID:**|UC-01|
@@ -534,7 +570,7 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 |**Descripcion:**|Permite al cliente visualizar las ofertas del hotel|
 |**Actor:**|Cliente|
 |**Precondiciones:**|Ser un cliente del hotel|
-|**Flujo normal:**|1 Hospedarse en el hotel|
+|**Flujo normal:**|1 Hospedarse en el hotel<br>2-Ver las ofertas disponibles del hotel|
 |**Flujo aternativo:**|Ninguno|
 |**Postcondiciones:**|Ninguna|
 ||
