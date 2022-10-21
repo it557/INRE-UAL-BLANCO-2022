@@ -1,13 +1,13 @@
 @startuml supuesto1E-R
 
-entity "Horario"{
+entity "Horario" as Horario{
     * idHorario : number
     nombre : text
     fechaIncorporacion: date
     fechaValidez: date
 }
 
-entity "Estudiante"{
+entity "Estudiante" as Estudiante{
     * idEstudiante : number
     nombre: text
     fechaIncorporacion : date
@@ -15,14 +15,14 @@ entity "Estudiante"{
     DNI : number
 }
 
-entity "ListaDeClase"{
+entity "ListaDeClase" as ListaDeClase{
     * idListado : number
     nombreListado : text
     fechaIncorporacion : date
     nrEstudiantes : number
 }
 
-entity "Asignatura"{
+entity "Asignatura" as Asignatura{
     * idAsignatura : number
     nombre : text
     fechaIncorporacion : date
@@ -31,13 +31,76 @@ entity "Asignatura"{
     curso : number
 }
 
-entity "PDI"{
-
+entity "PDI" as PDI{
+    * idPDI : number
+    nombre : text
+    fechaContratación : date
 }
 
-entity "PAS"{
-    
+entity "PAS" as PAS{
+    * idPAS : number
+    nombre : text
+    fechaContratacion : date
 }
+
+entity "Estudiante_consulta_horario" as ECH{
+    * idHorario : number
+    * idEstudiante : number
+}
+Horario }|--|| ECH
+ECH ||--|{ Estudiante
+
+entity "PAS_consulta_horario" as PCH{
+    * idHorario : number
+    * idPAS : number
+}
+Horario }|--|| PCH
+PCH ||--|{ PAS
+
+entity "PDI_consulta_horario" as PDICH{
+    * idHorario : number
+    * idPDI : number
+}
+Horario }|--|| PDICH
+PDICH ||--|{ PDI
+
+entity "PAS_modifica_horario" as PASmodH{
+    * idHorario : number
+    * idPAS : number
+}
+Horario }|--|| PASmodH
+PASmodH ||--|{ PAS
+
+entity "PDI_propone_cambio_horario" as PDIprop{
+    * idHorario : number
+    * idPDI : number
+}
+Horario }|--|| PDIprop
+PDIprop ||--|{ PDI
+
+entity "Estudiante_esta_en" as EEE{
+    * idEstudiante: number
+    * idListado : number
+}
+Estudiante }|--|| EEE
+EEE ||--|{ ListaDeClase
+
+entity "Estudiante_cursa" as EC{
+    * idEstudiante : number
+    * idAsignatura : number
+}
+Estudiante }|--|| EC
+EC ||--|{ Asignatura
+
+ListaDeClase ||--|| Asignatura : tiene
+
+PDI ||--|{ Estudiante : Dar de alta
+PAS ||--|{ Estudiante : Dar de alta
+
+
+
+
+
 
 
 

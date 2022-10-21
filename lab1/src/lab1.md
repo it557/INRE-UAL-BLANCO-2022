@@ -79,7 +79,7 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 | **Fuentes** |  |
 | **Referencias** | - Modificar horario  <br> - Dar de alta estudiantes <br> - Validar datos|
 | **Descripción** | El sistema deberá almacenar la informacion de cada PAS |
-| **Datos específicos** | - Identificador del PAS <br> - Nombre del PAS <br> - Fecha de incorporación |
+| **Datos específicos** | - Identificador del PAS <br> - Nombre del PAS <br> - Fecha de contratacion |
 | **Importancia** | Muy importante |
 | **Estado** | Aceptado |
 | **Comentarios** | Ninguno |
@@ -94,7 +94,7 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 | **Fuentes** |  |
 | **Referencias** | - Proponer cambios en los horarios <br> - Dar de alta estudiantes <br> - Buscar estudiantes en la lista de clase |
 | **Descripción** | El sistema deberá almacenar la informacion de cada PDI |
-| **Datos específicos** | - Identificador del PDI <br> - Nombre del PDI <br> - Fecha de incorporación |
+| **Datos específicos** | - Identificador del PDI <br> - Nombre del PDI <br> - Fecha de contratación |
 | **Importancia** | Muy importante |
 | **Estado** | Aceptado |
 | **Comentarios** | Ninguno |
