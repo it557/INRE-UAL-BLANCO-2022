@@ -545,6 +545,37 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 | **Comentarios** | Ninguno |
 ||
 
+| |  |
+| ---| :---: |
+|  **ID** | IR-03 |
+| **Nombre** | Precio |
+| **Versión** | Versión 1 (21/10/2022) |
+| **Autores** | Daniel Pérez Escarcena |
+| **Fuentes** |  |
+| **Referencias** | - Recalcular precio |
+| **Descripción** | El sistema deberá almacenar información correspondiente a los precios de las ofertas disponibles|
+| **Datos específicos** | - Identificador de la oferta<br> - Nombre de la oferta <br> - Fecha de incorporación <br>- Precio de la oferta  |
+| **Importancia** | Muy importante |
+| **Estado** | Aceptado |
+| **Comentarios** | Ninguno |
+||
+
+| |  |
+| ---| :---: |
+|  **ID** | IR-04 |
+| **Nombre** | Peticiones |
+| **Versión** | Versión 1 (21/10/2022) |
+| **Autores** | Daniel Pérez Escarcena |
+| **Fuentes** |  |
+| **Referencias** | - Gestionar peticion|
+| **Descripción** | El sistema deberá almacenar información correspondiente a las peticiones que hacen los clientes|
+| **Datos específicos** | - Identificador de la peticion<br> - Nombre de la peticion <br> - Fecha de incorporacion|
+| **Importancia** | Muy importante |
+| **Estado** | Aceptado |
+| **Comentarios** | Ninguno |
+||
+
+
 >#### **Definición de casos de uso**
 
 || |
