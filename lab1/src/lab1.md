@@ -64,7 +64,7 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 | **Fuentes** |  |
 | **Referencias** | - Buscar estudiante en la lista de clase |
 | **Descripción** | El sistema deberá almacenar información correspondiente a los listados de clase de los estudiantes para cada asignatura |
-| **Datos específicos** | - Identificador de la asignatura <br> - Nombre de la asignatura <br> - Fecha de incorporación <br> - Numero de estudiantes  |
+| **Datos específicos** | - Identificador de la asignatura <br> - Nombre de la asignatura <br> - Fecha de incorporación <br> - Numero de estudiantes <br> - Profesor <br> - Curso |
 | **Importancia** | Muy importante |
 | **Estado** | Aceptado |
 | **Comentarios** | Ninguno |
