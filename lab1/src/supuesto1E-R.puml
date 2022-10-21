@@ -1,0 +1,13 @@
+@startuml supuesto1E-R
+
+class producto {
+    hola: string
+}
+
+
+
+
+
+
+
+@enduml
