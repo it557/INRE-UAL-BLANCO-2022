@@ -6,6 +6,39 @@
 En una universidad, el personal del PDI, el personal del PAS y los estudiantes pueden consultar horarios. Por su parte, el personal del PAS puede modificar horarios y dar de alta estudiantes. El personal de PDI puede proponer cambios en los horarios y dar de alta estudiantes. La funcionalidad de dar de alta estudiantes del PAS realiza una verificación de los datos del estudiante. Sin embargo, la funcionalidad de dar de alta estudiantes del PDI, además de verificar los datos también permite de forma excepcional realizar la búsqueda en las listas de clase de sus asignaturas.
 
 ![Supuesto 1: Horarios](/out/lab0/src/horarios/horarios.svg)
+
+>#### **Definición de requisitos de información**
+| |  |
+| ---| :---: |
+|  **ID** | IR-01 |
+| **Nombre** | Horario |
+| **Versión** | Versión 1 (21/10/2022) |
+| **Autores** | Daniel Pérez Escarcena |
+| **Fuentes** |  |
+| **Referencias** | - Consultar horario <br> - Modificar horario <br> - Proponer cambios en los horarios|
+| **Descripción** | El sistema deberá almacenar información correspondiente a los horarios de los estudiantes |
+| **Datos específicos** | - Identificador del horario <br> - Nombre del horario <br> - Fecha de incorporación  |
+| **Importancia** | Muy importante |
+| **Estado** | Aceptado |
+| **Comentarios** | Ninguno |
+
+| |  |
+| ---| :---: |
+|  **ID** | IR-02 |
+| **Nombre** | Estudiante |
+| **Versión** | Versión 1 (21/10/2022) |
+| **Autores** | Daniel Pérez Escarcena |
+| **Fuentes** |  |
+| **Referencias** | - Buscar estudiantes <br> - Dar de alta estudiantes <br> - Validar estudiantes|
+| **Descripción** | El sistema deberá almacenar información correspondiente a los horarios de los estudiantes |
+| **Datos específicos** | - Identificador del horario <br> - Nombre del horario <br> - Fecha de incorporación  |
+| **Importancia** | Muy importante |
+| **Estado** | Aceptado |
+| **Comentarios** | Ninguno |
+
+
+>#### **Definición de casos de uso**
+
 || |
 |-|:-:|
 |**ID:**|UC-01|
