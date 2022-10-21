@@ -1,7 +1,42 @@
 @startuml supuesto1E-R
 
-class producto {
-    hola: string
+entity "Horario"{
+    * idHorario : number
+    nombre : text
+    fechaIncorporacion: date
+    fechaValidez: date
+}
+
+entity "Estudiante"{
+    * idEstudiante : number
+    nombre: text
+    fechaIncorporacion : date
+    fechaNacimiento : date
+    DNI : number
+}
+
+entity "ListaDeClase"{
+    * idListado : number
+    nombreListado : text
+    fechaIncorporacion : date
+    nrEstudiantes : number
+}
+
+entity "Asignatura"{
+    * idAsignatura : number
+    nombre : text
+    fechaIncorporacion : date
+    nrEstudiantes : number
+    profesor : text
+    curso : number
+}
+
+entity "PDI"{
+
+}
+
+entity "PAS"{
+    
 }
 
 
