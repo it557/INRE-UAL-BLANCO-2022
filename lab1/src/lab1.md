@@ -38,7 +38,7 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 
 | |  |
 | ---| :---: |
-|  **ID** | IR-01 |
+|  **ID** | IR-03 |
 | **Nombre** | Lista de clase |
 | **Versión** | Versión 1 (21/10/2022) |
 | **Autores** | Daniel Pérez Escarcena |
