@@ -1,0 +1,27 @@
+@startuml supuesto3E-R
+
+entity "Reservas" as Reservas{
+    * idReserva : number
+
+}
+
+entity "Ofertas" as Ofertas{
+
+}
+
+entity "Precio" as Precio{
+
+}
+
+entity "Peticiones" as Peticiones{
+
+}
+
+
+
+
+
+
+
+
+@enduml

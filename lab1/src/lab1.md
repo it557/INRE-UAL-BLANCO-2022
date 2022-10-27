@@ -627,8 +627,8 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 | **Autores** | Daniel Pérez Escarcena |
 | **Fuentes** |  |
 | **Referencias** | - Consultar reservas <br> - Gestionar nueva reserva  <br> - Bloquear temporalmente una reserva|
-| **Descripción** | El sistema deberá almacenar información correspondiente a las ofertas disponibles|
-| **Datos específicos** | - Identificador de la oferta<br> - Nombre de la oferta <br> - Fecha de incorporación <br>- Precio de la oferta  |
+| **Descripción** | El sistema deberá almacenar información correspondiente a las reservas disponibles|
+| **Datos específicos** | - Identificador de la reserva<br> - Nombre de la reserva <br> - Fecha de la reserva <br> - Duración de la reserva (en días) <br> - Precio de la reserva <br> - Habitación |
 | **Importancia** | Muy importante |
 | **Estado** | Aceptado |
 | **Comentarios** | Ninguno |
@@ -643,7 +643,7 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 | **Fuentes** |  |
 | **Referencias** | - Realizar oferta <br> - Visualizar oferta  <br> - Bloquear temporalmente una reserva|
 | **Descripción** | El sistema deberá almacenar información correspondiente a las ofertas disponibles|
-| **Datos específicos** | - Identificador de la oferta<br> - Nombre de la oferta <br> - Fecha de incorporación <br>- Precio de la oferta  |
+| **Datos específicos** | - Identificador de la oferta<br> - Nombre de la oferta <br> - Fecha de inicio <br> - Fecha de fin <br> - Precio de la oferta |
 | **Importancia** | Muy importante |
 | **Estado** | Aceptado |
 | **Comentarios** | Ninguno |
@@ -658,7 +658,7 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 | **Fuentes** |  |
 | **Referencias** | - Recalcular precio |
 | **Descripción** | El sistema deberá almacenar información correspondiente a los precios de las ofertas disponibles|
-| **Datos específicos** | - Identificador de la oferta<br> - Nombre de la oferta <br> - Fecha de incorporación <br>- Precio de la oferta  |
+| **Datos específicos** | - Valor del precio |
 | **Importancia** | Muy importante |
 | **Estado** | Aceptado |
 | **Comentarios** | Ninguno |
@@ -678,6 +678,52 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 | **Estado** | Aceptado |
 | **Comentarios** | Ninguno |
 ||
+
+| |  |
+| ---| :---: |
+|  **ID** | IR-05 |
+| **Nombre** | Cliente |
+| **Versión** | Versión 1 (28/10/2022) |
+| **Autores** | Luca Daniel Gavriloaie |
+| **Fuentes** |  |
+| **Referencias** | - Visualizar ofertas <br> - Consultar disponibilidad |
+| **Descripción** | El sistema deberá almacenar información correspondiente a los clientes |
+| **Datos específicos** | - NIF <br> - Nombre <br> - Edad |
+| **Importancia** | Muy importante |
+| **Estado** | Aceptado |
+| **Comentarios** | Ninguno |
+||
+
+| |  |
+| ---| :---: |
+|  **ID** | IR-06 |
+| **Nombre** | Comercial |
+| **Versión** | Versión 1 (28/10/2022) |
+| **Autores** | Luca Daniel Gavriloaie |
+| **Fuentes** |  |
+| **Referencias** | - Gestionar nueva reserva <br> - Consultar reservas |
+| **Descripción** | El sistema deberá almacenar información correspondiente a los comerciales |
+| **Datos específicos** | - NIF <br> - Nombre <br> - Edad <br> - Empresa |
+| **Importancia** | Muy importante |
+| **Estado** | Aceptado |
+| **Comentarios** | Ninguno |
+||
+
+| |  |
+| ---| :---: |
+|  **ID** | IR-07 |
+| **Nombre** | Administrador |
+| **Versión** | Versión 1 (28/10/2022) |
+| **Autores** | Luca Daniel Gavriloaie |
+| **Fuentes** |  |
+| **Referencias** | - Consultar reservas <br> - Realizar oferta <br> - Gestionar petición |
+| **Descripción** | El sistema deberá almacenar información correspondiente a los administradores |
+| **Datos específicos** | - NIF <br> - Nombre <br> - Edad |
+| **Importancia** | Muy importante |
+| **Estado** | Aceptado |
+| **Comentarios** | Ninguno |
+||
+
 
 
 >#### **Definición de casos de uso**
