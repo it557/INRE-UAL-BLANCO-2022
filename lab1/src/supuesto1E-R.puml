@@ -13,6 +13,8 @@ entity "Estudiante" as Estudiante{
     fechaIncorporacion : date
     fechaNacimiento : date
     DNI : number
+    idPDI : number <<FK>>
+    idPAS : number <<FK>>
 }
 
 entity "ListaDeClase" as ListaDeClase{
@@ -92,10 +94,22 @@ entity "Estudiante_cursa" as EC{
 Estudiante }|--|| EC
 EC ||--|{ Asignatura
 
-ListaDeClase ||--|| Asignatura : tiene
+ListaDeClase ||--|| Asignatura
 
-PDI ||--|{ Estudiante : Dar de alta
-PAS ||--|{ Estudiante : Dar de alta
+PDI ||..|{ Estudiante
+PAS ||..|{ Estudiante
+
+entity "PDI_busca_en_lista" as pbl{
+    * idPDI : number
+    * idListado : number
+}
+PDI }|--|| pbl
+pbl ||--|{ ListaDeClase
+
+
+
+
+
 
 
 
