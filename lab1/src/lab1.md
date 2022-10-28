@@ -102,6 +102,10 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 
 <br>
 
+![Supuesto 1: Horarios. Diagrama Entidad - Relación](/out/lab1/src/supuesto1E-R/supuesto1E-R.svg)
+
+<br>
+
 >#### **Definición de casos de uso**
 
 || |
@@ -344,6 +348,10 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **Importancia** | Muy importante |
 | **Estado** | Aceptado |
 | **Comentarios** | Ninguno |
+
+<br>
+
+![Supuesto 2: Sistema de compras. Diagrama Entidad - Relación]()
 
 <br>
 
@@ -724,6 +732,20 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 | **Comentarios** | Ninguno |
 ||
 
+| |  |
+| ---| :---: |
+|  **ID** | IR-08 |
+| **Nombre** | Disponibilidades |
+| **Versión** | Versión 1 (28/10/2022) |
+| **Autores** | Luca Daniel Gavriloaie |
+| **Fuentes** |  |
+| **Referencias** | - Consultar disponibilidad <br> - Mostrar calendario |
+| **Descripción** | El sistema deberá almacenar información correspondiente a las disponibilidades |
+| **Datos específicos** | - Habitación <br> - Fecha |
+| **Importancia** | Muy importante |
+| **Estado** | Aceptado |
+| **Comentarios** | Ninguno |
+||
 
 
 >#### **Definición de casos de uso**

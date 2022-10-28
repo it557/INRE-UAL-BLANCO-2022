@@ -2,26 +2,53 @@
 
 entity "Reservas" as Reservas{
     * idReserva : number
-
+    nombre : text
+    fecha : date
+    duracion(dias) : number
+    precio : number
+    habitacion : number
 }
 
 entity "Ofertas" as Ofertas{
-
+    * idOferta : number
+    nombre : text
+    fechaInicio : date
+    fechaFin : date
+    precio : number
 }
 
 entity "Precio" as Precio{
-
+    * valor : number
 }
 
 entity "Peticiones" as Peticiones{
-
+    * idPeticion : number
+    nombre : text
+    fecha : date
 }
 
+entity "Cliente" as Cliente{
+    * NIF : number
+    nombre : text
+    edad : number
+}
 
+entity "Comercial" as Comercial{
+    * NIF : number
+    nombre : text
+    edad : number
+    empresa : text
+}
 
+entity "Administrador" as Administrador{
+    * NIF : number
+    nombre : text
+    edad : number
+}
 
-
-
-
+entity "Disponibilidades" as Disponibilidades{
+    * nrHabitacion : number
+    fecha : date
+}
 
 @enduml
