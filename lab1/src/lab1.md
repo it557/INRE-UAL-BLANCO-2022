@@ -366,7 +366,7 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 |  **Autor** | Toderic Ioan Stefan |
 |  **Descripcion** | El actor comprador y vendedor pueden acceder a un historico de ventas realizadas  |
 |  **Actores** | Comprador, Vendedor |
-|  **Precondiciones** | |
+|  **Precondiciones** | El usuario debe estar logueado como Comprador o Vendedor|
 |  **Flujo Normal** | 1.El usuario actor o comprador accede al historial <br> 2.Se carga la seccion de la base de datos de los hisotricos <br> 3.Si existen ventas realizadas, devuelve un documento con todos los historicos hasta el momento |
 |  **Flujo Alternativo** | 3A. Si no existen ventas realizadas hasta el momento, el sistema devuelve un mensaje de "Sin ventas" |
 | **Postcondiciones** |  |
@@ -382,7 +382,7 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 |  **Descripcion:** | Boton opcional para incorporar una oferta   |
 |  **Actores:** | Proveedor |
 |  **Precondiciones:** | El usuario debe estar logueado como proveedor|
-|  **Flujo normal:** | 1. El actor busca el producto en el formulario <br> 2. Si se le incorpora la oferta, el producto se vera modificado el precio y se guarda con oferta|
+|  **Flujo normal:** | 1.Escoge la oferta y los productos a asociar <br> 2. El actor busca el producto en el formulario <br> 3. Si se le incorpora la oferta, el producto se vera modificado el precio y se guarda con oferta|
 |  **Flujo alternativo:** | 2.B Si no se incorpora la oferta el producto se guarda sin oferta |
 |  **Postcondiciones:** | Modificar el precio del producto |
 | **Referencias**|UC-08|
@@ -396,7 +396,7 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **Descripcion**| Permite consultar el historico de ventas  |
 | **Actores**| Comprador |
 | **Precondiciones**| El usuario debe estar logueado como comprador |
-| **Flujo Normal**|  1. El actor  pulsar el botón de Consultar productos para ver la lista de los productos <br> 2. El actor visualiza la disponibilidad del producto <br> 3. El actor busca el producto en el formulario de busqueda <br> 4. El sistema busca el prodcto en la tabla de producto <br> 5. Se comprueba la disponibildad del producto <br> 6. Si el producto esta disponible se le muestra al actor|
+| **Flujo Normal**|  1. El actor  pulsar el botón de Consultar productos para ver la lista de los productos en el campo de busqueda <br> 2. El actor busca el producto en el formulario de busqueda  <br> 3. El actor visualiza la disponibilidad del producto 4. El sistema busca el prodcto en la tabla de producto <br> 5. Se comprueba la disponibildad del producto <br> 6. Si el producto esta disponible se le muestra al actor|
 | **Flujo Alternativo** | 4B. El producto no esta disponible, por lo que se le muestra al actor un mensaje de la no disponibilidad del producto |
 |**Postcondiciones**| |
 |**Referencias**| UC-15, UC-09 |
