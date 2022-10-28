@@ -100,6 +100,7 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 | **Comentarios** | Ninguno |
 ||
 
+#### **Diagrama entidad relacion**
 <br>
 
 ![Supuesto 1: Horarios. Diagrama Entidad - Relación](/out/lab1/src/supuesto1E-R/supuesto1E-R.svg)
@@ -349,6 +350,7 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **Estado** | Aceptado |
 | **Comentarios** | Ninguno |
 
+**Diagrama entidad relacion**
 <br>
 
 ![Supuesto 2: Sistema de compras. Diagrama Entidad - Relación]()
@@ -747,6 +749,10 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 | **Comentarios** | Ninguno |
 ||
 
+**Diagrama entidad relacion**
+<br>
+
+<br>
 
 >#### **Definición de casos de uso**
 
