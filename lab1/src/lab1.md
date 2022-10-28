@@ -353,7 +353,7 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 **Diagrama entidad relacion**
 <br>
 
-![Supuesto 2: Sistema de compras. Diagrama Entidad - Relación]()
+![Supuesto 2: Sistema de compras. Diagrama Entidad - Relación](/out/lab1/src/supuesto2E-R/supuesto2E-R.svg)
 
 <br>
 
