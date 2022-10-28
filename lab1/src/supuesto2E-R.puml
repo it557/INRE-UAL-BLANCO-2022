@@ -1,4 +1,4 @@
-@startuml
+@startuml supuesto2E-R
 
 entity "Productos"{
     * idProducto: number
