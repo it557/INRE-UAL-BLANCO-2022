@@ -18,11 +18,11 @@ Después de un incendio, por un lado se necesita obtener información de nuestra
 
 6.Se solicita y recibe la revisión del departamento de finanzas. Este departamento puede:
 
-a.Aprobar
+    a.Aprobar
 
-b.Rechazar basados en la información de la solicitud del empleado
+    b.Rechazar basados en la información de la solicitud del empleado
 
-c.Rechazar basados en la información contable proporcionada por el director
+    c.Rechazar basados en la información contable proporcionada por el director
 
 7.Si el departamento de finanzas rechazó basado en la solicitud del empleado, se debe volver al paso #2
 
