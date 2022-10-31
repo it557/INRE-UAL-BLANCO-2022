@@ -118,9 +118,9 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 |**Descripcion:**|Permite al actor PAS modificar el horario|
 |**Actor:**|PAS|
 |**Precondiciones:**|Pertenecer al PAS de esta institucion|
-|**Flujo normal:**|1.Accedo a la web de la universidad<br>2.Entro como PAS<br>3.Accedo al horario<br>4.Modifico el horario|
-|**Flujo aternativo:**|No existe horario buscado|
-|**Postcondiciones:**|Ninguna|
+|**Flujo normal:**|1.Busco el horario que quiero modificar<br>2.Selecciono la asignatura correspondiente<br>3.Realizo la modificacion deseada del horario<br>4.Se hace una verificacion automatica de esa modificacion<br>5.La modificacion es aprobada<br>6.Se guarda la modificacion realizada en la base de datos<br>7.Se manda un mensaje a todas las partes involucradas informandole del cambio de horario|
+|**Flujo aternativo:**|5.2.La modificacion no es aceptada, por lo que se le vuelve a mandar a la pagina del horario informandole del motivo por la que no ha sido validada<br>6.2.La modificacion realizada no se guarda bien en la base de datos y manda un mensaje de error|
+|**Postcondiciones:**|El horario ha de ser guardado o modificado|
 |**Referencias:**|Ninguna|
 ||
 
@@ -134,10 +134,10 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 |**Descripcion:**|Permite al actor PAS <br> dar de alta a los estudiantes|
 |**Actor:**|PAS|
 |**Precondiciones:**|Pertenecer al PAS de esta institucion|
-|**Flujo normal:**|1.Accedo a la web de la universidad<br>2.Entro como PAS <br>3.Accedo al listado de estudiantes<br>4.Doy de alta al estudiante seleccionado|
-|**Flujo aternativo:**|No existe el estudiante|
+|**Flujo normal:**| 1.Accedo al listado de estudiantes<br>2.Buscar al estudiante que vamos a dar de alta<br>3.Mandar solicitud para dar de alta al estudiante<br>4.Se hace una valoracion automatica de esta solicitud y si no esta dentro de los parametros establecidos de esta verificacion se manda a un empleado para su verificacion<br>5.Se validan los datos propuestos<br>6.Se aprueba el alta de este estudiante<br>7.Se cambia la informacion de este estudiante como dado de alta<br>8.Se le envia un correo al estudiante correspondiente para informarle<br>9.Se le quita del grado y las asignaturas que estuviera inscrito dentro de la institucion|
+|**Flujo aternativo:**|6.2.No se aprueba el alta del estudiante|
 |**Postcondiciones:**|El estudiante ya no esta registrado|
-|**Referencias:**|Validar datos<br>Dar de alta estudiantes(PDI)|
+|**Referencias:**|UC-04, UC-05|
 ||
 
 || |
@@ -149,8 +149,8 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 |**Descripcion:**|Permite al actor PDI proponer cambios en los horarios|
 |**Actor:**|PDI|
 |**Precondiciones:**|Pertenecer al PDI de esta institucion|
-|**Flujo normal:**|1. Accede a la web de la universidad <br> 2.Entrar como PDI<br>3.Acceder a informacion del horario<br>4.Sugerir un cambio en el horario a la espera de ser aprobado|
-|**Flujo aternativo:**|Ninguno|
+|**Flujo normal:**|1.Busco el horario que quiero modificar<br>2.Selecciono la asignatura correspondiente<br>3.Propongo la modificacion deseada del horario<br>4.Se hace una verificacion automatica de esa modificacion<br>5.La modificacion es validada<br>6.Se registra la modificacion realizada en la base de datos|
+|**Flujo aternativo:**|5.2.La modificacion no es aprobada|
 |**Postcondiciones:**|Ninguna|
 |**Referencias:**|Ninguna|
 ||
@@ -164,10 +164,10 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 |**Descripcion:**|Permite al actor PAS modificar el horario|
 |**Actor:**|PAS|
 |**Precondiciones:**|Pertenecer al PAS de esta institucion|
-|**Flujo normal:**|1. Accede a la web de la universidad <br> 2.Entrar como PAS<br>3.Acceder a los datos de los estudiantes<br>4.Validar los datos|
-|**Flujo aternativo:**|Ninguno|
-|**Postcondiciones:**|Ninguna|
-|**Referencias:**|Dar de alta estudiantes|
+|**Flujo normal:**| 1.Accedo al listado de estudiantes<br>2.Buscar al estudiante que vamos a dar de alta<br>3.Mandar solicitud para dar de alta al estudiante<br>4.Se hace una valoracion automatica de esta solicitud y si no esta dentro de los parametros establecidos de esta verificacion se manda a un empleado para su verificacion<br>5.Se le mandan los datos relacionados con el estudiante<br>6.Se validan los datos proporcionados<br>7.Se aprueba el alta de este estudiante<br>8.Se cambia la informacion de este estudiante como dado de alta<br>9.Se le envia un correo al estudiante correspondiente para informarle<br>10.Se le quita del grado y las asignaturas que estuviera inscrito dentro de la institucion|
+|**Flujo aternativo:**|6.2.Los datos no se validan correctamente<br>7.2.No se aprueba el alta del estudiante|
+|**Postcondiciones:**|El estudiante es dado de alta|
+|**Referencias:**|UC-02|
 ||
 
 || |
@@ -179,10 +179,10 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 |**Descripcion:**|Permite al actor PDI <br> dar de alta a los estudiantes|
 |**Actor:**|PDI|
 |**Precondiciones:**|Pertenecer al PDI de esta institucion|
-|**Flujo normal:**|1.Accedo a la web de la universidad<br>2.Entro como PAS <br>3.Accedo al listado de estudiantes<br>4.Doy de alta al estudiante seleccionado|
-|**Flujo aternativo:**|No existe el estudiante|
+|**Flujo normal:**|1.Accedo al listado de estudiantes<br>2.Buscar al estudiante que vamos a dar de alta<br>3.Mandar solicitud para dar de alta al estudiante<br>4.Se hace una valoracion automatica de esta solicitud y si no esta dentro de los parametros establecidos de esta verificacion se manda a un empleado para su verificacion<br>5.Se validan los datos propuestos<br>6.Se aprueba el alta de este estudiante<br>7.Se cambia la informacion de este estudiante como dado de alta<br>8.Se le envia un correo al estudiante correspondiente para informarle<br>9.Se le quita del grado y las asignaturas que estuviera inscrito dentro de la institucion|
+|**Flujo aternativo:**|6.2.No se aprueba el alta del estudiante<br>9.2.Se busca al estudiante en las listas de clase para eliminar todos sus registros|
 |**Postcondiciones:**|El estudiante ya no esta registrado|
-|**Referencias:**|Dar de alta estudiantes<br>Buscar estudiantes en la lista de clase|
+|**Referencias:**|UC-02, UC-06|
 ||
 
 || |
@@ -194,10 +194,10 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 |**Descripcion:**|Permite al actor PDI <br> buscar estudiantes en la lista de clase|
 |**Actor:**|PDI|
 |**Precondiciones:**|Pertenecer al PDI de esta institucion|
-|**Flujo normal:**|1.Accedo a la web de la universidad<br>2.Entro como PAS <br>3.Accedo al listado de estudiantes<br>4.Busco al estudiante seleccionado|
-|**Flujo aternativo:**|No existe el estudiante|
-|**Postcondiciones:**|El estudiante ya no esta registrado|
-|**Referencias:**|Dar de alta estudiantes (PDI)|
+|**Flujo normal:**|1.Accedo al listado de estudiantes<br>2.Buscar al estudiante que vamos a dar de alta<br>3.Mandar solicitud para dar de alta al estudiante<br>4.Se hace una valoracion automatica de esta solicitud y si no esta dentro de los parametros establecidos de esta verificacion se manda a un empleado para su verificacion<br>5.Se validan los datos propuestos<br>6.Se aprueba el alta de este estudiante<br>7.Se cambia la informacion de este estudiante como dado de alta<br>8.Se le envia un correo al estudiante correspondiente para informarle<br>9.Se le quita del grado y las asignaturas que estuviera inscrito dentro de la institucion<br>10.Se busca al estudiante en las listas de clase para eliminar todos sus registros|
+|**Flujo aternativo:**|6.2.No se aprueba el alta del estudiante|
+|**Postcondiciones:**|Ninguna|
+|**Referencias:**|UC-05|
 ||
 
 || |
@@ -209,7 +209,7 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 |**Descripcion:**|Permite al actor PAS modificar el horario|
 |**Actor:**|Estudiante, PDI, PAS|
 |**Precondiciones:**|Ser un estudiante de esta institucion|
-|**Flujo normal:**|1.Accedo a la web de la universidad<br>2.Entro como PAS<br>3.Accedo al horario<br>4.Consultar el horario|
+|**Flujo normal:**|1.Busco el horario que quiero consultar<br>2.Selecciono la asignatura correspondiente<br>3.Veo el horario|
 |**Flujo aternativo:**|Ninguno|
 |**Postcondiciones:**|Ninguna|
 |**Referencias:**|Ninguna|
@@ -366,7 +366,7 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 |  **Autor** | Toderic Ioan Stefan |
 |  **Descripcion** | El actor comprador y vendedor pueden acceder a un historico de ventas realizadas  |
 |  **Actores** | Comprador, Vendedor |
-|  **Precondiciones** | El usuario debe estar logueado como Comprador o Vendedor|
+|  **Precondiciones** | |
 |  **Flujo Normal** | 1.El usuario actor o comprador accede al historial <br> 2.Se carga la seccion de la base de datos de los hisotricos <br> 3.Si existen ventas realizadas, devuelve un documento con todos los historicos hasta el momento |
 |  **Flujo Alternativo** | 3A. Si no existen ventas realizadas hasta el momento, el sistema devuelve un mensaje de "Sin ventas" |
 | **Postcondiciones** |  |
@@ -382,7 +382,7 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 |  **Descripcion:** | Boton opcional para incorporar una oferta   |
 |  **Actores:** | Proveedor |
 |  **Precondiciones:** | El usuario debe estar logueado como proveedor|
-|  **Flujo normal:** | 1.Escoge la oferta y los productos a asociar <br> 2. El actor busca el producto en el formulario <br> 3. Si se le incorpora la oferta, el producto se vera modificado el precio y se guarda con oferta|
+|  **Flujo normal:** | 1. El actor busca el producto en el formulario <br> 2. Si se le incorpora la oferta, el producto se vera modificado el precio y se guarda con oferta|
 |  **Flujo alternativo:** | 2.B Si no se incorpora la oferta el producto se guarda sin oferta |
 |  **Postcondiciones:** | Modificar el precio del producto |
 | **Referencias**|UC-08|
@@ -396,7 +396,7 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **Descripcion**| Permite consultar el historico de ventas  |
 | **Actores**| Comprador |
 | **Precondiciones**| El usuario debe estar logueado como comprador |
-| **Flujo Normal**|  1. El actor  pulsar el botón de Consultar productos para ver la lista de los productos en el campo de busqueda <br> 2. El actor busca el producto en el formulario de busqueda  <br> 3. El actor visualiza la disponibilidad del producto 4. El sistema busca el prodcto en la tabla de producto <br> 5. Se comprueba la disponibildad del producto <br> 6. Si el producto esta disponible se le muestra al actor|
+| **Flujo Normal**|  1. El actor  pulsar el botón de Consultar productos para ver la lista de los productos <br> 2. El actor visualiza la disponibilidad del producto <br> 3. El actor busca el producto en el formulario de busqueda <br> 4. El sistema busca el prodcto en la tabla de producto <br> 5. Se comprueba la disponibildad del producto <br> 6. Si el producto esta disponible se le muestra al actor|
 | **Flujo Alternativo** | 4B. El producto no esta disponible, por lo que se le muestra al actor un mensaje de la no disponibilidad del producto |
 |**Postcondiciones**| |
 |**Referencias**| UC-15, UC-09 |
