@@ -51,4 +51,6 @@ entity "Disponibilidades" as Disponibilidades{
     fecha : date
 }
 
+
+
 @enduml

@@ -5,6 +5,7 @@ entity "Horario" as Horario{
     nombre : text
     fechaIncorporacion: date
     fechaValidez: date
+    idAsignatura : number <<FK>>
 }
 
 entity "Estudiante" as Estudiante{
@@ -13,8 +14,7 @@ entity "Estudiante" as Estudiante{
     fechaIncorporacion : date
     fechaNacimiento : date
     DNI : number
-    idPDI : number <<FK>>
-    idPAS : number <<FK>>
+    email : text
 }
 
 entity "ListaDeClase" as ListaDeClase{
@@ -22,6 +22,7 @@ entity "ListaDeClase" as ListaDeClase{
     nombreListado : text
     fechaIncorporacion : date
     nrEstudiantes : number
+    idAsignatura : number <<FK>>
 }
 
 entity "Asignatura" as Asignatura{
@@ -30,81 +31,69 @@ entity "Asignatura" as Asignatura{
     fechaIncorporacion : date
     nrEstudiantes : number
     profesor : text
-    curso : number
+    idCurso : number <<FK>>
 }
 
 entity "PDI" as PDI{
     * idPDI : number
     nombre : text
     fechaContratación : date
+    email : text
+    telefono : text
 }
 
 entity "PAS" as PAS{
     * idPAS : number
     nombre : text
     fechaContratacion : date
+    email : text
+    telefono : text
 }
 
-entity "Estudiante_consulta_horario" as ECH{
-    * idHorario : number
-    * idEstudiante : number
+entity "Curso" as Curso{
+    * idCurso : number
+    coordinador : text
+    * idGrado : number <<FK>>
 }
-Horario }|--|| ECH
-ECH ||--|{ Estudiante
 
-entity "PAS_consulta_horario" as PCH{
-    * idHorario : number
-    * idPAS : number
+entity "Grupo" as Grupo{
+    * idGrupo : number
+    * idCurso : number <<FK>>
 }
-Horario }|--|| PCH
-PCH ||--|{ PAS
 
-entity "PDI_consulta_horario" as PDICH{
-    * idHorario : number
-    * idPDI : number
+entity "Grado" as Grado{
+    * idGrado : number
+    nombreGrado : text
+    rama : text
+    coordinador : text
+    * idUniversidad : number <<FK>>
 }
-Horario }|--|| PDICH
-PDICH ||--|{ PDI
 
-entity "PAS_modifica_horario" as PASmodH{
-    * idHorario : number
-    * idPAS : number
+entity "Universidad" as Universidad{
+    * idUniversidad : number
+    nombre : text
+    direccion : text
+    nrTelefono : text
+    email : text
+    web : text
 }
-Horario }|--|| PASmodH
-PASmodH ||--|{ PAS
 
-entity "PDI_propone_cambio_horario" as PDIprop{
-    * idHorario : number
-    * idPDI : number
-}
-Horario }|--|| PDIprop
-PDIprop ||--|{ PDI
-
-entity "Estudiante_esta_en" as EEE{
-    * idEstudiante: number
-    * idListado : number
-}
-Estudiante }|--|| EEE
-EEE ||--|{ ListaDeClase
-
-entity "Estudiante_cursa" as EC{
-    * idEstudiante : number
-    * idAsignatura : number
-}
-Estudiante }|--|| EC
-EC ||--|{ Asignatura
-
-ListaDeClase ||--|| Asignatura
-
-PDI ||..|{ Estudiante
 PAS ||..|{ Estudiante
+Estudiante }|..|| PDI
 
-entity "PDI_busca_en_lista" as pbl{
-    * idPDI : number
-    * idListado : number
-}
-PDI }|--|| pbl
-pbl ||--|{ ListaDeClase
+Estudiante ||..|{ ListaDeClase
+ListaDeClase }|..|| Asignatura
+
+Asignatura }|..|| Curso
+
+Curso }|--|| Grado
+
+Universidad ||--|{ Grado
+
+Curso ||--|{ Grupo
+
+Asignatura ||--|| Horario
+
 
 
 

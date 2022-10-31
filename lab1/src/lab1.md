@@ -17,9 +17,9 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 | **Versión** | Versión 1 (21/10/2022) |
 | **Autores** | Daniel Pérez Escarcena |
 | **Fuentes** |  |
-| **Referencias** | - Consultar horario <br> - Modificar horario <br> - Proponer cambios en los horarios|
+| **Referencias** | - (UC-07) Consultar horario <br> - (UC-01) Modificar horario <br> - (UC-03) Proponer cambios en los horarios|
 | **Descripción** | El sistema deberá almacenar información correspondiente a los horarios de los estudiantes |
-| **Datos específicos** | - Identificador del horario <br> - Nombre del horario <br> - Fecha de incorporación <br> - Fecha de validez  |
+| **Datos específicos** | - Identificador del horario <br> - Nombre del horario <br> - Fecha de incorporación <br> - Fecha de validez <br> - Asignatura  |
 | **Importancia** | Muy importante |
 | **Estado** | Aceptado |
 | **Comentarios** | Ninguno |
@@ -32,9 +32,9 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 | **Versión** | Versión 1 (21/10/2022) |
 | **Autores** | Daniel Pérez Escarcena |
 | **Fuentes** |  |
-| **Referencias** | - Consultar horario|
+| **Referencias** | - (UC-07) Consultar horario |
 | **Descripción** | El sistema deberá almacenar información de los estudiantes |
-| **Datos específicos** | - Identificador del estudiante <br> - Nombre del estudiante <br> - Fecha de incorporación <br> - Fecha de nacimiento <br> -DNI |
+| **Datos específicos** | - Identificador del estudiante <br> - Nombre del estudiante <br> - Fecha de incorporación <br> - Fecha de nacimiento <br> - DNI <br> - Correo electrónico |
 | **Importancia** | Muy importante |
 | **Estado** | Aceptado |
 | **Comentarios** | Ninguno |
@@ -47,9 +47,9 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 | **Versión** | Versión 1 (21/10/2022) |
 | **Autores** | Daniel Pérez Escarcena |
 | **Fuentes** |  |
-| **Referencias** | - Buscar estudiante en la lista de clase |
+| **Referencias** | - (UC-06) Buscar estudiante en la lista de clase |
 | **Descripción** | El sistema deberá almacenar información correspondiente a los listados de clase de los estudiantes |
-| **Datos específicos** | - Identificador del listado <br> - Nombre del listado <br> - Fecha de incorporación <br> - Numero de estudiantes  |
+| **Datos específicos** | - Identificador del listado <br> - Nombre del listado <br> - Fecha de incorporación <br> - Numero de estudiantes <br> - Asignatura a la que pertenece el listado |
 | **Importancia** | Muy importante |
 | **Estado** | Aceptado |
 | **Comentarios** | Ninguno |
@@ -62,7 +62,7 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 | **Versión** | Versión 1 (21/10/2022) |
 | **Autores** | Daniel Pérez Escarcena |
 | **Fuentes** |  |
-| **Referencias** | - Buscar estudiante en la lista de clase |
+| **Referencias** | - (UC-06) Buscar estudiante en la lista de clase |
 | **Descripción** | El sistema deberá almacenar información correspondiente a los listados de clase de los estudiantes para cada asignatura |
 | **Datos específicos** | - Identificador de la asignatura <br> - Nombre de la asignatura <br> - Fecha de incorporación <br> - Numero de estudiantes <br> - Profesor <br> - Curso |
 | **Importancia** | Muy importante |
@@ -77,9 +77,9 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 | **Versión** | Versión 1 (21/10/2022) |
 | **Autores** | Daniel Pérez Escarcena |
 | **Fuentes** |  |
-| **Referencias** | - Modificar horario  <br> - Dar de alta estudiantes <br> - Validar datos|
+| **Referencias** | - (UC-01) Modificar horario  <br> - (UC-02) Dar de alta estudiantes <br> - (UC-04) Validar datos|
 | **Descripción** | El sistema deberá almacenar la informacion de cada PAS |
-| **Datos específicos** | - Identificador del PAS <br> - Nombre del PAS <br> - Fecha de contratacion |
+| **Datos específicos** | - Identificador del PAS <br> - Nombre del PAS <br> - Fecha de contratacion <br> - Correo electrónico <br> - Número de teléfono |
 | **Importancia** | Muy importante |
 | **Estado** | Aceptado |
 | **Comentarios** | Ninguno |
@@ -92,13 +92,59 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 | **Versión** | Versión 1 (21/10/2022) |
 | **Autores** | Daniel Pérez Escarcena |
 | **Fuentes** |  |
-| **Referencias** | - Proponer cambios en los horarios <br> - Dar de alta estudiantes <br> - Buscar estudiantes en la lista de clase |
+| **Referencias** | - (UC-03) Proponer cambios en los horarios <br> - (UC-02) Dar de alta estudiantes <br> - (UC-06) Buscar estudiantes en la lista de clase |
 | **Descripción** | El sistema deberá almacenar la informacion de cada PDI |
-| **Datos específicos** | - Identificador del PDI <br> - Nombre del PDI <br> - Fecha de contratación |
+| **Datos específicos** | - Identificador del PDI <br> - Nombre del PDI <br> - Fecha de contratación <br> - Correo electrónico <br> - Número de teléfono |
 | **Importancia** | Muy importante |
 | **Estado** | Aceptado |
 | **Comentarios** | Ninguno |
 ||
+
+| |  |
+| ---| :---: |
+|  **ID** | IR-07 |
+| **Nombre** |Curso|
+| **Versión** | Versión 1 (31/10/2022) |
+| **Autores** | Luca Daniel Gavriloaie |
+| **Fuentes** |  |
+| **Referencias** | - (UC-02) Dar de alta estudiantes |
+| **Descripción** | El sistema deberá almacenar la informacion de los cursos de un determinado grado |
+| **Datos específicos** | - Identificador del curso <br> - Coordinador del curso <br> - Identificador del grado al que pertenece el curso |
+| **Importancia** | Muy importante |
+| **Estado** | Aceptado |
+| **Comentarios** | Ninguno |
+||
+
+| |  |
+| ---| :---: |
+|  **ID** | IR-08 |
+| **Nombre** |Grado|
+| **Versión** | Versión 1 (31/10/2022) |
+| **Autores** | Luca Daniel Gavriloaie |
+| **Fuentes** |  |
+| **Referencias** | - Todos los casos de uso |
+| **Descripción** | El sistema deberá almacenar la informacion de los grados de una determinada institución universitaria |
+| **Datos específicos** | - Identificador del grado <br> - Nombre del grado <br> - Rama a la que pertenece el grado <br> - Coordinador del grado <br> - Identificador de la universidad a la que pertenece el grado |
+| **Importancia** | Muy importante |
+| **Estado** | Aceptado |
+| **Comentarios** | Ninguno |
+||
+
+| |  |
+| ---| :---: |
+|  **ID** | IR-09 |
+| **Nombre** |Universidad|
+| **Versión** | Versión 1 (31/10/2022) |
+| **Autores** | Luca Daniel Gavriloaie |
+| **Fuentes** |  |
+| **Referencias** | - Todos los casos de uso |
+| **Descripción** | El sistema deberá almacenar la informacion de la universidad |
+| **Datos específicos** | - Identificador de la universidad <br> - Nombre de la universidad <br> - Dirección <br> - Número de teléfono <br> - Correo electrónico <br> - Página web de la universidad |
+| **Importancia** | Muy importante |
+| **Estado** | Aceptado |
+| **Comentarios** | Ninguno |
+||
+
 
 #### **Diagrama entidad relacion**
 <br>
