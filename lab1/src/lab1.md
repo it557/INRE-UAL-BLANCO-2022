@@ -180,9 +180,9 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 |**Descripcion:**|Permite al actor PAS <br> dar de alta a los estudiantes|
 |**Actor:**|PAS|
 |**Precondiciones:**|Pertenecer al PAS de esta institucion|
-|**Flujo normal:**| 1.Accedo al listado de estudiantes<br>2.Buscar al estudiante que vamos a dar de alta<br>3.Mandar solicitud para dar de alta al estudiante<br>4.Se hace una valoracion automatica de esta solicitud y si no esta dentro de los parametros establecidos de esta verificacion se manda a un empleado para su verificacion<br>5.Se validan los datos propuestos<br>6.Se aprueba el alta de este estudiante<br>7.Se cambia la informacion de este estudiante como dado de alta<br>8.Se le envia un correo al estudiante correspondiente para informarle<br>9.Se le quita del grado y las asignaturas que estuviera inscrito dentro de la institucion|
+|**Flujo normal:**| 1.Accedo al listado de estudiantes<br>2.Buscar al estudiante que vamos a dar de alta<br>3.Mandar solicitud para dar de alta al estudiante<br>4.Se hace una valoracion automatica de esta solicitud y si no esta dentro de los parametros establecidos de esta verificacion se manda a un empleado para su verificacion<br>5.Se validan los datos propuestos<br>6.Se aprueba el alta de este estudiante<br>7.Se cambia la informacion de este estudiante como dado de alta<br>8.Se le envia un correo al estudiante correspondiente para informarle |
 |**Flujo aternativo:**|6.2.No se aprueba el alta del estudiante|
-|**Postcondiciones:**|El estudiante ya no esta registrado|
+|**Postcondiciones:**|El estudiante se marca en la base de datos como dado de alta|
 |**Referencias:**|UC-04, UC-05|
 ||
 
@@ -210,7 +210,7 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 |**Descripcion:**|Permite al actor PAS modificar el horario|
 |**Actor:**|PAS|
 |**Precondiciones:**|Pertenecer al PAS de esta institucion|
-|**Flujo normal:**| 1.Accedo al listado de estudiantes<br>2.Buscar al estudiante que vamos a dar de alta<br>3.Mandar solicitud para dar de alta al estudiante<br>4.Se hace una valoracion automatica de esta solicitud y si no esta dentro de los parametros establecidos de esta verificacion se manda a un empleado para su verificacion<br>5.Se le mandan los datos relacionados con el estudiante<br>6.Se validan los datos proporcionados<br>7.Se aprueba el alta de este estudiante<br>8.Se cambia la informacion de este estudiante como dado de alta<br>9.Se le envia un correo al estudiante correspondiente para informarle<br>10.Se le quita del grado y las asignaturas que estuviera inscrito dentro de la institucion|
+|**Flujo normal:**| 1.Accedo al listado de estudiantes<br>2.Buscar al estudiante que vamos a dar de alta<br>3.Mandar solicitud para dar de alta al estudiante<br>4.Se hace una valoracion automatica de esta solicitud y si no esta dentro de los parametros establecidos de esta verificacion se manda a un empleado para su verificacion<br>5.Se le mandan los datos relacionados con el estudiante<br>6.Se validan los datos proporcionados<br>7.Se aprueba el alta de este estudiante<br>8.Se cambia la informacion de este estudiante como dado de alta<br>9.Se le envia un correo al estudiante correspondiente para informarle |
 |**Flujo aternativo:**|6.2.Los datos no se validan correctamente<br>7.2.No se aprueba el alta del estudiante|
 |**Postcondiciones:**|El estudiante es dado de alta|
 |**Referencias:**|UC-02|
@@ -225,9 +225,9 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 |**Descripcion:**|Permite al actor PDI <br> dar de alta a los estudiantes|
 |**Actor:**|PDI|
 |**Precondiciones:**|Pertenecer al PDI de esta institucion|
-|**Flujo normal:**|1.Accedo al listado de estudiantes<br>2.Buscar al estudiante que vamos a dar de alta<br>3.Mandar solicitud para dar de alta al estudiante<br>4.Se hace una valoracion automatica de esta solicitud y si no esta dentro de los parametros establecidos de esta verificacion se manda a un empleado para su verificacion<br>5.Se validan los datos propuestos<br>6.Se aprueba el alta de este estudiante<br>7.Se cambia la informacion de este estudiante como dado de alta<br>8.Se le envia un correo al estudiante correspondiente para informarle<br>9.Se le quita del grado y las asignaturas que estuviera inscrito dentro de la institucion|
+|**Flujo normal:**|1.Accedo al listado de estudiantes<br>2.Buscar al estudiante que vamos a dar de alta<br>3.Mandar solicitud para dar de alta al estudiante<br>4.Se hace una valoracion automatica de esta solicitud y si no esta dentro de los parametros establecidos de esta verificacion se manda a un empleado para su verificacion<br>5.Se validan los datos propuestos<br>6.Se aprueba el alta de este estudiante<br>7.Se cambia la informacion de este estudiante como dado de alta<br>8.Se le envia un correo al estudiante correspondiente para informarle |
 |**Flujo aternativo:**|6.2.No se aprueba el alta del estudiante<br>9.2.Se busca al estudiante en las listas de clase para eliminar todos sus registros|
-|**Postcondiciones:**|El estudiante ya no esta registrado|
+|**Postcondiciones:**|El estudiante se marca en la base de datos como dado de alta|
 |**Referencias:**|UC-02, UC-06|
 ||
 
@@ -240,7 +240,7 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 |**Descripcion:**|Permite al actor PDI <br> buscar estudiantes en la lista de clase|
 |**Actor:**|PDI|
 |**Precondiciones:**|Pertenecer al PDI de esta institucion|
-|**Flujo normal:**|1.Accedo al listado de estudiantes<br>2.Buscar al estudiante que vamos a dar de alta<br>3.Mandar solicitud para dar de alta al estudiante<br>4.Se hace una valoracion automatica de esta solicitud y si no esta dentro de los parametros establecidos de esta verificacion se manda a un empleado para su verificacion<br>5.Se validan los datos propuestos<br>6.Se aprueba el alta de este estudiante<br>7.Se cambia la informacion de este estudiante como dado de alta<br>8.Se le envia un correo al estudiante correspondiente para informarle<br>9.Se le quita del grado y las asignaturas que estuviera inscrito dentro de la institucion<br>10.Se busca al estudiante en las listas de clase para eliminar todos sus registros|
+|**Flujo normal:**|1.Accedo al listado de estudiantes<br>2.Buscar al estudiante que vamos a dar de alta<br>3.Mandar solicitud para dar de alta al estudiante<br>4.Se hace una valoracion automatica de esta solicitud y si no esta dentro de los parametros establecidos de esta verificacion se manda a un empleado para su verificacion<br>5.Se validan los datos propuestos<br>6.Se aprueba el alta de este estudiante<br>7.Se cambia la informacion de este estudiante como dado de alta<br>8.Se le envia un correo al estudiante correspondiente para informarle |
 |**Flujo aternativo:**|6.2.No se aprueba el alta del estudiante|
 |**Postcondiciones:**|Ninguna|
 |**Referencias:**|UC-05|
@@ -277,9 +277,9 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **Versión** | Versión 1 (21/10/2022) |
 | **Autores** | Luca Daniel Gavriloaie |
 | **Fuentes** |  |
-| **Referencias** | - Consultar producto <br> - Buscar producto <br> - Agragar productos <br> - Eliminar producto <br> - Verificar disponibilidad <br> - Bloquear productos <br> - Consultar precio|
+| **Referencias** | - (UC-03) Consultar producto <br> - (UC-15) Buscar producto <br> - (UC-17) Agregar productos <br> - (UC-06) Eliminar producto <br> - (UC-09) Verificar disponibilidad <br> - (UC-18) Bloquear productos <br> - (UC-12) Consultar precio|
 | **Descripción** | El sistema deberá almacenar información correspondiente a los productos del sistema de compras. En concreto: |
-| **Datos específicos** | - Identificador del producto <br> - Nombre del producto <br> - Fecha de incorporación <br> - Stock disponible <br> - Precio <br> - En oferta (si o no) <br> - Fabricante <br> - Modelo |
+| **Datos específicos** | - Identificador del producto <br> - Nombre del producto <br> - Fecha de incorporación <br> - Stock disponible <br> - Precio <br> - En oferta (si o no) <br> - Fabricante <br> - Modelo <br> - Proveedor de dicho producto |
 | **Importancia** | Muy importante |
 | **Estado** | Aceptado |
 | **Comentarios** | Ninguno |
@@ -287,13 +287,13 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | |  |
 | ---| :---: |
 |  **ID** | IR-02 |
-| **Nombre** | Ofertas |
+| **Nombre** | Oferta |
 | **Versión** | Versión 1 (21/10/2022) |
 | **Autores** | Luca Daniel Gavriloaie |
 | **Fuentes** |  |
-| **Referencias** | - Incorporar oferta <br> - Avisar de fin de oferta <br> - Consultar oferta <br> - Eliminar oferta |
+| **Referencias** | - (UC-02) Incorporar oferta <br> - (UC-07) Avisar de fin de oferta <br> - (UC-11) Consultar oferta <br> - (UC-13) Eliminar oferta |
 | **Descripción** | El sistema deberá almacenar información correspondiente a las ofertas del sistema de compras. En concreto: |
-| **Datos específicos** | - Nombre de la oferta <br> - Fecha inicio <br> - Fecha fin <br> - Descuento aplicable <br> - Usuarios afectados |
+| **Datos específicos** | - Identificador de la oferta <br> - Nombre de la oferta <br> - Fecha inicio <br> - Fecha fin <br> - Descuento aplicable <br> - Si está activa o no |
 | **Importancia** | Muy importante |
 | **Estado** | Aceptado |
 | **Comentarios** | Ninguno |
@@ -301,30 +301,30 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | |  |
 | ---| :---: |
 |  **ID** | IR-03 |
-| **Nombre** | Ventas |
+| **Nombre** | Venta |
 | **Versión** | Versión 1 (21/10/2022) |
 | **Autores** | Luca Daniel Gavriloaie |
 | **Fuentes** |  |
-| **Referencias** | - Realizar venta <br> - Acordar precio |
+| **Referencias** | - (UC-05) Realizar venta <br> - (UC-10) Acordar precio |
 | **Descripción** | El sistema deberá almacenar información correspondiente a las ventas realizadas en el sistema de compras. En concreto: |
-| **Datos específicos** | - Fecha de la venta <br> - Comprador <br> - Vendedor <br> - Producto vendido <br> - Precio de venta |
+| **Datos específicos** | - Identificador del producto <br> - Comprador <br> - Vendedor  <br> - Fecha de la venta <br> - Precio de venta <br> - Unidades del producto compradas |
 | **Importancia** | Muy importante |
 | **Estado** | Aceptado |
-| **Comentarios** | Ninguno |
+| **Comentarios** | Incluimos el precio de venta en este requisito de información puesto que el comprador y el vendedor deben ponerse de acuerdo en el precio de la venta, de modo que los productos no tienen un precio asignado, sino que este se relaciona con la propia venta |
 
 | |  |
 | ---| :---: |
 |  **ID** | IR-04 |
-| **Nombre** | Avisos |
+| **Nombre** | Aviso |
 | **Versión** | Versión 1 (21/10/2022) |
 | **Autores** | Luca Daniel Gavriloaie |
 | **Fuentes** |  |
-| **Referencias** | - Avisar fin de oferta <br> - Avisar de nuevo producto <br> - Avisar (Proveedor) <br> - Enviar notificación |
+| **Referencias** | - (UC-07) Avisar fin de oferta <br> - (UC-08) Avisar de nuevo producto <br> - (UC-14) Avisar (Proveedor) <br> - (UC-16) Enviar notificación |
 | **Descripción** | El sistema deberá almacenar información correspondiente a los avisos realizados en el sistema de compras. En concreto: |
-| **Datos específicos** | - Fecha del aviso <br> - Emisor del aviso <br> - Motivo de aviso <br> - Destinatarios <br> |
+| **Datos específicos** | - Identificador del aviso <br> - Fecha del aviso <br> - Motivo de aviso <br> - Destinatarios <br> - Si fue notificado o no <br> - Proveedor que emitió el aviso (emisor) |
 | **Importancia** | Muy importante |
 | **Estado** | Aceptado |
-| **Comentarios** | Ninguno |
+| **Comentarios** | Pueden haber avisos sin notificar y avisos para los que se ha generado una notificación |
 
 | |  |
 | ---| :---: |
@@ -333,12 +333,12 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **Versión** | Versión 1 (21/10/2022) |
 | **Autores** | Luca Daniel Gavriloaie |
 | **Fuentes** |  |
-| **Referencias** | - Avisar fin de oferta <br> - Avisar (Proveedor) <br> - Enviar notificación |
+| **Referencias** | - (UC-07) Avisar fin de oferta <br> - (UC-14) Avisar (Proveedor) <br> - (UC-16) Enviar notificación |
 | **Descripción** | El sistema deberá almacenar información correspondiente a las notificaciones enviadas en el sistema de compras. En concreto: |
-| **Datos específicos** | - Fecha de la notificación <br> - Emisor de la notificación <br> - Aviso relacionado <br> - Destinatarios |
+| **Datos específicos** | - Identificador de la notificación <br> - Texto de la notificación <br> - Fecha de la notificación <br> - Aviso relacionado <br> - Destinatarios |
 | **Importancia** | Muy importante |
 | **Estado** | Aceptado |
-| **Comentarios** | Ninguno |
+| **Comentarios** | Las notificaciones solo podrán ser generadas por el Proveedor que emitió el aviso que se pretende notificar. Por ello las relacionamos con el aviso y no con el emisor, que se sobreentiende. |
 
 | |  |
 | ---| :---: |
@@ -347,9 +347,9 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **Versión** | Versión 1 (21/10/2022) |
 | **Autores** | Daniel Perez Escarcena |
 | **Fuentes** |  |
-| **Referencias** | - Consultar producto <br> - Finalizar compra <br> -Realizar venta <br> - Verificar disponibilidad <br> - Acordar precio <br> -Consultar historico |
+| **Referencias** | - (UC-03) Consultar producto <br> - (UC-04) Finalizar compra <br> - (UC-05) Realizar venta <br> - (UC-09) Verificar disponibilidad <br> - (UC-10) Acordar precio <br> - (UC-01) Consultar historico |
 | **Descripción** | El sistema deberá almacenar información correspondiente al comprador |
-| **Datos específicos** | - Nombre del comprador <br> - Nombre del producto  <br> - Precio <br> - En oferta (si o no) |
+| **Datos específicos** | - Identificador del comprador <br> - Nombre del comprador <br> - Correo electrónico <br> - Número de teléfono |
 | **Importancia** | Muy importante |
 | **Estado** | Aceptado |
 | **Comentarios** | Ninguno |
@@ -361,9 +361,9 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **Versión** | Versión 1 (21/10/2022) |
 | **Autores** | Daniel Perez Escarcena |
 | **Fuentes** |  |
-| **Referencias** | - Eliminar producto <br>- Consultar oferta<br> - Consultar precio<br>-Buscar producto |
+| **Referencias** | - (UC-06) Eliminar producto <br> - (UC-11) Consultar oferta <br> - (UC-12) Consultar precio <br> - (UC-15) Buscar producto |
 | **Descripción** | El sistema deberá almacenar información correspondiente al administrador |
-| **Datos específicos** | - Nombre del administrador <br> - Nombre del producto  <br> - Precio <br> - En oferta (si o no) |
+| **Datos específicos** | - Identificador del administrador <br> - Nombre del administrador <br> - Correo electrónico <br> - Número de teléfono |
 | **Importancia** | Muy importante |
 | **Estado** | Aceptado |
 | **Comentarios** | Ninguno |
@@ -375,9 +375,9 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **Versión** | Versión 1 (21/10/2022) |
 | **Autores** | Daniel Perez Escarcena |
 | **Fuentes** |  |
-| **Referencias** | - Realizar venta <br> - Consultar historico <br>- Acordar precio <br>- Consultar oferta<br> - Consultar precio<br>-Buscar producto  |
+| **Referencias** | - (UC-15) Realizar venta <br> - (UC-01) Consultar historico <br> - (UC-10) Acordar precio <br> - (UC-11) Consultar oferta <br> - (UC-12) Consultar precio <br> - (UC-15) Buscar producto  |
 | **Descripción** | El sistema deberá almacenar información correspondiente al vendedor |
-| **Datos específicos** | - Nombre del vendedor <br> - Nombre del producto  <br> - Precio <br> - En oferta (si o no) <br> -Historico de ventas|
+| **Datos específicos** | - Identificador del vendedor <br> - Nombre del vendedor <br> - Correo electrónico <br> - Número de teléfono |
 | **Importancia** | Muy importante |
 | **Estado** | Aceptado |
 | **Comentarios** | Ninguno |
@@ -389,12 +389,56 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **Versión** | Versión 1 (21/10/2022) |
 | **Autores** | Daniel Perez Escarcena |
 | **Fuentes** |  |
-| **Referencias** | - Avisar fin de oferta <br>- Avisar de nuevo producto<br>- Incorporar oferta<br> - Eliminar oferta<br> - Avisar proveedor<br>- Enviar notificacion <br>- Consultar oferta<br> - Consultar precio<br>-Buscar producto  |
+| **Referencias** | - (UC-07) Avisar fin de oferta <br>- (UC-08) Avisar de nuevo producto<br>- (UC-02) Incorporar oferta<br> - (UC-13) Eliminar oferta<br> - (UC-14) Avisar proveedor<br>- (UC-16) Enviar notificacion <br>- (UC-11) Consultar oferta<br> - (UC-12) Consultar precio<br>- (UC-15) Buscar producto  |
 | **Descripción** | El sistema deberá almacenar información correspondiente al proveedor |
-| **Datos específicos** | - Nombre del proveedor <br> - Nombre del producto  <br> - Precio <br> - En oferta (si o no)|
+| **Datos específicos** | - Identificador del proveedor <br> - Nombre del proveedor <br> - Correo electrónico <br> - Número de teléfono |
 | **Importancia** | Muy importante |
 | **Estado** | Aceptado |
 | **Comentarios** | Ninguno |
+
+| |  |
+| ---| :---: |
+|  **ID** | IR-10 |
+| **Nombre** | Productos eliminados |
+| **Versión** | Versión 1 (31/10/2022) |
+| **Autores** | Luca Daniel Gavriloaie |
+| **Fuentes** |  |
+| **Referencias** | - (UC-06) Eliminar producto |
+| **Descripción** | El sistema deberá almacenar información correspondiente a los productos eliminados por el administrador |
+| **Datos específicos** | - Identificador del administrador que realizó la eliminación <br> - Identificador del producto eliminado |
+| **Importancia** | Muy importante |
+| **Estado** | Aceptado |
+| **Comentarios** | Ninguno |
+
+| |  |
+| ---| :---: |
+|  **ID** | IR-11 |
+| **Nombre** | Cesta de la compra |
+| **Versión** | Versión 1 (31/10/2022) |
+| **Autores** | Luca Daniel Gavriloaie |
+| **Fuentes** |  |
+| **Referencias** | - (UC-17) Agregar producto |
+| **Descripción** | El sistema deberá almacenar información correspondiente a los productos agregados por el comprador en su cesta de la compra |
+| **Datos específicos** | - Identificador del producto añadido a la cesta de la compra <br> - Identificador del comprador que lo añadió <br> - Unidades del producto añadidas a la cesta |
+| **Importancia** | Muy importante |
+| **Estado** | Aceptado |
+| **Comentarios** | Ninguno |
+
+| |  |
+| ---| :---: |
+|  **ID** | IR-12 |
+| **Nombre** | Productos ofertados |
+| **Versión** | Versión 1 (01/11/2022) |
+| **Autores** | Luca Daniel Gavriloaie |
+| **Fuentes** |  |
+| **Referencias** | - (UC-02) Incorporar oferta <br> - (UC-07) Avisar fin de oferta <br> - (UC-11) Consultar oferta <br> - (UC-13) Eliminar oferta |
+| **Descripción** | El sistema deberá almacenar información correspondiente a los productos ofertados |
+| **Datos específicos** | - Identificador del producto en oferta <br> - Identificador de la oferta |
+| **Importancia** | Muy importante |
+| **Estado** | Aceptado |
+| **Comentarios** | Ninguno |
+
+
 
 **Diagrama entidad relacion**
 <br>
@@ -682,7 +726,7 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 | **Versión** | Versión 1 (21/10/2022) |
 | **Autores** | Daniel Pérez Escarcena |
 | **Fuentes** |  |
-| **Referencias** | - Consultar reservas <br> - Gestionar nueva reserva  <br> - Bloquear temporalmente una reserva|
+| **Referencias** | - (UC-05) Consultar reservas <br> - (UC-10) Gestionar nueva reserva  <br> - (UC-09) Bloquear temporalmente una reserva|
 | **Descripción** | El sistema deberá almacenar información correspondiente a las reservas disponibles|
 | **Datos específicos** | - Identificador de la reserva<br> - Nombre de la reserva <br> - Fecha de la reserva <br> - Duración de la reserva (en días) <br> - Precio de la reserva <br> - Habitación |
 | **Importancia** | Muy importante |
@@ -697,7 +741,7 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 | **Versión** | Versión 1 (21/10/2022) |
 | **Autores** | Daniel Pérez Escarcena |
 | **Fuentes** |  |
-| **Referencias** | - Realizar oferta <br> - Visualizar oferta  <br> - Bloquear temporalmente una reserva|
+| **Referencias** | - (UC-07) Realizar oferta <br> - (UC-02) Visualizar oferta  <br> - (UC-09) Bloquear temporalmente una reserva|
 | **Descripción** | El sistema deberá almacenar información correspondiente a las ofertas disponibles|
 | **Datos específicos** | - Identificador de la oferta<br> - Nombre de la oferta <br> - Fecha de inicio <br> - Fecha de fin <br> - Precio de la oferta |
 | **Importancia** | Muy importante |
@@ -712,7 +756,7 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 | **Versión** | Versión 1 (21/10/2022) |
 | **Autores** | Daniel Pérez Escarcena |
 | **Fuentes** |  |
-| **Referencias** | - Recalcular precio |
+| **Referencias** | - (UC-12) Recalcular precio |
 | **Descripción** | El sistema deberá almacenar información correspondiente a los precios de las ofertas disponibles|
 | **Datos específicos** | - Valor del precio |
 | **Importancia** | Muy importante |
@@ -727,7 +771,7 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 | **Versión** | Versión 1 (21/10/2022) |
 | **Autores** | Daniel Pérez Escarcena |
 | **Fuentes** |  |
-| **Referencias** | - Gestionar peticion|
+| **Referencias** | - (UC-08) Gestionar peticion|
 | **Descripción** | El sistema deberá almacenar información correspondiente a las peticiones que hacen los clientes|
 | **Datos específicos** | - Identificador de la peticion<br> - Nombre de la peticion <br> - Fecha de incorporacion|
 | **Importancia** | Muy importante |
@@ -742,7 +786,7 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 | **Versión** | Versión 1 (28/10/2022) |
 | **Autores** | Luca Daniel Gavriloaie |
 | **Fuentes** |  |
-| **Referencias** | - Visualizar ofertas <br> - Consultar disponibilidad |
+| **Referencias** | - (UC-02) Visualizar ofertas <br> - (UC-03) Consultar disponibilidad |
 | **Descripción** | El sistema deberá almacenar información correspondiente a los clientes |
 | **Datos específicos** | - NIF <br> - Nombre <br> - Edad |
 | **Importancia** | Muy importante |
@@ -757,7 +801,7 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 | **Versión** | Versión 1 (28/10/2022) |
 | **Autores** | Luca Daniel Gavriloaie |
 | **Fuentes** |  |
-| **Referencias** | - Gestionar nueva reserva <br> - Consultar reservas |
+| **Referencias** | - (UC-10) Gestionar nueva reserva <br> - (UC-05) Consultar reservas |
 | **Descripción** | El sistema deberá almacenar información correspondiente a los comerciales |
 | **Datos específicos** | - NIF <br> - Nombre <br> - Edad <br> - Empresa |
 | **Importancia** | Muy importante |
@@ -772,7 +816,7 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 | **Versión** | Versión 1 (28/10/2022) |
 | **Autores** | Luca Daniel Gavriloaie |
 | **Fuentes** |  |
-| **Referencias** | - Consultar reservas <br> - Realizar oferta <br> - Gestionar petición |
+| **Referencias** | - (UC05) Consultar reservas <br> - (UC-07) Realizar oferta <br> - (UC-08) Gestionar petición |
 | **Descripción** | El sistema deberá almacenar información correspondiente a los administradores |
 | **Datos específicos** | - NIF <br> - Nombre <br> - Edad |
 | **Importancia** | Muy importante |
@@ -787,7 +831,7 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 | **Versión** | Versión 1 (28/10/2022) |
 | **Autores** | Luca Daniel Gavriloaie |
 | **Fuentes** |  |
-| **Referencias** | - Consultar disponibilidad <br> - Mostrar calendario |
+| **Referencias** | - (UC-03) Consultar disponibilidad <br> - (UC-06) Mostrar calendario |
 | **Descripción** | El sistema deberá almacenar información correspondiente a las disponibilidades |
 | **Datos específicos** | - Habitación <br> - Fecha |
 | **Importancia** | Muy importante |

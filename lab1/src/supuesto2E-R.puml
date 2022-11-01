@@ -1,77 +1,112 @@
 @startuml supuesto2E-R
 
-entity "Productos"{
+entity "Producto"{
     * idProducto: number
     nombre: texto
     precio: number
+    fechaIncorporacion : date
+    stockDisponible : number
+    precio : number
+    enOferta : boolean
+    fabricante : text
+    modelo : text
+    idProveedor : number <<FK>>
 }
 
-entity "Compradores"{
+entity "Comprador"{
     * idComprador: number
     nombre: texto
+    email : texto
+    telefono : texto
 }
 
-entity "Comprador_agrega_Producto"{
-    * idProducto: number
-    * idComprador: number
+entity "Cesta_de_la_compra"{
+    * idProducto: number <<FK>>
+    * idComprador: number <<FK>>
+    unidades : number
 }
 
-entity "Vendedor_vende_Producto"{
-    * idProducto: number
-    * idVendedor: number
+entity "Productos_ofertados"{
+    * idProducto: number <<FK>>
+    * idOferta: number <<FK>>
 }
 
-entity "Oferta_tiene_Producto"{
-    * idProducto: number
-    * idOferta: number
-}
-
-entity "Vendedores"{
+entity "Vendedor"{
     * idVendedor: number
     nombre: texto
+    email : texto
+    telefono : texto
 }
 
-entity "Proveedores"{
+entity "Proveedor"{
     * idProveedor: number
     nombre: texto
+    email : texto
+    telefono : texto
 }
 
-entity "Ofertas"{
+entity "Oferta"{
     * idOferta: number
     nombre: texto
     fechaInicio: date 
     fechaFin: date 
+    descuentoAplicable : number
     activa: boolean
-    productos: texto
 }
 
-entity "Notificaciones"{
+entity "Notificacion"{
     * idNotificacion: number
     texto: texto
+    fecha : date
+    idAviso : number <<FK>>
+    destinatario : text
 }
 
-entity "Ventas" {
-    * idVenta: number
-    productos: texto
-    idComprador: number
-    idVendedor: number
+entity "Venta" {
+    * idProducto : number <<FK>>
+    * idComprador: number <<FK>>
+    * idVendedor: number <<FK>>
     fechaVenta: date
     precioVenta: number
+    unidades : number
+}
+
+entity "Aviso" as Aviso {
+    * idAviso : number
+    fecha : date
+    motivo : text
+    destinatarios : text
+    notificado : boolean
+    idProveedor : number <<FK>>
+}
+
+entity "Administrador" as Administrador{
+    * idAdministrador : number
+    nombre : text
+    email : text
+    telefono : text
+}
+
+entity "Productos eliminados" as AEP{
+    * idAdministrador : number <<FK>>
+    * idProducto : number <<FK>>
 }
 
 
-Productos }|..|| Comprador_agrega_Producto
-Comprador_agrega_Producto ||..|{ Compradores
+Producto ||--|{ Cesta_de_la_compra
+Cesta_de_la_compra }|--|| Comprador
 
-Productos }|..|| Oferta_tiene_Producto
-Oferta_tiene_Producto ||..|{ Ofertas
+Producto ||--|{ Productos_ofertados
+Productos_ofertados }|--|| Oferta
 
-Productos }|..|| Vendedor_vende_Producto
-Vendedor_vende_Producto ||..|{ Vendedores
+Producto }|..|| Proveedor
+Proveedor ||..|{ Aviso
 
-Productos }|..|| Proveedores
-Proveedores ||..|{ Notificaciones
+Producto ||--|{ Venta
+Venta }|--|| Vendedor
+Venta }|--|| Comprador
 
-Productos }|..|| Ventas
-Ventas ||..|{ Vendedores
-Ventas ||..|{ Compradores
+Aviso ||..|{ Notificacion
+
+Administrador ||--|{ AEP
+AEP }|--|| Producto
