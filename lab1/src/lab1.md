@@ -470,9 +470,9 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 |  **Autor** | Toderic Ioan Stefan |
 |  **Descripcion** | El actor comprador y vendedor pueden acceder a un historico de ventas realizadas  |
 |  **Actores** | Comprador, Vendedor |
-|  **Precondiciones** | |
-|  **Flujo Normal** | 1. El usuario actor o comprador accede al historial <br> 2. Se carga la seccion de la base de datos de los hisotricos <br> 3. Si existen ventas realizadas, devuelve un documento con todos los historicos hasta el momento |
-|  **Flujo Alternativo** | 3A. Si no existen ventas realizadas hasta el momento, el sistema devuelve un mensaje de "Sin ventas" |
+|  **Precondiciones** | Deben estar autentificado en el sistema como comprador o vendedor para obtener acceso al historico |
+|  **Flujo Normal** | 1. El usuario accede a la sección de consultar historico <br> 2. Se abre el menu desplegable y el usuario selecciona un dia, hora <br> 3.Si todos los parametros introducidos son correctos se mostrara un documento pdf en una nueva pestaña indicando todos los productos vendidos en esa hora y dia seleccionada. |
+|  **Flujo Alternativo** | 3A. Si algun párametro falla, se mostrará un mensaje de aviso en el campo erroneo indicando que no hay ventas realizadas ese dia o a esa hora y el sistema redirige al usuario al paso 3 para volver a introducir los parametros correctamente  |
 | **Postcondiciones** |  |
 | **Referencias** | UC-05 |
 
@@ -500,8 +500,8 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **Descripcion**| Permite consultar el historico de ventas  |
 | **Actores**| Comprador |
 | **Precondiciones**| El usuario debe estar logueado como comprador |
-| **Flujo Normal**|  1. El actor  pulsar el botón de Consultar productos para ver la lista de los productos <br> 2. El actor visualiza la disponibilidad del producto <br> 3. El actor busca el producto en el formulario de busqueda <br> 4. El sistema busca el prodcto en la tabla de producto <br> 5. Se comprueba la disponibildad del producto <br> 6. Si el producto esta disponible se le muestra al actor|
-| **Flujo Alternativo** | 4B. El producto no esta disponible, por lo que se le muestra al actor un mensaje de la no disponibilidad del producto |
+| **Flujo Normal**|  1. El usuario pulsa el botón de Consultar productos para ver la lista de los productos  <br>  2.El usuario introduce en la barra de busqueda del sistema un nombre del producto <br> 3.El sistema devuelve un listado con los productos con el nombre similar disponibles en el sistema <br>   4. El sistema busca el prodcto en la tabla de producto <br> 5.El usuario selecciona el producto al cual quiere comprobar si esta disponible <br> 6.Pulsa el boton de "Comprobar" <br> 7. El sistema busca en la base de datos el producto seleccionado y devuelve el producto en caso de que este disponible  <br> 8. Si el producto esta disponible se le muestra al actor<br>9. El actor visualiza la disponibilidad del producto |
+| **Flujo Alternativo** | 2A.En caso de no existir un producto con el nombre indicado en la barra de busqueda el sistema cambiara el color de la barra de busqueda a rojo |
 |**Postcondiciones**| |
 |**Referencias**| UC-15, UC-09 |
 
@@ -529,7 +529,7 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 |  **Actores** | Comprador, Vendedor |
 |  **Precondiciones** | El comprador y el vendedor deben estar autenticados en el Sistema |
 |  **Flujo Normal** | 1. El comprador comienza el proceso de tramitación del pedido <br> 2. El vendedor busca el producto en el sistema <br> 3. El vendedor verifica la disponibilidad del producto <br> 4. El vendedor establece un precio y lo envia a la base de datos del sistema <br> 2.El sistema establece el precio a dicho producto <br> 5. El comprador recibe una notificacion con el precio ajustado por el vendedor y decide si comprarlo <br> 6. Si acepta el precio, hace click sobre el boton Acordar <br> 7. El Sistema abre una pestaña con un formulario para poder comprar dicho producto <br> 8. El comprador acepta y envia el formulario <br> 9. Se realiza una petición de precio acordado al sistema <br> 10. El comprador y el vendedor finalizan el trámite del pedido |
-|  **Flujo Alternativo** | *3A*. Si el producto no está disponible, el vendedor recibe una notificación de la circunstancia y se lo notifica al comprador. El proceso termina <br> *3B*. Los actores pueden consultar si lo desean el histórico de ventas del producto <br> - 3B1.El usuario actor o comprador accede al historial <br> - 3B2. Se carga la sección de la base de datos de los históricos <br> - 3B3. Si existen ventas realizadas, devuelve un documento con todos los historicos hasta el momento <br> *6A*. Si no se llega a un acuerdo con respecto al precio, el proceso se cancela. |
+|  **Flujo Alternativo** | *3A*. Si el producto no está disponible, el vendedor recibe una notificación de la circunstancia y se lo notifica al comprador. El proceso termina <br> *3B*. Los actores pueden consultar si lo desean el histórico de ventas del producto <br>  - 3B1. El usuario accede a la sección de consultar historico <br> - 3B2 Se abre el menu desplegable y el usuario selecciona un dia, hora <br> - 3b3 Si todos los parametros introducidos son correctos se mostrara un documento pdf en una nueva pestaña indicando todos los productos vendidos en esa hora y dia seleccionada. <br> *6A*. Si no se llega a un acuerdo con respecto al precio, el proceso se cancela. |
 | **Postcondiciones** | El stock del producto vendido disminuye y se actualiza el histórico de ventas del mismo |
 | **Referencias** | UC-01, UC-10 |
 
@@ -585,8 +585,8 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 |  **Descripcion** | Permite comprobar si el producto esta disponible o no  |
 |  **Actores** | Comprador |
 |  **Precondiciones** | Debe estar logueado como un comprador y consultar el producto |
-|  **Flujo Normal** | 1. Busca en la base de datos el producto seleccionado y devuelve el producto en caso de que este disponible |
-|  **Flujo Alternativo** | 1B. Busca en la base de datos el producto seleccionado y devuelve un mensaje en caso de que no este disponible |
+|  **Flujo Normal** | 1.El usuario selecciona el producto al cual quiere comprobar si esta disponible <br> 2.Pulsa el boton de "Comprobar" <br> 2. El sistema busca en la base de datos el producto seleccionado y devuelve el producto en caso de que este disponible |
+|  **Flujo Alternativo** | 3A. Busca en la base de datos el producto seleccionado y devuelve un mensaje de "Producto indisponible" en caso de que no este indisponible |
 | **Postcondiciones** |  |
 | **Referencias** | UC-03 |
 
@@ -674,7 +674,7 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 |  **Actores** | Comprador |
 |  **Precondiciones** | El usuario debe estar logueado en el sistema como comprador |
 |  **Flujo Normal** | 1.El actor introduce en la barra de busqueda del sistema un nombre del producto <br> 2.El sistema devuelve un listado con los productos con el nombre similar disponibles en el sistema <br>  |
-|  **Flujo Alternativo** |  |
+|  **Flujo Alternativo** | 2A.En caso de no existir un producto con el nombre indicado en la barra de busqueda el sistema cambiara el color de la barra de busqueda a rojo |
 | **Postcondiciones** |  |
 | **Referencias** | UC-03, UC-12 |
 
