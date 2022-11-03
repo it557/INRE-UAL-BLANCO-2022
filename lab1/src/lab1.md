@@ -614,9 +614,7 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **Descripcion:** | Debe mostrar una serie de datos relacionados con la oferta |
 | **Actores:** | Comun, Administrador, Vendedor, Proveedor |
 | **Precondiciones:** | El usuario debe estar registrado como alguno de los actores permitidos|
-| **Flujo normal:** | 1- El usuario selecciona la opcion para consultar oferta|
-| | 2- Se abre una pestana que muestra los datos de la oferta|
-| | 3- El usuario puede cerrar esa pestana volviendo al estado anterior|
+| **Flujo normal:** | 1- El usuario selecciona la opcion para consultar oferta <br> 2- Se abre una pestana que muestra los datos de la oferta <br> 3- El usuario puede cerrar esa pestana volviendo al estado anterior |
 | **Flujo alternativo:** | Ninguno |
 | **Postcondiciones:** | Ninguna |
 | **Referencias:** | Administrador Vendedor y Proveedor heredan de Comun |
@@ -871,27 +869,27 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 ||
 
 || |
-|-|:-:|
+|--|:--|
 |**ID:**|UC-02|
 |**Nombre:**|Visualizar ofertas|
-|**Fecha:**|07/10/2022|
+|**Fecha:**|03/11/2022|
 |**Autor:**|Daniel Perez|
-|**Descripcion:**|Permite al cliente visualizar las ofertas del hotel|
-|**Actor:**|Cliente|
-|**Precondiciones:**|Ser un cliente del hotel|
-|**Flujo normal:**|1 Hospedarse en el hotel<br>2-Ver las ofertas disponibles del hotel|
-|**Flujo aternativo:**|Ninguno|
+|**Descripcion:**|Permite visualizar las ofertas del hotel|
+|**Actores:**|Cliente, Comercial, Administrador|
+|**Precondiciones:**| Acceder a la página del hotel |
+|**Flujo normal:**| 1. El actor solicita al sistema visualizar las ofertas <br> 2. El sistema le pide al actor completar al menos un criterio de búsqueda (intervalo de tiempo, lugar, estrellas, número de personas) <br> 3. El sistema mostrará las ofertas encontradas para los criterios seleccionados <br> 4. El actor podrá seleccionar una oferta para ver detalles de la misma |
+|**Flujo aternativo:**| 3A. Si no existen resultados, el sistema le pedirá al actor volver a seleccionar un criterio, o el actor podrá terminar el proceso. |
 |**Postcondiciones:**|Ninguna|
 ||
 
 || |
-|-|:-:|
+|-|:-|
 |**ID:**|UC-03|
 |**Nombre:**|Consultar disponibilidad|
 |**Fecha:**|07/10/2022|
 |**Autor:**|Daniel Perez|
 |**Descripcion:**|Permite al cliente ver si hay plazas disponibles|
-|**Actor:**|Cliente|
+|**Actor:**|Cliente, Administrador, Comercial|
 |**Precondiciones:**|Ninguna|
 |**Flujo normal:**|1-Clickar la opcion para mostrar las disponibilidades <br>2-El sistema muestra las distintas opciones disponibles|
 |**Flujo aternativo:**|1-No queda ninguna opcion disponible, por lo que se muestra un mensaje informativo|
