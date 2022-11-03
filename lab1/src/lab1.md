@@ -630,8 +630,8 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 |  **Descripcion** | El sistema muestra el precio del producto seleccionado por el actor |
 |  **Actores** | Administrador, Vendedor, Proveedor |
 |  **Precondiciones** | Debe de ser estar logueado en el sistema como un administrador, un vendedor o un proveedor  |
-|  **Flujo Normal** | 1. El actor envia una solicitud a la base de datos del producto <br> 2. El sistema devuelve la peticion con el precio del producto seleccionado |
-|  **Flujo Alternativo** |  |
+|  **Flujo Normal** | 1.El actor introduce en la barra de busqueda del sistema un nombre del producto <br> 2.El sistema devuelve un listado con los productos con el nombre similar disponibles en el sistema <br> 3.El sistema muestra los precios de cada producto buscado anteriormente |
+|  **Flujo Alternativo** |  2A.En caso de no existir un producto con el nombre indicado en la barra de busqueda el sistema cambiara el color de la barra de busqueda a rojo |
 | **Postcondiciones** |  |
 | **Referencias** | UC-15 |
 
@@ -673,7 +673,7 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 |  **Descripcion** | El comprador busca un producto en el sistema |
 |  **Actores** | Comprador |
 |  **Precondiciones** | El usuario debe estar logueado en el sistema como comprador |
-|  **Flujo Normal** | 1.El actor introduce en la barra de busqueda del sistema un nombre del producto <br> 2.El sistema devuelve un listado con los productos con el nombre similar disponibles en el sistema <br>  |
+|  **Flujo Normal** | 1.El actor introduce en la barra de busqueda del sistema un nombre del producto <br> 2.El sistema devuelve un listado con los productos con el nombre similar disponibles en el sistema |
 |  **Flujo Alternativo** | 2A.En caso de no existir un producto con el nombre indicado en la barra de busqueda el sistema cambiara el color de la barra de busqueda a rojo |
 | **Postcondiciones** |  |
 | **Referencias** | UC-03, UC-12 |
