@@ -855,16 +855,16 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 >#### **Definición de casos de uso**
 
 || |
-|-|:-:|
+|-|:--|
 |**ID:**|UC-01|
 |**Nombre:**|Consultar|
 |**Fecha:**|07/10/2022|
 |**Autor:**|Daniel Perez|
-|**Descripcion:**|Permite al cliente ver si hay plazas disponibles|
-|**Actor:**|Cliente|
-|**Precondiciones:**|Hereda de consultar|
-|**Flujo normal:**|1 Querer hospedarse en el hotel<br> 2. Consultar las disponibilidades|
-|**Flujo aternativo:**|Ninguno|
+|**Descripcion:**|Permite a los actores realizar una consulta en el sistema de la compañía hotelera|
+|**Actor:**|Cliente, Administrador, Comercial|
+|**Precondiciones:**| Los actores deben estar autenticados en el sistema de la compañía hotelera |
+|**Flujo normal:**| 1- El actor solicita al sistema realizar una consulta <br> 2- El sistema le pide al actor introducir un parámetro de búsqueda <br> 3- El actor escribe en el buscador el nombre del elemento <br> 4- El sistema muestra todos los elementos que contengan la cadena introducida en el buscador |
+|**Flujo aternativo:**|4A-Si no hay ningún elemento, se muestra un mensaje informativo y se vuelve a pedir al actor realizar la búsqueda (paso 3), o el actor puede terminar el proceso.|
 |**Postcondiciones:**|Ninguna|
 ||
 
@@ -876,7 +876,7 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 |**Autor:**|Daniel Perez|
 |**Descripcion:**|Permite visualizar las ofertas del hotel|
 |**Actores:**|Cliente, Comercial, Administrador|
-|**Precondiciones:**| Acceder a la página del hotel |
+|**Precondiciones:**| El actor debe estar autenticado en el sistema de la comañía hotelera |
 |**Flujo normal:**| 1. El actor solicita al sistema visualizar las ofertas <br> 2. El sistema le pide al actor completar al menos un criterio de búsqueda (intervalo de tiempo, lugar, estrellas, número de personas) <br> 3. El sistema mostrará las ofertas encontradas para los criterios seleccionados <br> 4. El actor podrá seleccionar una oferta para ver detalles de la misma |
 |**Flujo aternativo:**| 3A. Si no existen resultados, el sistema le pedirá al actor volver a seleccionar un criterio, o el actor podrá terminar el proceso. |
 |**Postcondiciones:**|Ninguna|
@@ -898,16 +898,16 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 ||
 
 || |
-|-|:-:|
+|-|:--|
 |**ID:**|UC-04|
 |**Nombre:**|Buscar elemento|
 |**Fecha:**|07/10/2022|
 |**Autor:**|Daniel Perez|
 |**Descripcion:**|Permite al cliente buscar un elemento en concreto para agilizar busqueda|
-|**Actor:**|Cliente|
+|**Actor:**|Cliente, Administrador, Comercial|
 |**Precondiciones:**|Ninguna|
-|**Flujo normal:**|1-El cliente escribe en el buscador el nombre del elemento<br>2-El sistema muestra todos los elementos que contengan la cadena introducida en el buscador|
-|**Flujo aternativo:**|1-No hay ningun elemento, por lo que se muestra un mensaje informativo|
+|**Flujo normal:**|1- El cliente escribe en el buscador el nombre del elemento <br> 2- El sistema muestra todos los elementos que contengan la cadena introducida en el buscador|
+|**Flujo aternativo:**|2A-Si no hay ningún elemento, se muestra un mensaje informativo y se vuelve a pedir al actor realizar la búsqueda, o el actor puede terminar el proceso.|
 |**Postcondiciones:**|Ninguna|
 | **Referencias**|UC-01|
 ||
