@@ -513,9 +513,9 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 |  **Autor:** | Guillermo Morales Caparros |
 |  **Descripcion:**| Termina la compra y da informacion sobre la compra realizada |
 |  **Actores:**| Comprador |
-|  **Precondiciones:** | Debe existir el producto |
-|  **Flujo normal:** | 1- El comprador pulsa el boton de finalizar <br> 2- El sistema cierra la vision de compra <br> 3- Se muestra una pestaña nueva con los productos comprados y su precio correspondiente|
-|  **Flujo alternativo:** | Ninguno |
+|  **Precondiciones:** | El ususario debe estar logueado en el sistema como comprador |
+|  **Flujo normal:** | 1.Una vez el usuario haya terminado de seleccionar los productos a comprar hace click en el boton "Comprar" <br> 2. El sistema cierra la vision de compra, le asigna una id al pedido <br> 3.El sistema envia el id a la base de datos y se lo asigna al comprador <br> 4.Se abre una pestaña en la cual el usuario elige el método de pago <br> 5.El usuario selecciona un método de pago y  realiza el pago <br> 6.El sistema comprueba que el pago se haya efectuado correctamente <br> 7.El sistema cambia la pestaña de pago <br> 3. Se muestra una pestaña nueva con los productos comprados y su precio correspondiente|
+|  **Flujo alternativo:** | 6A.En caso de haber problema con la transación se le avisara al usuario de que el pago no ha sido posible de efecturar <br> 6B.Se abre la pestaña de elegir otro método de pago <br> 6C.En caso de que el usuario no quiera seguir comprando puede optar por darle al bóton "Cancelar" |
 |  **Postcondiciones:** |  |
 |**Referencias**|  |
 
@@ -540,12 +540,12 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **Nombre:** | EliminarProducto |
 | **Fecha:** | 30/09/2022 |
 |  **Autor:** | Guillermo Morales Caparros |
-|  **Descripcion:** | Permite eliminar un producto  |
+|  **Descripcion:** | Permite eliminar un producto añadido en el carrito o lista de compra que ya se haya seleccionado previamente al darle al boton "Añadir" |
 |  **Actores:** | Administrador |
-|  **Precondiciones:** | Debe existir el producto |
-|  **Flujo normal:** | 1- El actor pulsa el boton para eliminar el producto <br> 2- Aparece un mensaje de "producto eliminado" <br> 3- El administrador selecciona "aceptar" y vuelve la pantalla inicial|
-|  **Flujo alternativo:** | Ninguno |
-|  **Postcondiciones:** | El producto debe desaparecer |
+|  **Precondiciones:** | El usuario debe estar logueado en el sistema como Administrador|
+|  **Flujo normal:** | 1.El usuario accede a la lista de productos <br> 2. Selecciona un producto o varios  <br> 3.El sistema cambia el color de los productos seleccionados <br>4.Al seleccionar un producto aparece un icono de una papelera <br> 5.El usuario hace click en la papelera <br> 6.El sistema muestra un aviso "¿Seguro que desea eliminar estos productos?" <br> 7.El usuario decide pulsar "Si" <br> 8.Se cierra la pestaña y vuelve a llevarte a tu lista refrescandola con todos los productos actuales en ella |
+|  **Flujo alternativo:** | 7A. El usuario decide pulsar "No" <br> 7B.El sistema no cierra la pestaña del aviso de "¿Seguro que desea eliminar estos productos?" <br> 7C.Muestra todos los productos seleccionados y brinda al usuario la opción de "Cancelar" donde no se hará nada y la lista quedará igual. |
+|  **Postcondiciones:** | El producto o los productos seleccionados se eliminarán de la lista |
 | **Referencias**||
 
 | |  |
