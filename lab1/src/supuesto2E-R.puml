@@ -92,6 +92,12 @@ entity "Productos eliminados" as AEP{
     * idProducto : number <<FK>>
 }
 
+entity "Productos bloqueados" as PB{
+    * idComprador : number <<FK>>
+    * idProducto : number <<FK>>
+    unidades : number
+}
+
 
 Producto ||--|{ Cesta_de_la_compra
 Cesta_de_la_compra }|--|| Comprador
@@ -110,3 +116,6 @@ Aviso ||..|{ Notificacion
 
 Administrador ||--|{ AEP
 AEP }|--|| Producto
+
+Comprador ||--|{ PB
+PB }|--|| Producto

@@ -438,6 +438,20 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **Estado** | Aceptado |
 | **Comentarios** | Ninguno |
 
+| |  |
+| ---| :---: |
+|  **ID** | IR-13 |
+| **Nombre** | Productos bloqueados |
+| **Versión** | Versión 1 (03/11/2022) |
+| **Autores** | Luca Daniel Gavriloaie |
+| **Fuentes** |  |
+| **Referencias** | - (UC-17) Agregar producto <br> - (UC-18) Bloquear producto |
+| **Descripción** | El sistema deberá almacenar información correspondiente a los productos bloqueados o reservados |
+| **Datos específicos** | - Identificador del comprador <br> - Identificador del producto bloqueado <br> - Unidades bloqueadas o reservadas del producto |
+| **Importancia** | Muy importante |
+| **Estado** | Aceptado |
+| **Comentarios** | Ninguno |
+
 
 
 **Diagrama entidad relacion**
@@ -449,7 +463,7 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 
 >#### **Definición de casos de uso**
 | |  |
-| ---| :---: |
+| ---| :--- |
 |  **ID**| UC-01 |
 |  **Nombre** | ConsultarHistorico |
 |  **Fecha** | 18/10/2022 |
@@ -457,14 +471,14 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 |  **Descripcion** | El actor comprador y vendedor pueden acceder a un historico de ventas realizadas  |
 |  **Actores** | Comprador, Vendedor |
 |  **Precondiciones** | |
-|  **Flujo Normal** | 1.El usuario actor o comprador accede al historial <br> 2.Se carga la seccion de la base de datos de los hisotricos <br> 3.Si existen ventas realizadas, devuelve un documento con todos los historicos hasta el momento |
+|  **Flujo Normal** | 1. El usuario actor o comprador accede al historial <br> 2. Se carga la seccion de la base de datos de los hisotricos <br> 3. Si existen ventas realizadas, devuelve un documento con todos los historicos hasta el momento |
 |  **Flujo Alternativo** | 3A. Si no existen ventas realizadas hasta el momento, el sistema devuelve un mensaje de "Sin ventas" |
 | **Postcondiciones** |  |
 | **Referencias** | UC-05 |
 
 
 | | |
-| ----------- | :-----------: |
+| ----------- | :----------- |
 | **Identificador**: | UC-02 |
 | **Nombre:** | IncorporarOferta |
 | **Fecha:** | 30/09/2022 |
@@ -472,13 +486,13 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 |  **Descripcion:** | Boton opcional para incorporar una oferta   |
 |  **Actores:** | Proveedor |
 |  **Precondiciones:** | El usuario debe estar logueado como proveedor|
-|  **Flujo normal:** | 1. El actor busca el producto en el formulario <br> 2. Si se le incorpora la oferta, el producto se vera modificado el precio y se guarda con oferta|
-|  **Flujo alternativo:** | 2.B Si no se incorpora la oferta el producto se guarda sin oferta |
-|  **Postcondiciones:** | Modificar el precio del producto |
+|  **Flujo normal:** | 1. El actor busca un producto en el formulario por su identificador <br> 2. El sistema muestra una lista de resultados <br> 3. El actor selecciona un producto <br> 4. El actor pulsa un botón para incorporarle una oferta al producto seleccionado <br> 5. El sistema muestra un listado de todas las ofertas <br> 6. El actor selecciona la oferta <br> 7. El sistema muestra una previsualización del producto ofertado con su nuevo precio <br> 8. Si el actor está de acuerdo, acepta y el producto se guarda con oferta |
+|  **Flujo alternativo:** | 2A. Si el producto no se encuentra, se volverá a solicitar el identificador o se cancela el proceso <br> 5A. Si no hay ofertas activas, el proceso termina. <br> 8A. Si se rechaza la propuesta del producto ofertado, el producto se guarda sin oferta |
+|  **Postcondiciones:** | Modificación del precio del producto |
 | **Referencias**|UC-08|
 
 | |  |
-| ---| :---: |
+| ---| :--- |
 | **ID**| UC-03 |
 | **Nombre**| ConsultarProducto|
 | **Fecha**| 07/10/2022 |
@@ -492,7 +506,7 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 |**Referencias**| UC-15, UC-09 |
 
 | | |
-| ----------- | :-----------: |
+| ----------- | :----------- |
 |  **Identificador:**| UC-04 |
 |  **Nombre:** | FinalizarCompra |
 |  **Fecha:** | 30/09/2022 |
@@ -500,15 +514,13 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 |  **Descripcion:**| Termina la compra y da informacion sobre la compra realizada |
 |  **Actores:**| Comprador |
 |  **Precondiciones:** | Debe existir el producto |
-|  **Flujo normal:** | 1- El comprador pulsa el boton de finalizar|
-| | 2- El sistema cierra la vision de compra|
-| | 3- Se muestra una pestaña nueva con los productos comprados y su precio correspondiente|
+|  **Flujo normal:** | 1- El comprador pulsa el boton de finalizar <br> 2- El sistema cierra la vision de compra <br> 3- Se muestra una pestaña nueva con los productos comprados y su precio correspondiente|
 |  **Flujo alternativo:** | Ninguno |
 |  **Postcondiciones:** |  |
 |**Referencias**|  |
 
 | |  |
-| ---| :---: |
+| ---| :--- |
 |  **ID**| UC-05|
 |  **Nombre** | RealizarVenta |
 |  **Fecha** | 13/10/2022 |
@@ -516,14 +528,14 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 |  **Descripcion** | Permite realizar un venta |
 |  **Actores** | Comprador, Vendedor |
 |  **Precondiciones** | El comprador y el vendedor deben estar autenticados en el Sistema |
-|  **Flujo Normal** | 1. El comprador elige el producto que desea comprar y lo anade al carrito de compra <br> 2. El comprador comienza el proceso de tramitación del pedido <br> 3. El vendedor busca el producto en el sistema <br> 4. El vendedor verifica la disponibilidad del producto <br> 5. El comprador y el vendedor se ponen de acuerdo en un precio <br> 6. El comprador y el vendedor finalizan el trámite del pedido |
-|  **Flujo Alternativo** | 4A. Si el producto no está disponible, el vendedor recibe una notificación de la circunstancia y se lo notifica al comprador. El proceso termina <br> 4B. Los actores pueden consultar si lo desean el histórico de ventas del producto <br> 5A. Si no se llega a un acuerdo con respecto al precio, el proceso se cancela. |
+|  **Flujo Normal** | 1. El comprador comienza el proceso de tramitación del pedido <br> 2. El vendedor busca el producto en el sistema <br> 3. El vendedor verifica la disponibilidad del producto <br> 4. El vendedor establece un precio y lo envia a la base de datos del sistema <br> 2.El sistema establece el precio a dicho producto <br> 5. El comprador recibe una notificacion con el precio ajustado por el vendedor y decide si comprarlo <br> 6. Si acepta el precio, hace click sobre el boton Acordar <br> 7. El Sistema abre una pestaña con un formulario para poder comprar dicho producto <br> 8. El comprador acepta y envia el formulario <br> 9. Se realiza una petición de precio acordado al sistema <br> 10. El comprador y el vendedor finalizan el trámite del pedido |
+|  **Flujo Alternativo** | *3A*. Si el producto no está disponible, el vendedor recibe una notificación de la circunstancia y se lo notifica al comprador. El proceso termina <br> *3B*. Los actores pueden consultar si lo desean el histórico de ventas del producto <br> - 3B1.El usuario actor o comprador accede al historial <br> - 3B2. Se carga la sección de la base de datos de los históricos <br> - 3B3. Si existen ventas realizadas, devuelve un documento con todos los historicos hasta el momento <br> *6A*. Si no se llega a un acuerdo con respecto al precio, el proceso se cancela. |
 | **Postcondiciones** | El stock del producto vendido disminuye y se actualiza el histórico de ventas del mismo |
 | **Referencias** | UC-01, UC-10 |
 
 
 | | |
-| ----------- | :-----------: |
+| ----------- | :----------- |
 | **Identificador**: | UC-06 |
 | **Nombre:** | EliminarProducto |
 | **Fecha:** | 30/09/2022 |
@@ -531,15 +543,13 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 |  **Descripcion:** | Permite eliminar un producto  |
 |  **Actores:** | Administrador |
 |  **Precondiciones:** | Debe existir el producto |
-|  **Flujo normal:** | 1- El actor pulsa el boton para eliminar el producto|
-| | 2- Aparece un mensaje de "producto eliminado"|
-| | 3- El administrador selecciona "aceptar" y vuelve la pantalla inicial|
+|  **Flujo normal:** | 1- El actor pulsa el boton para eliminar el producto <br> 2- Aparece un mensaje de "producto eliminado" <br> 3- El administrador selecciona "aceptar" y vuelve la pantalla inicial|
 |  **Flujo alternativo:** | Ninguno |
 |  **Postcondiciones:** | El producto debe desaparecer |
 | **Referencias**||
 
 | |  |
-| ---| :---: |
+| ---| :--- |
 |  **ID**| UC-07|
 |  **Nombre** | AvisarFinDeOferta |
 |  **Fecha** | 13/10/2022 |
@@ -547,13 +557,13 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 |  **Descripcion** | El proveedor avisará a los usuarios del sistema sobre el fin de una oferta |
 |  **Actores** | Proveedor |
 |  **Precondiciones** | El proveedor debe estar autenticado en el sistema |
-|  **Flujo Normal** | 1. El proveedor comprueba el estado de la oferta <br> 2. El proveedor emitirá un aviso para todos los usuarios en forma de notificación <br> 3. El proveedor eliminará la oferta |
-|  **Flujo Alternativo** | 2A. El proveedor no podrá avisar del fin de la oferta si esta no va a finalizar |
-| **Postcondiciones** | Ninguna |
+|  **Flujo Normal** | 1. El proveedor introduce el nombre de una oferta <br> 2. El sistema realiza la búsqueda de dicha oferta <br> 3. El proveedor selecciona y comprueba el estado de la oferta <br> 4. El proveedor pulsa crear un aviso <br> 5. El sistema lleva al proveedor a la interfaz de creación del aviso <br> 6. El proveedor debe configurar el aviso (información, fecha y hora, duración...) <br> 7. El proveedor crea el aviso <br> 8. El actor selecciona el aviso para ser notificado <br> 9. El actor solicita al sistema enviar una notificación <br> 10. El sistema consulta la información del aviso para generar la notificación a partir de dicha información <br> 11. El sistema envía la notificación <br> 12. El proveedor solicita al sistema el listado de ofertas activas <br> 13. El sistema muestra todas las ofertas <br> 14. El proveedor selecciona la oferta que desea eliminar <br> 15. El proveedor elimina la oferta |
+|  **Flujo Alternativo** | 2A. Si el sistema no encuentra dicha oferta, se notificará sobre este resultado <br> 6A. Si la fecha y/o la hora seleccionadas son anteriores a la actual, el sistema dará error <br> 7A. El proveedor no podrá crear el aviso si no se han completado todos los campos del paso 6 <br>  |
+| **Postcondiciones** | Creación de un nuevo aviso y su respectiva notificación en la base de datos. Eliminación de la oferta. |
 | **Referencias** | UC-13, UC-14, UC-16 |
 
 | |  |
-| ---| :---: |
+| ---| :--- |
 |  **ID**| UC-08|
 |  **Nombre** | AvisarDeNuevoProducto |
 |  **Fecha** | 14/10/2022 |
@@ -562,8 +572,8 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 |  **Actores** | Proveedor |
 |  **Precondiciones** | El proveedor debe estar autenticado en el sistema |
 |  **Flujo Normal** | 1. El proveedor busca el nuevo producto <br> 2. El proveedor marca el nuevo producto como disponible <br> 3. El proveedor emite un aviso para los usuarios del sistema de la disponibilidad del nuevo producto y de su precio |
-|  **Flujo Alternativo** | 1A. Si el sistema no encuentra el producto, le notificará del error al actor <br> 3A. Opcionalmente, el proveedor podrá crear una oferta para el nuevo producto |
-| **Postcondiciones** | Ninguna |
+|  **Flujo Alternativo** | 1A. Si el sistema no encuentra el producto, le notificará del error al actor <br> 3A. Opcionalmente, el proveedor podrá crear una oferta para el nuevo producto: <br> - 3A1. El actor busca el producto en el formulario por su identificador <br> - 3A2. El sistema muestra una lista de resultados <br> - 3A3. El actor selecciona el producto <br> - 3A4. El actor pulsa un botón para incorporarle una oferta al producto seleccionado <br> - 3A5. El sistema muestra un listado de todas las ofertas <br> - 3A6. El actor selecciona la oferta <br> - 3A7. El sistema muestra una previsualización del producto ofertado con su nuevo precio <br> - 3A8. Si el actor está de acuerdo, acepta y el producto se guarda con oferta |
+| **Postcondiciones** | Creación de un nuevo aviso en la base de datos |
 | **Referencias** | UC-02 |
 
 | |  |
@@ -635,13 +645,13 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 |  **Actores** | Proveedor |
 |  **Precondiciones** | El proveedor debe estar autenticado en el sistema |
 |  **Flujo Normal** | 1. El proveedor solicita al sistema el listado de ofertas activas <br> 2. El sistema muestra todas las ofertas <br> 3. El proveedor selecciona la oferta que desea eliminar <br> 4. El proveedor elimina la oferta |
-|  **Flujo Alternativo** | 4A. La oferta no se podrá eliminar sin haber avisado previamente su finalización |
+|  **Flujo Alternativo** | 4A. La oferta no se podrá eliminar sin haber avisado previamente de su finalización |
 | **Postcondiciones** | Se actualiza el conjunto de ofertas activas y los productos afectados por la oferta eliminada vuelven a su precio anterior |
 | **Referencias** | UC-07 |
 
 
 |  |  |
-| --- | :---: |
+| --- | :--- |
 |  **ID**| UC-14 |
 |  **Nombre** | AvisarProveedor |
 |  **Fecha** | 18/10/2022 |
@@ -649,12 +659,10 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 |  **Descripcion** | El proveedor podrá realizar avisos visibles en el sistema para determinados fines |
 |  **Actores** | Proveedor |
 |  **Precondiciones** | El proveedor debe estar autenticado en el sistema |
-|  **Flujo Normal** | 1. El proveedor pulsa crear un aviso <br> 2. El sistema lleva al proveedor a la interfaz de creación del aviso <br> 3. El proveedor debe configurar el aviso (información, fecha y hora, duración...) <br> 4. El proveedor crea el aviso <br> 5. El proveedor envía una notificación con el aviso |
-|  **Flujo Alternativo** | 3A. Si el proveedor pulsa enviar aviso sin completar la configuración necesaria, el sistema dará error y volverá a la vista de creación del aviso <br> 3B. Si la fecha y/o la hora seleccionadas ya vencieron, el sistema dará error |
+|  **Flujo Normal** | 1. El proveedor pulsa crear un aviso <br> 2. El sistema lleva al proveedor a la interfaz de creación del aviso <br> 3. El proveedor debe configurar el aviso (información, fecha y hora, duración...) <br> 4. El proveedor crea el aviso <br> 5. El actor selecciona el aviso para ser notificado <br> 6. El actor solicita al sistema enviar una notificación <br> 7. El sistema consulta la información del aviso para generar la notificación a partir de dicha información <br> 8. El sistema envía la notificación |
+|  **Flujo Alternativo** | 3A. Si el proveedor pulsa enviar aviso sin completar la configuración necesaria, el sistema dará error y volverá a la vista de creación del aviso <br> 3B. Si la fecha y/o la hora seleccionadas son anteriores a la actual, el sistema dará error |
 | **Postcondiciones** | Ninguna |
 | **Referencias** | UC-07, UC-16 |
-
-
 
 | |  |
 | ---| :---: |
@@ -671,7 +679,7 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **Referencias** | UC-03, UC-12 |
 
 | |  |
-| ---| :---: |
+| ---| :--- |
 | **ID**| UC-16 |
 | **Nombre** | EnviarNotificacion |
 | **Fecha** | 18/10/2022 |
@@ -679,13 +687,13 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **Descripcion** | Permite enviar una notificación a los usuarios del sistema |
 | **Actores** | Proveedor |
 | **Precondiciones** | El proveedor debe estar autenticado |
-| **Flujo Normal** | 1. El actor selecciona un aviso a notificar <br> 2. El actor solicita al sistema enviar una notificación <br> 3. El sistema consulta la información del aviso necesaria para generar la notificación <br> 4. El sistema envía la notificación |
+| **Flujo Normal** | 1. El actor selecciona el aviso para ser notificado <br> 2. El actor solicita al sistema enviar una notificación <br> 3. El sistema consulta la información del aviso para generar la notificación a partir de dicha información <br> 4. El sistema envía la notificación |
 | **Flujo Alternativo** | 1A. Si no existe ningún aviso a notificar, el proceso termina |
 | **Postcondiciones** | Ninguna |
 | **Referencias** | UC-14 |
 
 | |  |
-| ---| :---: |
+| ---| :--- |
 |  **ID**| UC-17 |
 |  **Nombre** | Agregar productos |
 |  **Fecha** | 18/10/2022 |
@@ -693,13 +701,13 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 |  **Descripcion** | El comprador puede agregar productos a la cesta de compra |
 |  **Actores** | Comprador |
 |  **Precondiciones** | El comprador debe estar autenticado en el sistema |
-|  **Flujo Normal** | 1. El comprador selecciona el producto deseado <br> 2. El comprador solicita al sistema agregar el producto a la cesta de compra pulsando un botón <br> 3. El sistema añade el producto a la cesta de compra del comprador <br> 4. El comprador bloquea el producto |
+|  **Flujo Normal** | 1. El comprador selecciona el producto deseado <br> 2. El comprador solicita al sistema agregar el producto a la cesta de compra pulsando un botón <br> 3. El sistema añade el producto a la cesta de compra del comprador <br> 4. El Comprador determina el número de unidades que desea bloquear o reservar <br> 5. El Comprador solicita al sistema bloquear ese número de unidades del producto <br> 6. El sistema comprueba que el número de unidades disponibles del producto se mayor al número de unidades que se desean bloquear o reservar <br> 7. En caso afirmativo, el Sistema marca tal número de unidades del producto como reservadas |
 |  **Flujo Alternativo** | 2A. Si no hay stock del producto, el sistema devuelve un error |
 | **Postcondiciones** | La lista con los productos en la cesta de la compra se actualiza |
 | **Referencias** | UC-18 |
 
 | |  |
-| ---| :---: |
+| ---| :--- |
 |  **ID**| UC-18 |
 |  **Nombre** | Bloquear productos |
 |  **Fecha** | 21/10/2022 |
@@ -707,9 +715,9 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 |  **Descripcion** | Permite bloquear una unidad de un producto reservandola para un comprador |
 |  **Actores** | Comprador |
 |  **Precondiciones** | El Comprador debe estar autenticado en el sistema |
-|  **Flujo Normal** | 1. El Comprador solicita al sistema bloquear un producto <br> 2. El Sistema registra dicho producto como bloqueado en la base de datos <br> 3. El Sistema marca el producto como reservado |
-|  **Flujo Alternativo** | 1A. Si el producto ya está bloqueado o reservado por otro comprador, se notificará de la circunstancia |
-| **Postcondiciones** | El producto se marca en la base de datos como bloqueado |
+|  **Flujo Normal** | 1. El Comprador determina el número de unidades que desea bloquear o reservar <br> 2. El Comprador solicita al sistema bloquear ese número de unidades del producto <br> 3. El sistema comprueba que el número de unidades disponibles del producto se mayor al número de unidades que se desean bloquear o reservar <br> 4. En caso afirmativo, el Sistema marca tal número de unidades del producto como reservadas |
+|  **Flujo Alternativo** | 3A. En caso contrario, todas las unidades están ya reservadas y se notificará de la circunstancia. |
+| **Postcondiciones** | El producto se marca en la base de datos como bloqueado o reservado y se reduce el número de unidades reservables del producto |
 | **Referencias** | UC-17 |
 
 
@@ -841,6 +849,8 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 
 **Diagrama entidad relacion**
 <br>
+
+
 
 <br>
 
