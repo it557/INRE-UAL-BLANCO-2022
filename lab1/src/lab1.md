@@ -614,10 +614,10 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **Descripcion:** | Debe mostrar una serie de datos relacionados con la oferta |
 | **Actores:** | Comun, Administrador, Vendedor, Proveedor |
 | **Precondiciones:** | El usuario debe estar registrado como alguno de los actores permitidos|
-| **Flujo normal:** | 1- El usuario selecciona la opcion para consultar oferta <br> 2- Se abre una pestana que muestra los datos de la oferta <br> 3- El usuario puede cerrar esa pestana volviendo al estado anterior |
-| **Flujo alternativo:** | Ninguno |
-| **Postcondiciones:** | Ninguna |
-| **Referencias:** | Administrador Vendedor y Proveedor heredan de Comun |
+| **Flujo normal:** | 1. El usuario selecciona la opcion para consultar oferta de un producto seleccionado <br> 2.Se abre una pestana que muestra los datos de la oferta <br> 3. El usuario puede decidir si comprar el producto en oferta <br> 4.Si el usuario decide comprar el producto puede darle al boton de añadir producto a mi lista  |
+| **Flujo alternativo:** | 3A.Si el usuario decide no comprar el producto con esa oferta, selecciona el botón "Cancelar" y el sistema cierra la pestaña de ofertas |
+| **Postcondiciones:** ||
+| **Referencias:** |  |
 
 | |  |
 | ---| :---: |
