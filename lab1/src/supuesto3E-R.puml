@@ -1,15 +1,20 @@
 @startuml supuesto3E-R
 
-entity "Reservas" as Reservas{
+entity "Reserva" as Reserva{
     * idReserva : number
     nombre : text
     fecha : date
-    duracion(dias) : number
+    duracion : number
     precio : number
     habitacion : number
 }
 
-entity "Ofertas" as Ofertas{
+entity "Reservas bloqueadas" as rb{
+    * idReserva : number <<FK>>
+    * idComercial : number <<FK>>
+}
+
+entity "Oferta" as Oferta{
     * idOferta : number
     nombre : text
     fechaInicio : date
@@ -17,40 +22,59 @@ entity "Ofertas" as Ofertas{
     precio : number
 }
 
-entity "Precio" as Precio{
-    * valor : number
-}
-
-entity "Peticiones" as Peticiones{
+entity "Peticion" as Peticion{
     * idPeticion : number
     nombre : text
     fecha : date
 }
 
 entity "Cliente" as Cliente{
-    * NIF : number
+    * NIFCliente : number
     nombre : text
     edad : number
 }
 
 entity "Comercial" as Comercial{
-    * NIF : number
+    * NIFComercial : number
     nombre : text
     edad : number
     empresa : text
 }
 
 entity "Administrador" as Administrador{
-    * NIF : number
+    * NIFAdministrador : number
     nombre : text
     edad : number
 }
 
-entity "Disponibilidades" as Disponibilidades{
-    * nrHabitacion : number
+entity "Disponibilidad" as Disponibilidad{
+    * idDisponibilidad : number
+    nrHabitacion : number
     fecha : date
 }
 
+entity "Compañía hotelera"{
+
+}
+
+entity "Hotel"{
+
+}
+
+entity "Habitacion"{
+    * nrHabitacion : number
+    planta : number
+    tipo : text
+}
+
+
+Comercial ||--|{ Oferta
+Comercial ||--|{ Reserva
+Administrador ||--|{ Oferta
+Administrador ||--|{ Peticion
+
+Comercial ||--|{ rb
+rb }|--|| Reserva
 
 
 @enduml
