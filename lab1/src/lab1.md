@@ -255,7 +255,7 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 |**Descripcion:**|Permite al actor PAS modificar el horario|
 |**Actor:**|Estudiante, PDI, PAS|
 |**Precondiciones:**|Ser un estudiante de esta institucion|
-|**Flujo normal:**|1.Busco el horario que quiero consultar<br>2.Selecciono la asignatura correspondiente<br>3.Veo el horario|
+|**Flujo normal:**|1.Busco el horario que quiero consultar<br>2.Selecciono la asignatura correspondiente<br>3.Realizo la consulta deseada del horario<br>4.Se guarda el horario en la base de datos|
 |**Flujo aternativo:**|Ninguno|
 |**Postcondiciones:**|Ninguna|
 |**Referencias:**|Ninguna|
@@ -863,9 +863,11 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 |**Descripcion:**|Permite a los actores realizar una consulta en el sistema de la compañía hotelera|
 |**Actor:**|Cliente, Administrador, Comercial|
 |**Precondiciones:**| Los actores deben estar autenticados en el sistema de la compañía hotelera |
-|**Flujo normal:**| 1- El actor solicita al sistema realizar una consulta <br> 2- El sistema le pide al actor introducir un parámetro de búsqueda <br> 3- El actor escribe en el buscador el nombre del elemento <br> 4- El sistema muestra todos los elementos que contengan la cadena introducida en el buscador |
+|**Flujo normal:**| 1.Busco el horario que quiero modificar<br>2.Selecciono la asignatura correspondiente<br>3.Realizo la modificacion deseada del horario<br>4.Se hace una verificacion automatica de esa modificacion<br>5.La modificacion es aprobada<br>6.Se guarda la modificacion realizada en la base de datos<br>7.Se manda un mensaje a todas las partes involucradas informandole del cambio de horario
+1- El actor solicita al sistema realizar una consulta <br> 2- El sistema le pide al actor introducir un parámetro de búsqueda <br> 3- El actor escribe en el buscador el nombre del elemento <br> 4- El sistema muestra todos los elementos que contengan la cadena introducida en el buscador |
 |**Flujo aternativo:**|4A-Si no hay ningún elemento, se muestra un mensaje informativo y se vuelve a pedir al actor realizar la búsqueda (paso 3), o el actor puede terminar el proceso.|
 |**Postcondiciones:**|Ninguna|
+| **Referencias**|UC-03, UC-04, UC-05, UC-06|
 ||
 
 || |
@@ -880,6 +882,7 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 |**Flujo normal:**| 1. El actor solicita al sistema visualizar las ofertas <br> 2. El sistema le pide al actor completar al menos un criterio de búsqueda (intervalo de tiempo, lugar, estrellas, número de personas) <br> 3. El sistema mostrará las ofertas encontradas para los criterios seleccionados <br> 4. El actor podrá seleccionar una oferta para ver detalles de la misma |
 |**Flujo aternativo:**| 3A. Si no existen resultados, el sistema le pedirá al actor volver a seleccionar un criterio, o el actor podrá terminar el proceso. |
 |**Postcondiciones:**|Ninguna|
+| **Referencias**||
 ||
 
 || |
@@ -951,7 +954,7 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 |**Descripcion:**|Permite al administrador ver si hay ofertas disponibles|
 |**Actor:**|Administrador|
 |**Precondiciones:**|El administrador debe estar registrado con su nombre de usuario o ID|
-|**Flujo normal:**|1-Acceder al apartado de ofertas<br>2-Seleccionar la opcion de mostrar ofertas<br>3-El sistema muestra una tabla con las ofertas disponibles|
+|**Flujo normal:**|1-Acceder a la web<br>2.Entra en el apartado de oferta<br>3.Filtra para encontrar los productos que estas buscando<br>4-Seleccionar la opcion de mostrar ofertas<br>5-El sistema muestra una tabla con las ofertas disponibles|
 |**Flujo aternativo:**|1-No hay ninguna oferta disponible, por lo que se muestra un mensaje informativo|
 |**Postcondiciones:**|Ninguna|
 | **Referencias**||
