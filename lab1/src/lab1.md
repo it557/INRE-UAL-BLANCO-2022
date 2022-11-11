@@ -863,8 +863,7 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 |**Descripcion:**|Permite a los actores realizar una consulta en el sistema de la compañía hotelera|
 |**Actor:**|Cliente, Administrador, Comercial|
 |**Precondiciones:**| Los actores deben estar autenticados en el sistema de la compañía hotelera |
-|**Flujo normal:**| 1.Busco el horario que quiero modificar<br>2.Selecciono la asignatura correspondiente<br>3.Realizo la modificacion deseada del horario<br>4.Se hace una verificacion automatica de esa modificacion<br>5.La modificacion es aprobada<br>6.Se guarda la modificacion realizada en la base de datos<br>7.Se manda un mensaje a todas las partes involucradas informandole del cambio de horario
-1- El actor solicita al sistema realizar una consulta <br> 2- El sistema le pide al actor introducir un parámetro de búsqueda <br> 3- El actor escribe en el buscador el nombre del elemento <br> 4- El sistema muestra todos los elementos que contengan la cadena introducida en el buscador |
+|**Flujo normal:**|1- El actor solicita al sistema realizar una consulta <br> 2- El sistema le pide al actor introducir un parámetro de búsqueda <br> 3- El actor escribe en el buscador el nombre del elemento <br> 4- El sistema muestra todos los elementos que contengan la cadena introducida en el buscador |
 |**Flujo aternativo:**|4A-Si no hay ningún elemento, se muestra un mensaje informativo y se vuelve a pedir al actor realizar la búsqueda (paso 3), o el actor puede terminar el proceso.|
 |**Postcondiciones:**|Ninguna|
 | **Referencias**|UC-03, UC-04, UC-05, UC-06|
