@@ -18,3 +18,8 @@
 
 3. **Lab 2 - BPMN** - [Ver](lab2/lab2.md)
 
+<br>
+
+## **Anexo** 📄
+---
+* [Preguntas entrevista](/Proyecto/Preguntas%20entrevista.pdf)

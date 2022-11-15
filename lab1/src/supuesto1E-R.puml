@@ -23,6 +23,7 @@ entity "ListaDeClase" as ListaDeClase{
     fechaIncorporacion : date
     nrEstudiantes : number
     idAsignatura : number <<FK>>
+    idEstudiante : number <<FK>>
 }
 
 entity "Asignatura" as Asignatura{
