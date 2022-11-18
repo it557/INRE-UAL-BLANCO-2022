@@ -4,8 +4,8 @@ entity "Horario" as Horario{
     * idHorario : number
     nombre : text
     fechaIncorporacion: date
-    fechaValidez: date
-    idAsignatura : number <<FK>>
+    * idGrupo : number <<FK>>
+    * idCurso : number <<FK>>
 }
 
 entity "Estudiante" as Estudiante{
@@ -79,6 +79,24 @@ entity "Universidad" as Universidad{
     web : text
 }
 
+entity "Asignatura_horario" as AsHor{
+    * idHorario : number <<FK>>
+    * idAsignatura : number <<FK>>
+    idClase : number <<FK>>
+    hora : text
+}
+
+entity "Clase" as Clase{
+    * idClase : number
+    idUniversidad : number <<FK>>
+    aforo : number
+}
+
+entity "Asignatura_PDI" as AsPDI{
+    * idPDI : number <<FK>>
+    * idAsignatura : number <<FK>>
+}
+
 PAS ||..|{ Estudiante
 Estudiante }|..|| PDI
 
@@ -93,7 +111,17 @@ Universidad ||--|{ Grado
 
 Curso ||--|{ Grupo
 
-Asignatura ||--|| Horario
+Grupo ||--|| Horario
+
+Horario ||--|{ AsHor
+AsHor }|--|| Asignatura
+
+Universidad ||--|{ Clase
+Clase ||--|| AsHor
+
+Asignatura ||--|{ AsPDI
+PDI ||--|{ AsPDI
+
 
 
 
