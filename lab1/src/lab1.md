@@ -11,7 +11,7 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 
 >#### **Definición de requisitos de información**
 | |  |
-| ---| :---: |
+| ---| :--- |
 |  **ID** | IR-01 |
 | **Nombre** | Horario |
 | **Versión** | Versión 1 (21/10/2022) |
@@ -26,7 +26,7 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 ||
 
 | |  |
-| ---| :---: |
+| ---| :--- |
 |  **ID** | IR-02 |
 | **Nombre** | Estudiante |
 | **Versión** | Versión 1 (21/10/2022) |
@@ -41,7 +41,7 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 ||
 
 | |  |
-| ---| :---: |
+| ---| :--- |
 |  **ID** | IR-03 |
 | **Nombre** | Lista de clase |
 | **Versión** | Versión 1 (21/10/2022) |
@@ -56,7 +56,7 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 ||
 
 | |  |
-| ---| :---: |
+| ---| :--- |
 |  **ID** | IR-04 |
 | **Nombre** | Asignatura |
 | **Versión** | Versión 1 (21/10/2022) |
@@ -71,7 +71,7 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 ||
 
 | |  |
-| ---| :---: |
+| ---| :--- |
 |  **ID** | IR-05 |
 | **Nombre** |PAS|
 | **Versión** | Versión 1 (21/10/2022) |
@@ -86,7 +86,7 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 ||
 
 | |  |
-| ---| :---: |
+| ---| :--- |
 |  **ID** | IR-06 |
 | **Nombre** |PDI|
 | **Versión** | Versión 1 (21/10/2022) |
@@ -101,7 +101,7 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 ||
 
 | |  |
-| ---| :---: |
+| ---| :--- |
 |  **ID** | IR-07 |
 | **Nombre** |Curso|
 | **Versión** | Versión 1 (31/10/2022) |
@@ -116,7 +116,7 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 ||
 
 | |  |
-| ---| :---: |
+| ---| :--- |
 |  **ID** | IR-08 |
 | **Nombre** |Grado|
 | **Versión** | Versión 1 (31/10/2022) |
@@ -131,7 +131,7 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 ||
 
 | |  |
-| ---| :---: |
+| ---| :--- |
 |  **ID** | IR-09 |
 | **Nombre** |Universidad|
 | **Versión** | Versión 1 (31/10/2022) |
@@ -156,38 +156,38 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 >#### **Definición de casos de uso**
 
 || |
-|-|:-:|
+|-|:-|
 |**ID:**|UC-01|
 |**Nombre:**|Modificar Horario|
 |**Fecha:**|30/09/2022|
 |**Autor:**|Daniel Perez|
 |**Descripcion:**|Permite al actor PAS modificar el horario|
 |**Actor:**|PAS|
-|**Precondiciones:**|Pertenecer al PAS de esta institucion|
-|**Flujo normal:**|1.Busco el horario que quiero modificar<br>2.Selecciono la asignatura correspondiente<br>3.Realizo la modificacion deseada del horario<br>4.Se hace una verificacion automatica de esa modificacion<br>5.La modificacion es aprobada<br>6.Se guarda la modificacion realizada en la base de datos<br>7.Se manda un mensaje a todas las partes involucradas informandole del cambio de horario|
-|**Flujo aternativo:**|5.2.La modificacion no es aceptada, por lo que se le vuelve a mandar a la pagina del horario informandole del motivo por la que no ha sido validada<br>6.2.La modificacion realizada no se guarda bien en la base de datos y manda un mensaje de error|
+|**Precondiciones:**|Pertenecer al PAS de esta institucion y estar autenticado en el sistema|
+|**Flujo normal:**|1. El actor busca el horario que quiere modificar<br>2. El actor selecciona la asignatura correspondiente<br>3. El actor realiza la modificacion deseada en el horario<br>4. El sistema hace una verificacion automatica de esa modificacion<br>5. La modificacion es aprobada<br>6. Se guarda la modificacion realizada en la base de datos<br>7. Se manda un mensaje a todas las partes involucradas informandole del cambio de horario|
+|**Flujo aternativo:**|5.2. La modificacion no es aceptada, por lo que se le vuelve a mandar a la pagina del horario informandole del motivo por la que no ha sido validada<br>6.2. La modificacion realizada no se guarda bien en la base de datos y manda un mensaje de error|
 |**Postcondiciones:**|El horario ha de ser guardado o modificado|
 |**Referencias:**|Ninguna|
 ||
 
 
 || |
-|-|:-:|
+|-|:-|
 |**ID:**|UC-02|
 |**Nombre:**|Dar de alta estudiantes|
 |**Fecha:**|30/09/2022|
 |**Autor:**|Daniel Perez|
-|**Descripcion:**|Permite al actor PAS <br> dar de alta a los estudiantes|
+|**Descripcion:**|Permite al actor PAS dar de alta a los estudiantes|
 |**Actor:**|PAS|
-|**Precondiciones:**|Pertenecer al PAS de esta institucion|
-|**Flujo normal:**| 1.Accedo al listado de estudiantes<br>2.Buscar al estudiante que vamos a dar de alta<br>3.Mandar solicitud para dar de alta al estudiante<br>4.Se hace una valoracion automatica de esta solicitud y si no esta dentro de los parametros establecidos de esta verificacion se manda a un empleado para su verificacion<br>5.Se validan los datos propuestos<br>6.Se aprueba el alta de este estudiante<br>7.Se cambia la informacion de este estudiante como dado de alta<br>8.Se le envia un correo al estudiante correspondiente para informarle |
-|**Flujo aternativo:**|6.2.No se aprueba el alta del estudiante|
+|**Precondiciones:**|Pertenecer al PAS de esta institucion y estar autenticado en el sistema|
+|**Flujo normal:**| 1. El actor accede al listado de estudiantes<br>2. El actor busca por DNI al estudiante que vamos a dar de alta<br>3. El actor manda una solicitud para dar de alta al estudiante<br>4. Se hace una valoracion automatica de esta solicitud y si no esta dentro de los parametros establecidos de esta verificacion se manda a un empleado para su verificacion<br>5. Se validan los datos propuestos <br> 6. Mediante una acción de confirmación, el actor envía al sistema los datos a ser validados <br> 7. El sistema comprueba que los datos de cada campo se adecúen a las restricciones del campo en cuestión en la base de datos <br> 8. El Sistema devuelve un mensaje de validación completada correctamente <br>9. Se aprueba el alta de este estudiante<br>10. Se cambia la informacion de este estudiante como dado de alta<br>11. Se le envia un correo al estudiante correspondiente para informarle |
+|**Flujo aternativo:**|6.2. No se aprueba el alta del estudiante|
 |**Postcondiciones:**|El estudiante se marca en la base de datos como dado de alta|
 |**Referencias:**|UC-04, UC-05|
 ||
 
 || |
-|-|:-:|
+|-|:-|
 |**ID:**|UC-03|
 |**Nombre:**|Proponer cambios en los horarios|
 |**Fecha:**|30/09/2022|
@@ -195,14 +195,14 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 |**Descripcion:**|Permite al actor PDI proponer cambios en los horarios|
 |**Actor:**|PDI|
 |**Precondiciones:**|Pertenecer al PDI de esta institucion|
-|**Flujo normal:**|1.Busco el horario que quiero modificar<br>2.Selecciono la asignatura correspondiente<br>3.Propongo la modificacion deseada del horario<br>4.Se hace una verificacion automatica de esa modificacion<br>5.La modificacion es validada<br>6.Se registra la modificacion realizada en la base de datos|
-|**Flujo aternativo:**|5.2.La modificacion no es aprobada|
+|**Flujo normal:**|1. El actor busca el horario que quiere modificar<br>2. El actor selecciona la asignatura correspondiente<br>3. El actor propone la modificacion deseada del horario<br>4. Se hace una verificacion automatica de esa propuesta<br>5. La propuesta es validada<br>6. Se registra la propuesta realizada en la base de datos|
+|**Flujo aternativo:**|5.2. La propuesta no es aprobada|
 |**Postcondiciones:**|Ninguna|
 |**Referencias:**|Ninguna|
 ||
 
 || |
-|-|:-:|
+|-|:-|
 |**ID:**|UC-04|
 |**Nombre:**|Validar datos|
 |**Fecha:**|30/09/2022|
@@ -210,14 +210,14 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 |**Descripcion:**|Permite al actor PAS modificar el horario|
 |**Actor:**|PAS|
 |**Precondiciones:**|Pertenecer al PAS de esta institucion|
-|**Flujo normal:**| 1.Accedo al listado de estudiantes<br>2.Buscar al estudiante que vamos a dar de alta<br>3.Mandar solicitud para dar de alta al estudiante<br>4.Se hace una valoracion automatica de esta solicitud y si no esta dentro de los parametros establecidos de esta verificacion se manda a un empleado para su verificacion<br>5.Se le mandan los datos relacionados con el estudiante<br>6.Se validan los datos proporcionados<br>7.Se aprueba el alta de este estudiante<br>8.Se cambia la informacion de este estudiante como dado de alta<br>9.Se le envia un correo al estudiante correspondiente para informarle |
-|**Flujo aternativo:**|6.2.Los datos no se validan correctamente<br>7.2.No se aprueba el alta del estudiante|
+|**Flujo normal:**| 1. Mediante una acción de confirmación, el actor envía al sistema los datos a ser validados <br> 2. El sistema comprueba que los datos de cada campo se adecúen a las restricciones del campo en cuestión en la base de datos <br> 3. El Sistema devuelve un mensaje de validación completada correctamente |
+|**Flujo aternativo:**|2A. En caso de que no se cumplan las restricciones en los datos de algún campo, el Sistema informa de los campos mal completados <br> 3A. Si los datos no se validan correctamente, el Sistema devuelve un mensaje de error |
 |**Postcondiciones:**|El estudiante es dado de alta|
 |**Referencias:**|UC-02|
 ||
 
 || |
-|-|:-:|
+|-|:-|
 |**ID:**|UC-05|
 |**Nombre:**|Dar de alta estudiantes (PDI)|
 |**Fecha:**|30/09/2022|
@@ -225,14 +225,14 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 |**Descripcion:**|Permite al actor PDI <br> dar de alta a los estudiantes|
 |**Actor:**|PDI|
 |**Precondiciones:**|Pertenecer al PDI de esta institucion|
-|**Flujo normal:**|1.Accedo al listado de estudiantes<br>2.Buscar al estudiante que vamos a dar de alta<br>3.Mandar solicitud para dar de alta al estudiante<br>4.Se hace una valoracion automatica de esta solicitud y si no esta dentro de los parametros establecidos de esta verificacion se manda a un empleado para su verificacion<br>5.Se validan los datos propuestos<br>6.Se aprueba el alta de este estudiante<br>7.Se cambia la informacion de este estudiante como dado de alta<br>8.Se le envia un correo al estudiante correspondiente para informarle |
-|**Flujo aternativo:**|6.2.No se aprueba el alta del estudiante<br>9.2.Se busca al estudiante en las listas de clase para eliminar todos sus registros|
+|**Flujo normal:**|1. Accedo al listado de estudiantes<br>2. Buscar al estudiante que vamos a dar de alta<br>3. Mandar solicitud para dar de alta al estudiante<br>4. Se hace una valoracion automatica de esta solicitud y si no esta dentro de los parametros establecidos de esta verificacion se manda a un empleado para su verificacion<br>5. Se validan los datos propuestos<br>6. Se aprueba el alta de este estudiante<br>7. Se cambia la informacion de este estudiante como dado de alta<br>8. Se le envia un correo al estudiante correspondiente para informarle |
+|**Flujo aternativo:**|6.2. No se aprueba el alta del estudiante<br>9.2. Se busca al estudiante en las listas de clase para eliminar todos sus registros|
 |**Postcondiciones:**|El estudiante se marca en la base de datos como dado de alta|
 |**Referencias:**|UC-02, UC-06|
 ||
 
 || |
-|-|:-:|
+|-|:-|
 |**ID:**|UC-06|
 |**Nombre:**|Buscar estudiantes en la lista de clase|
 |**Fecha:**|30/09/2022|
@@ -240,14 +240,14 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 |**Descripcion:**|Permite al actor PDI <br> buscar estudiantes en la lista de clase|
 |**Actor:**|PDI|
 |**Precondiciones:**|Pertenecer al PDI de esta institucion|
-|**Flujo normal:**|1.Accedo al listado de estudiantes<br>2.Buscar al estudiante que vamos a dar de alta<br>3.Mandar solicitud para dar de alta al estudiante<br>4.Se hace una valoracion automatica de esta solicitud y si no esta dentro de los parametros establecidos de esta verificacion se manda a un empleado para su verificacion<br>5.Se validan los datos propuestos<br>6.Se aprueba el alta de este estudiante<br>7.Se cambia la informacion de este estudiante como dado de alta<br>8.Se le envia un correo al estudiante correspondiente para informarle |
-|**Flujo aternativo:**|6.2.No se aprueba el alta del estudiante|
+|**Flujo normal:**|1. Accedo al listado de estudiantes<br>2. Buscar al estudiante que vamos a dar de alta<br>3. Mandar solicitud para dar de alta al estudiante<br>4. Se hace una valoracion automatica de esta solicitud y si no esta dentro de los parametros establecidos de esta verificacion se manda a un empleado para su verificacion<br>5. Se validan los datos propuestos<br>6. Se aprueba el alta de este estudiante<br>7. Se cambia la informacion de este estudiante como dado de alta<br>8. Se le envia un correo al estudiante correspondiente para informarle |
+|**Flujo aternativo:**|6.2. No se aprueba el alta del estudiante|
 |**Postcondiciones:**|Ninguna|
 |**Referencias:**|UC-05|
 ||
 
 || |
-|-|:-:|
+|-|:-|
 |**ID:**|UC-07|
 |**Nombre:**|Consultar Horario|
 |**Fecha:**|30/09/2022|
@@ -255,7 +255,7 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 |**Descripcion:**|Permite al actor PAS modificar el horario|
 |**Actor:**|Estudiante, PDI, PAS|
 |**Precondiciones:**|Ser un estudiante de esta institucion|
-|**Flujo normal:**|1.Busco el horario que quiero consultar<br>2.Selecciono la asignatura correspondiente<br>3.Realizo la consulta deseada del horario<br>4.Se guarda el horario en la base de datos|
+|**Flujo normal:**|1. Busco el horario que quiero consultar<br>2. Selecciono la asignatura correspondiente<br>3. Realizo la consulta deseada del horario<br>4. Se guarda el horario en la base de datos|
 |**Flujo aternativo:**|Ninguno|
 |**Postcondiciones:**|Ninguna|
 |**Referencias:**|Ninguna|

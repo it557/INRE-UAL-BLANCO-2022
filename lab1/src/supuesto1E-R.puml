@@ -15,6 +15,7 @@ entity "Estudiante" as Estudiante{
     fechaNacimiento : date
     DNI : number
     email : text
+    alta : boolean
 }
 
 entity "ListaDeClase" as ListaDeClase{
