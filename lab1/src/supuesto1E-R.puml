@@ -18,13 +18,12 @@ entity "Estudiante" as Estudiante{
     alta : boolean
 }
 
-entity "ListaDeClase" as ListaDeClase{
-    * idListado : number
-    nombreListado : text
-    fechaIncorporacion : date
-    nrEstudiantes : number
-    idAsignatura : number <<FK>>
-    idEstudiante : number <<FK>>
+entity "Estudiante_cursa_Asignatura" as EsAs{
+    * idAsignatura : number <<FK>>
+    * idEstudiante : number <<FK>>
+    cursoAcademico : text
+    nrMatricula : number
+    convocatoriasRestantes : number
 }
 
 entity "Asignatura" as Asignatura{
@@ -83,7 +82,7 @@ entity "Universidad" as Universidad{
 entity "Asignatura_horario" as AsHor{
     * idHorario : number <<FK>>
     * idAsignatura : number <<FK>>
-    idClase : number <<FK>>
+    * idClase : number <<FK>>
     hora : text
 }
 
@@ -101,8 +100,8 @@ entity "Asignatura_PDI" as AsPDI{
 PAS ||..|{ Estudiante
 Estudiante }|..|| PDI
 
-Estudiante ||..|{ ListaDeClase
-ListaDeClase }|..|| Asignatura
+Estudiante ||--|{ EsAs
+EsAs }|--|| Asignatura
 
 Asignatura }|..|| Curso
 
@@ -117,7 +116,7 @@ Grupo ||--|| Horario
 Horario ||--|{ AsHor
 AsHor }|--|| Asignatura
 
-Universidad ||--|{ Clase
+Universidad ||..|{ Clase
 Clase ||--|| AsHor
 
 Asignatura ||--|{ AsPDI

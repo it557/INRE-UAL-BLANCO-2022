@@ -5,7 +5,10 @@
 ### **Supuesto 1: Horarios➡️**
 En una universidad, el personal del PDI, el personal del PAS y los estudiantes pueden consultar horarios. Por su parte, el personal del PAS puede modificar horarios y dar de alta estudiantes. El personal de PDI puede proponer cambios en los horarios y dar de alta estudiantes. La funcionalidad de dar de alta estudiantes del PAS realiza una verificación de los datos del estudiante. Sin embargo, la funcionalidad de dar de alta estudiantes del PDI, además de verificar los datos también permite de forma excepcional realizar la búsqueda en las listas de clase de sus asignaturas.
 
-![Supuesto 1: Horarios](/out/lab0/src/horarios/horarios.svg)
+<br>
+
+#### **Diagrama entidad-relación**
+![Supuesto 1: Horarios. Diagrama Entidad - Relación](/out/lab1/src/supuesto1E-R/supuesto1E-R.svg)
 
 <br>
 
@@ -19,7 +22,7 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 | **Fuentes** |  |
 | **Referencias** | - (UC-07) Consultar horario <br> - (UC-01) Modificar horario <br> - (UC-03) Proponer cambios en los horarios|
 | **Descripción** | El sistema deberá almacenar información correspondiente a los horarios de los estudiantes |
-| **Datos específicos** | - Identificador del horario <br> - Nombre del horario <br> - Fecha de incorporación <br> - Fecha de validez <br> - Asignatura  |
+| **Datos específicos** | - Identificador del horario <br> - Nombre del horario <br> - Fecha de incorporación <br> - Grupo al que pertenece el horario <br> - Curso al que pertenece el horario  |
 | **Importancia** | Muy importante |
 | **Estado** | Aceptado |
 | **Comentarios** | Ninguno |
@@ -34,7 +37,7 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 | **Fuentes** |  |
 | **Referencias** | - (UC-07) Consultar horario |
 | **Descripción** | El sistema deberá almacenar información de los estudiantes |
-| **Datos específicos** | - Identificador del estudiante <br> - Nombre del estudiante <br> - Fecha de incorporación <br> - Fecha de nacimiento <br> - DNI <br> - Correo electrónico |
+| **Datos específicos** | - Identificador del estudiante <br> - Nombre del estudiante <br> - Fecha de incorporación <br> - Fecha de nacimiento <br> - DNI <br> - Correo electrónico <br> - Si está dado de alta o no |
 | **Importancia** | Muy importante |
 | **Estado** | Aceptado |
 | **Comentarios** | Ninguno |
@@ -43,13 +46,13 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 | |  |
 | ---| :--- |
 |  **ID** | IR-03 |
-| **Nombre** | Lista de clase |
-| **Versión** | Versión 1 (21/10/2022) |
-| **Autores** | Daniel Pérez Escarcena |
+| **Nombre** | Estudiante cursa Asignatura |
+| **Versión** | Versión 1 (28/11/2022) |
+| **Autores** | Luca Daniel Gavriloaie |
 | **Fuentes** |  |
 | **Referencias** | - (UC-06) Buscar estudiante en la lista de clase |
 | **Descripción** | El sistema deberá almacenar información correspondiente a los listados de clase de los estudiantes |
-| **Datos específicos** | - Identificador del listado <br> - Nombre del listado <br> - Fecha de incorporación <br> - Numero de estudiantes <br> - Asignatura a la que pertenece el listado |
+| **Datos específicos** | - Asignatura a la que pertenece el listado <br> - Identificador del estudiante que cursa dicha asignatura <br> - Curso académico en el que la cursa <br> - Número de veces que se ha matriculado en la asignatura (incluyendo la actual) <br> - Número de convocatorias restantes |
 | **Importancia** | Muy importante |
 | **Estado** | Aceptado |
 | **Comentarios** | Ninguno |
@@ -145,11 +148,70 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 | **Comentarios** | Ninguno |
 ||
 
+| |  |
+| ---| :--- |
+|  **ID** | IR-10 |
+| **Nombre** | Clase |
+| **Versión** | Versión 1 (28/11/2022) |
+| **Autores** | Luca Daniel Gavriloaie |
+| **Fuentes** |  |
+| **Referencias** | - Todos los casos de uso |
+| **Descripción** | El sistema deberá almacenar la informacion de las aulas o clases de la universidad |
+| **Datos específicos** | - Identificador de la clase <br> - Identificador de la universidad <br> - Aforo del aula |
+| **Importancia** | Muy importante |
+| **Estado** | Aceptado |
+| **Comentarios** | Ninguno |
+||
 
-#### **Diagrama entidad relacion**
-<br>
+| |  |
+| ---| :--- |
+|  **ID** | IR-11 |
+| **Nombre** | Asignatura_horario |
+| **Versión** | Versión 1 (28/11/2022) |
+| **Autores** | Luca Daniel Gavriloaie |
+| **Fuentes** |  |
+| **Referencias** | - (UC-01) Modificar horario <br> - (UC-03) Proponer cambios en los horarios <br> - (UC-07) Consultar horario |
+| **Descripción** | El sistema deberá almacenar la informacion sobre la impartición de una determinada asignatura en una clase y un horario específicos |
+| **Datos específicos** | - Identificador del horario <br> - Identificador de la asignatura <br> - Identificador de la clase <br> - Hora a la que se imparte la docencia |
+| **Importancia** | Muy importante |
+| **Estado** | Aceptado |
+| **Comentarios** | Ninguno |
+||
 
-![Supuesto 1: Horarios. Diagrama Entidad - Relación](/out/lab1/src/supuesto1E-R/supuesto1E-R.svg)
+| |  |
+| ---| :--- |
+|  **ID** | IR-12 |
+| **Nombre** | Asignatura_PDI |
+| **Versión** | Versión 1 (28/11/2022) |
+| **Autores** | Luca Daniel Gavriloaie |
+| **Fuentes** |  |
+| **Referencias** | - (UC-06) Buscar estudiantes en la lista de clase |
+| **Descripción** | El sistema deberá almacenar la informacion sobre qué profesores (PDI) imparten cada asignatura |
+| **Datos específicos** | - Identificador del PDI <br> - Identificador de la asignatura |
+| **Importancia** | Muy importante |
+| **Estado** | Aceptado |
+| **Comentarios** | Ninguno |
+||
+
+| |  |
+| ---| :--- |
+|  **ID** | IR-13 |
+| **Nombre** | Grupo |
+| **Versión** | Versión 1 (28/11/2022) |
+| **Autores** | Luca Daniel Gavriloaie |
+| **Fuentes** |  |
+| **Referencias** | - Todos los casos de uso |
+| **Descripción** | El sistema deberá almacenar la informacion sobre los grupos que tiene cada curso |
+| **Datos específicos** | - Identificador del grupo <br> - Identificador del curso |
+| **Importancia** | Muy importante |
+| **Estado** | Aceptado |
+| **Comentarios** | Ninguno |
+||
+
+
+#### **Diagrama de casos de uso**
+
+![Supuesto 1: Horarios](/out/lab0/src/horarios/horarios.svg)
 
 <br>
 
@@ -225,7 +287,7 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 |**Descripcion:**|Permite al actor PDI <br> dar de alta a los estudiantes|
 |**Actor:**|PDI|
 |**Precondiciones:**|Pertenecer al PDI de esta institucion|
-|**Flujo normal:**|1. El actor accede al listado de estudiantes<br>2. El actor busca al estudiante que vamos a dar de alta<br>3. El actor manda solicitud para dar de alta al estudiante<br>4. El actor hace una valoracion automatica de esta solicitud y si no esta dentro de los parametros establecidos de esta verificacion se manda a un empleado para su verificacion<br>5. El sistema valida los datos propuestos<br>6. El sistema aprueba el alta de este estudiante<br>7. El sistema cambia la informacion de este estudiante como dado de alta<br>8. El sistema envia un correo al estudiante correspondiente para informarle |
+|**Flujo normal:**|1. El actor accede al listado de estudiantes<br>2. El actor busca por DNI al estudiante que vamos a dar de alta<br>3. El actor manda una solicitud para dar de alta al estudiante<br>4. El sistema hace una valoracion automatica de esta solicitud y si no esta dentro de los parametros establecidos de esta verificacion se manda a un empleado para su verificacion<br>5. El sistema valida los datos propuestos <br> 6. Mediante una acción de confirmación, el actor envía al sistema los datos a ser validados <br> 7. El sistema comprueba que los datos de cada campo se adecúen a las restricciones del campo en cuestión en la base de datos <br> 8. El Sistema devuelve un mensaje de validación completada correctamente <br>9. El sistema aprueba el alta de este estudiante<br>10. La base de datos cambia la informacion de este estudiante como dado de alta<br>11. El sistema envia un correo al estudiante correspondiente para informarle |
 |**Flujo aternativo:**|6.2. El sistema no aprueba el alta del estudiante<br>9.2. El sistema busca al estudiante en las listas de clase para eliminar todos sus registros|
 |**Postcondiciones:**|El estudiante se marca en la base de datos como dado de alta|
 |**Referencias:**|UC-02, UC-06|
@@ -265,13 +327,15 @@ En una universidad, el personal del PDI, el personal del PAS y los estudiantes p
 ### **Supuesto 2: Sistema de compras➡️**
 En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, proveedor y administrador. Los compradores pueden agregar productos, consultar precios, finalizar la compra y consultar ofertas. Agregar productos implica marcar esos productos como bloqueados. Los vendedores también pueden consultar ofertas y consultar precios. Los proveedores pueden consultar precios, avisar de nuevos productos y consultar ofertas. Avisar de nuevos productos, de forma excepcional, realiza la incorporación de una oferta. Los proveedores también tienen una funcionalidad para avisar del fin de una oferta. Cuando se avisa del fin de una oferta, se ejecuta la funcionalidad de eliminar la oferta. Ambas funcionalidades de avisar del proveedor tienen en común que se encarga de enviar una notificación. Los administradores pueden consultar precios, consultar ofertas y eliminar productos. La funcionalidad de consultar precios incluye una funcionalidad de buscar productos que es similar a la funcionalidad de consultar productos de los compradores. Sin embargo, la funcionalidad de consultar productos añade una funcionalidad para verificar la disponibilidad. Para realizar una venta, un comprador y un vendedor participan de forma conjunta. En dicha operación, se lleva a cabo el acuerdo de un precio; excepcionalmente, durante la realización de la venta, se consultará el histórico de ventas.
 
-![Supuerto 2: Sistema de Compras](/out/lab0/src/SistemaDeCompras/SistemaDeCompras.svg)
+<br>
 
+#### **Diagrama entidad-relación**
+![Supuesto 2: Sistema de compras. Diagrama Entidad - Relación](/out/lab1/src/supuesto2E-R/supuesto2E-R.svg)
 <br>
 
 >#### **Definición de requisitos de información**
 | |  |
-| ---| :---: |
+| ---| :-- |
 |  **ID** | IR-01 |
 | **Nombre** | Producto |
 | **Versión** | Versión 1 (21/10/2022) |
@@ -285,7 +349,7 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **Comentarios** | Ninguno |
 
 | |  |
-| ---| :---: |
+| ---| :-- |
 |  **ID** | IR-02 |
 | **Nombre** | Oferta |
 | **Versión** | Versión 1 (21/10/2022) |
@@ -299,7 +363,7 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **Comentarios** | Ninguno |
 
 | |  |
-| ---| :---: |
+| ---| :-- |
 |  **ID** | IR-03 |
 | **Nombre** | Venta |
 | **Versión** | Versión 1 (21/10/2022) |
@@ -313,7 +377,7 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **Comentarios** | Incluimos el precio de venta en este requisito de información puesto que el comprador y el vendedor deben ponerse de acuerdo en el precio de la venta, de modo que los productos no tienen un precio asignado, sino que este se relaciona con la propia venta |
 
 | |  |
-| ---| :---: |
+| ---| :-- |
 |  **ID** | IR-04 |
 | **Nombre** | Aviso |
 | **Versión** | Versión 1 (21/10/2022) |
@@ -327,7 +391,7 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **Comentarios** | Pueden haber avisos sin notificar y avisos para los que se ha generado una notificación |
 
 | |  |
-| ---| :---: |
+| ---| :-- |
 |  **ID** | IR-05 |
 | **Nombre** | Notificaciones |
 | **Versión** | Versión 1 (21/10/2022) |
@@ -341,7 +405,7 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **Comentarios** | Las notificaciones solo podrán ser generadas por el Proveedor que emitió el aviso que se pretende notificar. Por ello las relacionamos con el aviso y no con el emisor, que se sobreentiende. |
 
 | |  |
-| ---| :---: |
+| ---| :-- |
 |  **ID** | IR-06 |
 | **Nombre** | Comprador |
 | **Versión** | Versión 1 (21/10/2022) |
@@ -355,7 +419,7 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **Comentarios** | Ninguno |
 
 | |  |
-| ---| :---: |
+| ---| :-- |
 |  **ID** | IR-07 |
 | **Nombre** | Administrador |
 | **Versión** | Versión 1 (21/10/2022) |
@@ -369,7 +433,7 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **Comentarios** | Ninguno |
 
 | |  |
-| ---| :---: |
+| ---| :-- |
 |  **ID** | IR-08 |
 | **Nombre** | Vendedor |
 | **Versión** | Versión 1 (21/10/2022) |
@@ -383,7 +447,7 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **Comentarios** | Ninguno |
 
 | |  |
-| ---| :---: |
+| ---| :-- |
 |  **ID** | IR-09 |
 | **Nombre** | Proveedor |
 | **Versión** | Versión 1 (21/10/2022) |
@@ -397,7 +461,7 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **Comentarios** | Ninguno |
 
 | |  |
-| ---| :---: |
+| ---| :-- |
 |  **ID** | IR-10 |
 | **Nombre** | Productos eliminados |
 | **Versión** | Versión 1 (31/10/2022) |
@@ -411,7 +475,7 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **Comentarios** | Ninguno |
 
 | |  |
-| ---| :---: |
+| ---| :-- |
 |  **ID** | IR-11 |
 | **Nombre** | Cesta de la compra |
 | **Versión** | Versión 1 (31/10/2022) |
@@ -425,7 +489,7 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **Comentarios** | Ninguno |
 
 | |  |
-| ---| :---: |
+| ---| :-- |
 |  **ID** | IR-12 |
 | **Nombre** | Productos ofertados |
 | **Versión** | Versión 1 (01/11/2022) |
@@ -439,7 +503,7 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **Comentarios** | Ninguno |
 
 | |  |
-| ---| :---: |
+| ---| :-- |
 |  **ID** | IR-13 |
 | **Nombre** | Productos bloqueados |
 | **Versión** | Versión 1 (03/11/2022) |
@@ -452,12 +516,11 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **Estado** | Aceptado |
 | **Comentarios** | Ninguno |
 
-
-
-**Diagrama entidad relacion**
 <br>
 
-![Supuesto 2: Sistema de compras. Diagrama Entidad - Relación](/out/lab1/src/supuesto2E-R/supuesto2E-R.svg)
+**Diagrama de casos de uso**
+
+![Supuerto 2: Sistema de Compras](/out/lab0/src/SistemaDeCompras/SistemaDeCompras.svg)
 
 <br>
 
@@ -577,7 +640,7 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **Referencias** | UC-02 |
 
 | |  |
-| ---| :---: |
+| ---| :-- |
 |  **ID**| UC-09 |
 |  **Nombre** | VerificarDisponibilidad |
 |  **Fecha** | 18/10/2022 |
@@ -591,7 +654,7 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **Referencias** | UC-03 |
 
 | |  |
-| ---| :---: |
+| ---| :-- |
 |  **ID**| UC-10 |
 |  **Nombre** | AcordarPrecio |
 |  **Fecha** | 14/10/2022 |
@@ -606,7 +669,7 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 
 
 | | |
-| ----------- | :-----------: |
+| ----------- | :---------- |
 | **Identificador:** | UC-11 |
 | **Nombre:** | ConsultarOferta |
 | **Fecha:** | 07/10/2022 |
@@ -620,7 +683,7 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **Referencias:** |  |
 
 | |  |
-| ---| :---: |
+| ---| :-- |
 |  **ID**| UC-12 |
 |  **Nombre** | ConsultarPrecio |
 |  **Fecha** | 18/10/2022 |
@@ -634,7 +697,7 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **Referencias** | UC-15 |
 
 | |  |
-| ---| :---: |
+| ---| :-- |
 |  **ID**| UC-13|
 |  **Nombre** | EliminarOferta |
 |  **Fecha** | 14/10/2022 |
@@ -663,7 +726,7 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 | **Referencias** | UC-07, UC-16 |
 
 | |  |
-| ---| :---: |
+| ---| :-- |
 |  **ID**| UC-15 |
 |  **Nombre** | BuscarProducto |
 |  **Fecha** | 18/10/2022 |
@@ -726,7 +789,7 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 
 >#### **Definición de requisitos de información**
 | |  |
-| ---| :---: |
+| ---| :-- |
 |  **ID** | IR-01 |
 | **Nombre** | Reservas |
 | **Versión** | Versión 1 (21/10/2022) |
@@ -741,7 +804,7 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 ||
 
 | |  |
-| ---| :---: |
+| ---| :-- |
 |  **ID** | IR-02 |
 | **Nombre** | Ofertas |
 | **Versión** | Versión 1 (21/10/2022) |
@@ -756,7 +819,7 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 ||
 
 | |  |
-| ---| :---: |
+| ---| :-- |
 |  **ID** | IR-03 |
 | **Nombre** | Precio |
 | **Versión** | Versión 1 (21/10/2022) |
@@ -771,7 +834,7 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 ||
 
 | |  |
-| ---| :---: |
+| ---| :-- |
 |  **ID** | IR-04 |
 | **Nombre** | Peticiones |
 | **Versión** | Versión 1 (21/10/2022) |
@@ -786,7 +849,7 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 ||
 
 | |  |
-| ---| :---: |
+| ---| :-- |
 |  **ID** | IR-05 |
 | **Nombre** | Cliente |
 | **Versión** | Versión 1 (28/10/2022) |
@@ -801,7 +864,7 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 ||
 
 | |  |
-| ---| :---: |
+| ---| :-- |
 |  **ID** | IR-06 |
 | **Nombre** | Comercial |
 | **Versión** | Versión 1 (28/10/2022) |
@@ -816,7 +879,7 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 ||
 
 | |  |
-| ---| :---: |
+| ---| :-- |
 |  **ID** | IR-07 |
 | **Nombre** | Administrador |
 | **Versión** | Versión 1 (28/10/2022) |
@@ -831,7 +894,7 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 ||
 
 | |  |
-| ---| :---: |
+| ---| :-- |
 |  **ID** | IR-08 |
 | **Nombre** | Disponibilidades |
 | **Versión** | Versión 1 (28/10/2022) |
@@ -915,7 +978,7 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 ||
 
 || |
-|-|:-:|
+|-|:|
 |**ID:**|UC-05|
 |**Nombre:**|Consultar reservas|
 |**Fecha:**|07/10/2022|
@@ -930,7 +993,7 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 ||
 
 || |
-|-|:-:|
+|-|:|
 |**ID:**|UC-06|
 |**Nombre:**|Mostrar calendario|
 |**Fecha:**|18/10/2022|
@@ -945,7 +1008,7 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 ||
 
 || |
-|-|:-:|
+|-|:|
 |**ID:**|UC-07|
 |**Nombre:**|Realizar ofertas|
 |**Fecha:**|07/10/2022|
@@ -960,7 +1023,7 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 ||
 
 || |
-|-|:-:|
+|-|:|
 |**ID:**|UC-08|
 |**Nombre:**|Gestionar peticion|
 |**Fecha:**|07/10/2022|
@@ -975,7 +1038,7 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 ||
 
 || |
-|-|:-:|
+|-|:|
 |**ID:**|UC-09|
 |**Nombre:**|Bloquear temporalmente una reserva|
 |**Fecha:**|07/10/2022|
@@ -990,7 +1053,7 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 ||
 
 || |
-|-|:-:|
+|-|:|
 |**ID:**|UC-10|
 |**Nombre:**|Gestionar nueva reserva|
 |**Fecha:**|07/10/2022|
@@ -1005,7 +1068,7 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 ||
 
 || |
-|-|:-:|
+|-|:|
 |**ID:**|UC-11|
 |**Nombre:**|Realizar oferta del comercial|
 |**Fecha:**|07/10/2022|
@@ -1020,7 +1083,7 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 ||
 
 || |
-|-|:-:|
+|-|:|
 |**ID:**|UC-12|
 |**Nombre:**|Recalcular precio|
 |**Fecha:**|07/10/2022|
