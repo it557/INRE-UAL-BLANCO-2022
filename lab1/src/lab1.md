@@ -948,7 +948,7 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 ||
 
 || |
-|-|:-|
+|-|:----|
 |**ID:**|UC-03|
 |**Nombre:**|Consultar disponibilidad|
 |**Fecha:**|07/10/2022|
@@ -978,7 +978,7 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 ||
 
 || |
-|-|:|
+|-|:-|
 |**ID:**|UC-05|
 |**Nombre:**|Consultar reservas|
 |**Fecha:**|07/10/2022|
@@ -993,7 +993,7 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 ||
 
 || |
-|-|:|
+|-|:-|
 |**ID:**|UC-06|
 |**Nombre:**|Mostrar calendario|
 |**Fecha:**|18/10/2022|
@@ -1008,7 +1008,7 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 ||
 
 || |
-|-|:|
+|-|:--|
 |**ID:**|UC-07|
 |**Nombre:**|Realizar ofertas|
 |**Fecha:**|07/10/2022|
@@ -1023,7 +1023,7 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 ||
 
 || |
-|-|:|
+|-|:-|
 |**ID:**|UC-08|
 |**Nombre:**|Gestionar peticion|
 |**Fecha:**|07/10/2022|
@@ -1038,7 +1038,7 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 ||
 
 || |
-|-|:|
+|-|:-|
 |**ID:**|UC-09|
 |**Nombre:**|Bloquear temporalmente una reserva|
 |**Fecha:**|07/10/2022|
@@ -1053,7 +1053,7 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 ||
 
 || |
-|-|:|
+|-|:-|
 |**ID:**|UC-10|
 |**Nombre:**|Gestionar nueva reserva|
 |**Fecha:**|07/10/2022|
@@ -1068,7 +1068,7 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 ||
 
 || |
-|-|:|
+|-|:-|
 |**ID:**|UC-11|
 |**Nombre:**|Realizar oferta del comercial|
 |**Fecha:**|07/10/2022|
@@ -1083,7 +1083,7 @@ En una compañía hotelera, el administrador y el comercial pueden consultar res
 ||
 
 || |
-|-|:|
+|-|:-|
 |**ID:**|UC-12|
 |**Nombre:**|Recalcular precio|
 |**Fecha:**|07/10/2022|
