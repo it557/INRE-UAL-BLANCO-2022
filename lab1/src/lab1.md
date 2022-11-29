@@ -664,7 +664,7 @@ En un sistema de compra, existen cuatro tipos de usuarios: comprador, vendedor, 
 |  **Precondiciones** | Comprador y Vendedor deben estar autenticados en el sistema |
 |  **Flujo Normal** | 1.El vendedor establece un precio y lo envia a la base de datos del sistema <br> 2.El sistema establece el precio a dicho producto <br> 3.El comprador recibe una notificacion con el precio ajustado por el vendedor y decide si comprarlo <br> 4.Si acepta el precio, hace click sobre el boton Acordar <br> 5.El Sistema abre una pestaña con un formulario para poder comprar dicho producto <br> 6.El comprador acepta y envia el formulario <br> 7.Se realiza una petición de precio acordado al sistema |
 |  **Flujo Alternativo** | 4A. En caso que el comprador decida rechazar el precio propuesto por el vendedor, el sistema envia una petición al sistema "Precio denegado" |
-| **Postcondiciones** |  |
+| **Postcondiciones** | El sistema guarda el precio acordado |
 | **Referencias** | UC-05 |
 
 
