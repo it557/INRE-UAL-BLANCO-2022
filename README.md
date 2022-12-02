@@ -20,6 +20,6 @@
 
 <br>
 
-## **Anexo** 📄
+## **Proyecto** 📓
 ---
-* [Preguntas entrevista](/Proyecto/Preguntas%20entrevista.pdf)
+* [Preguntas y respuestas entrevista](/Proyecto/Preguntas%20y%20respuestas%20entrevista.pdf)
