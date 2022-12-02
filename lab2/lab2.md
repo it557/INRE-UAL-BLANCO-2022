@@ -3,7 +3,7 @@
 #### **Supuesto 1: Incendio➡️**
 Después de un incendio, por un lado se necesita obtener información de nuestra compañía de seguro. Por otro lado, es posible que necesitemos información adicional del departamento de bomberos, pero solo si los bomberos participaron durante el apagado del incendio. Cuando se tenga toda la información, se necesita escribir un informe consolidado.
 
-![Supuesto1](Supuesto1.svg)
+![Supuesto1](/lab2/src/Supuesto1.svg)
 
 #### **Supuesto 2: Aprobación de fondos➡️**
 1.Un proceso cliente envía una petición para que se realice una solicitud y aprobación de fondos
@@ -30,10 +30,10 @@ Después de un incendio, por un lado se necesita obtener información de nuestra
 
 9.Si el departamento de finanzas aprobó, el proceso finaliza enviando un mensaje al proceso cliente.
 
-![Supuesto2](Supuesto2.svg)
+![Supuesto2](/lab2/src/Supuesto2.svg)
 
 #### **Supuesto 3: Información revisada➡️**
 Un empleado envía una información para ser revisada. A un gerente se le envía la información para su revisión, quien tiene la potestad de aprobarla o rechazarla. Si se aprueba, el empleado recibe una notificación y el proceso culmina. De lo contrario al empleado se le envía la información para su corrección. El empleado procede a realizar los cambios y a enviar la información de vuelta. Luego se envía una notificación al gerente y el proceso culmina.
 
 
-![Supuesto3](Supuesto3.svg)
+![Supuesto3](/lab2/src/Supuesto3.svg)

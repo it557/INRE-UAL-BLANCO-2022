@@ -12,11 +12,11 @@
 
 ---
 
-1. **Lab 0 - Familiarización con MarkDown-Mermaid-PlantUML** - [Ver](/lab0/src/lab0.md)
+1. **Lab 0 - Familiarización con MarkDown-Mermaid-PlantUML** - [Ver](/lab0/lab0.md)
 
-2. **Lab 1 - Definición de casos de uso y requisitos de información** - [Ver](/lab1/src/lab1.md)
+2. **Lab 1 - Definición de casos de uso y requisitos de información** - [Ver](/lab1/lab1.md)
 
-3. **Lab 2 - BPMN** - [Ver](lab2/lab2.md)
+3. **Lab 2 - BPMN** - [Ver](/lab2/lab2.md)
 
 <br>
 
