@@ -282,55 +282,49 @@ Se podrá visualizar las tablas con los requisitos funcionales y los diagramas d
 |**Autor**  | David Hernández Carmona  |
 |**Referencias**  |  RF-06, RF-09 |
 |**Descripción**  |  Cada usuario debe pagar una tarifa ya sea para contratar el servicio de una línea o de un itinerario personalizado |
-|**Datos Especificos**  |   |
-|**Importancia**  |   |
-|**Estado**  |   |
-|**Comentarios**  |   |
-
-
+|**Datos Especificos**  | - Identificador de la tarifa <br> - Identificador del usuario  |
+|**Importancia**  | TBD  |
+|**Estado**  | Obligatorio  |
+|**Comentarios**  | Ninguno  |
 
 
 | ID          | RI-17 | 
 |-------------------|-------------|
-|**Nombre**  |   |    
-|**Versión**  |   |
-|**Autor**  |   |
-|**Referencias**  |   |
-|**Descripción**  |   |
-|**Datos Especificos**  |   |
-|**Importancia**  |   |
-|**Estado**  |   |
-|**Comentarios**  |   |
-
-
+|**Nombre**  | Usuarios Registrados_Itinerarios  |    
+|**Versión**  | 1.0, 16/12/2022  |
+|**Autor**  | David Hernández Carmona  |
+|**Referencias**  | RF-07, RF-06, RF-05, RF-09  |
+|**Descripción**  | Cada usuario puede contratar un itinerario ya sea predeterminado (por una línea) o personalizado por el mismo usuario  |
+|**Datos Especificos**  | - Identificador del usuario <br> - Identificador del itinerario <br> - Precio  |
+|**Importancia**  | TBD  |
+|**Estado**  | Obligatorio  |
+|**Comentarios**  | Ninguno  |
 
 
 | ID          | RI-18 | 
 |-------------------|-------------|
-|**Nombre**  |   |    
-|**Versión**  |   |
-|**Autor**  |   |
-|**Referencias**  |   |
-|**Descripción**  |   |
-|**Datos Especificos**  |   |
-|**Importancia**  |   |
-|**Estado**  |   |
-|**Comentarios**  |   |
-
-
+|**Nombre**  | Tarjeta de transporte  |    
+|**Versión**  | 1.0, 16/12/2022  |
+|**Autor**  | David Hernández Carmona  |
+|**Referencias**  | RF-12, RF-09  |
+|**Descripción**  | Tarjeta asociada a un usuario registrado que almacena el número de viajes restantes.  |
+|**Datos Especificos**  | - Identificador de la tarjeta <br> - Identificador del usuario <br> - Número de viajes disponibles  |
+|**Importancia**  | TBD  |
+|**Estado**  | Obligatorio  |
+|**Comentarios**  | Ninguno  |
 
 
 | ID          | RI-19 | 
 |-------------------|-------------|
-|**Nombre**  |   |    
-|**Versión**  |   |
-|**Autor**  |   |
-|**Referencias**  |   |
-|**Descripción**  |   |
-|**Datos Especificos**  |   |
-|**Importancia**  |   |
-|**Estado**  |   |
-|**Comentarios**  |   |
+|**Nombre**  | Incidencias  |    
+|**Versión**  | 1.0, 19/12/2022  |
+|**Autor**  | Luca Daniel Gavriloaie  |
+|**Referencias**  | RF-15, RF-09  |
+|**Descripción**  | El sistema deberá almacenar información correspondiente a las incidencias que el administrador tenga que trasladar a la web.  |
+|**Datos Especificos**  | - Identificador de la incidencia <br> - Identificador del administrador que la ha trasladado <br> - Nombre de la incidencia <br> - Fecha <br> - Lugar <br> - Línea <br> - Operador que la ha comunicado  |
+|**Importancia**  | TBD  |
+|**Estado**  | Obligatorio  |
+|**Comentarios**  | Ninguno  |
 
 <br>
 
@@ -389,7 +383,7 @@ Se podrá visualizar las tablas con los requisitos funcionales y los diagramas d
 |**Urgencia**  | Normal  |
 |**Estado**  |  Obligatorio |
 |**Estabilidad**  | Alta  |
-|**Comentarios**  |   |
+|**Comentarios**  | Ninguno  |
 
 | RF-5            | Buscar contenido en la Web    |
 |-------------------|-------------|
@@ -403,7 +397,7 @@ Se podrá visualizar las tablas con los requisitos funcionales y los diagramas d
 |**Urgencia**  | Normal  |
 |**Estado**  |  Obligatorio |
 |**Estabilidad**  | Alta  |
-|**Comentarios**  |   |
+|**Comentarios**  | Ninguno  |
 
 | RF-6            | Consultar de forma dinámica la información del servicio    |
 |-------------------|-------------|
@@ -417,7 +411,7 @@ Se podrá visualizar las tablas con los requisitos funcionales y los diagramas d
 |**Urgencia**  | Normal  |
 |**Estado**  |  Obligatorio |
 |**Estabilidad**  | Alta  |
-|**Comentarios**  |   |
+|**Comentarios**  | Ninguno  |
 
 | RF-7            | Ver itinerarios    |
 |-------------------|-------------|
@@ -431,7 +425,7 @@ Se podrá visualizar las tablas con los requisitos funcionales y los diagramas d
 |**Urgencia**  | Normal  |
 |**Estado**  |  Obligatorio |
 |**Estabilidad**  | Alta  |
-|**Comentarios**  |   |
+|**Comentarios**  | Ninguno  |
 
 | RF-8            | Programar con antelación un viaje    |
 |-------------------|-------------|
@@ -445,7 +439,7 @@ Se podrá visualizar las tablas con los requisitos funcionales y los diagramas d
 |**Urgencia**  | Normal  |
 |**Estado**  |  Obligatorio |
 |**Estabilidad**  | Alta  |
-|**Comentarios**  |   |
+|**Comentarios**  | Ninguno  |
 
 | RF-9            | Iniciar sesión   |
 |-------------------|-------------|
@@ -459,7 +453,7 @@ Se podrá visualizar las tablas con los requisitos funcionales y los diagramas d
 |**Urgencia**  | Normal  |
 |**Estado**  |  Obligatorio |
 |**Estabilidad**  | Alta  |
-|**Comentarios**  |   |
+|**Comentarios**  | Ninguno  |
 
 | RF-10            | Calcular importe del itinerario a realizar    |
 |-------------------|-------------|
@@ -473,7 +467,7 @@ Se podrá visualizar las tablas con los requisitos funcionales y los diagramas d
 |**Urgencia**  | Normal  |
 |**Estado**  |  Obligatorio |
 |**Estabilidad**  | Alta  |
-|**Comentarios**  |   |
+|**Comentarios**  | Ninguno  |
 
 | RF-11           | Enviar correo de confirmación de compra del itinerario    |
 |-------------------|-------------|
@@ -487,7 +481,7 @@ Se podrá visualizar las tablas con los requisitos funcionales y los diagramas d
 |**Urgencia**  | Normal  |
 |**Estado**  |  Obligatorio |
 |**Estabilidad**  | Alta  |
-|**Comentarios**  |   |
+|**Comentarios**  | Ninguno  |
 
 | RF-12           | Validar información introducida a la hora de hacer el pago    |
 |-------------------|-------------|
@@ -501,7 +495,7 @@ Se podrá visualizar las tablas con los requisitos funcionales y los diagramas d
 |**Urgencia**  | Normal  |
 |**Estado**  |  Obligatorio |
 |**Estabilidad**  | Alta  |
-|**Comentarios**  |   |
+|**Comentarios**  | Ninguno  |
 
 | RF-13           | Pedir confirmación de compra en la aplicación antes de cobrar el pago a realizar    |
 |-------------------|-------------|
@@ -515,7 +509,7 @@ Se podrá visualizar las tablas con los requisitos funcionales y los diagramas d
 |**Urgencia**  | Normal  |
 |**Estado**  |  Obligatorio |
 |**Estabilidad**  | Alta  |
-|**Comentarios**  |   |
+|**Comentarios**  | Ninguno  |
 
 | RF-14            | Enviar código qr con información de la compra realizada    |
 |-------------------|-------------|
@@ -551,7 +545,7 @@ Se podrá visualizar las tablas con los requisitos funcionales y los diagramas d
 ### ***3.1.3 Requisitos no Funcionales***
 | RNF-1            | Tiempo de respuesta    |
 |-------------------|-------------|
-| **Requisitos asociados**  | RF-01, RF-02,RF-03,RF-05, RF-06,RF-07, RF-08,RF-09,RF-10   |
+| **Requisitos asociados**  | RF-01, RF-02, RF-03, RF-05, RF-06, RF-07, RF-08, RF-09, RF-10   |
 | **Descripción**   | Tiempo de respuesta corto, baja  utilización de recursos, debe de ser accesible a todos los públicos, no tener un uso muy complejo.   |
 | **Comentarios**   | Ninguno   |
 
@@ -621,23 +615,6 @@ Se podrá visualizar las tablas con los requisitos funcionales y los diagramas d
 | **Requisitos asociados**  | RF-11, RF-12   |
 | **Descripción**   | Se deberá contemplar todos los subsistemas, interfaces, desarrollos e implementaciones necesarias para permitir la recarga, consulta, y cualquier operación relativa al título único del transporte de Gran Canaria.   |
 | **Comentarios**   | Ninguno   |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <br>
@@ -773,13 +750,188 @@ HOLA
 | **Nombre**            |    Ver itinerario    |
 | **Autor**             |    Daniel Pérez Escarcena     |
 | **Fecha**             |    16/12/2022     |
-| **Descripción**       |    El usuario ver el itinerario elegido     |
+| **Descripción**       |    El usuario puede ver el itinerario elegido     |
 | **Actores**           |   Usuario no registrado, Usuario registrado     |
 | **Precondiciones**    |   El usuario debe haber accedido a la opción de planificar una ruta.    |
 | **Flujo Normal**      |    1. El usuario selecciona un itinerario.<br> 2. El sistema muestra información del itinerario.|
 | **Flujo alternativo** |    2b. El usuario no encuentra ningun itinerario que se adecue a sus necesidades    |
 | **Post Condiciones**  |    Ninguna    |
 | **Referencias**       |    CU-07       |
+
+
+
+| **ID**                | CU-07                                           |
+|-----------------------|-------------------------------------------------|
+| **Nombre**            |    Planificar una ruta    |
+| **Autor**             |    Daniel Pérez Escarcena     |
+| **Fecha**             |    16/12/2022     |
+| **Descripción**       |    El usuario puede planificar una ruta que se adecue a sus necesidades     |
+| **Actores**           |   Usuario no registrado, Usuario registrado     |
+| **Precondiciones**    |   Entrar en la sección de rutas    |
+| **Flujo Normal**      | 1. El usuario solicita al sistema planificar un itinerario.<br> 2. El usuario solicita al sistema ajustar los parámetros de búsqueda.<br>3. El sistema solicita seleccionar un origen y un destino mostrándole una lista. <br> 4. El usuario proporciona al sistema dicha información. <br> 5. El sistema solicita indicar una fecha y una hora.<br> 6. El usuario introduce la fecha y la hora deseadas.<br>7. El sistema solicita seleccionar un aspecto a potenciar en la planificación (menor duración, número de transbordos, el menor precio).<br>8. El usuario indica el aspecto que quiere potenciar.<br>9. El usuario guarda los parámetros configurados<br>10. El usuario pulsa el botón para planificar la ruta descrita.<br>11. El sistema calcula el mejor itinerario para los filtros aplicados.<br>12. El sistema definirá los transbordos que se deben hacer comprobando cuál sería la mejor conexión entre las distintas líneas y medios de transporte disponibles.<br>13. El sistema muestra los transbordos que debe tomar para realizar el itinerario.<br>14. El sistema muestra una lista con los itinerarios que se adaptan a sus condiciones de búsqueda.<br>15. El usuario selecciona el itinerario deseado.<br>16. El sistema muestra información del itinerario.<br>17. El usuario solicita al sistema instrucciones para llevar a cabo el itinerario pulsando un botón.<br>18. El sistema muestra las instrucciones que debe seguir el usuario para cumplir con el itinerario.<br>19. El sistema evalúa las condiciones reales de tráfico y los factores influyentes consultando el sistema de información.<br>20. El sistema realiza un cálculo estimado del tiempo de recorrido teniendo en cuenta la información en tiempo real.<br>21. El sistema devuelve un pop-up con el tiempo estimado en minutos  y un pequeño resumen de la parada de origen y destino seleccionadas previamente.<br>22. El sistema realiza un cálculo de la distancia entre las paradas seleccionadas teniendo en cuenta la información geográfica del SI.<br>23. El sistema devuelve un pop-up con la distancia en kilómetros|
+| **Flujo alternativo** |    12A. Si existe una línea con ese recorrido, le mostrará al usuario dicha línea y que no necesita realizar transbordos.<br>15A. El usuario no encuentra ningun itinerario que se adecue a sus necesidades  |
+| **Post Condiciones**  |    Ninguna    |
+| **Referencias**       |    Ninguna    |
+
+
+| **ID**                | CU-08                                           |
+|-----------------------|-------------------------------------------------|
+| **Nombre**            |    Definir Transbordos     |
+| **Autor**             |    Daniel Pérez Escarcena     |
+| **Fecha**             |    16/12/2022     |
+| **Descripción**       |   El usuario puede ver los transbordos que debe tomar para llegar a la ruta deseada     |
+| **Actores**           |    Usuario no registrado, Usuario registrado, Sistema     |
+| **Precondiciones**    |   El usuario debe haber accedido a la opción de planificar una ruta (origen y destino seleccionados)  |
+| **Flujo Normal**      |  1. El sistema definirá los transbordos que se deben hacer comprobando cuál sería la mejor conexión entre las distintas líneas y medios de transporte disponibles.<br> 2. El sistema muestra los transbordos que debe tomar para realizar el itinerario.|
+| **Flujo alternativo** |    1A. Si existe una línea con ese recorrido, le mostrará al usuario dicha línea y que no necesita realizar transbordos.     |
+| **Post Condiciones**  |   Ninguna   |
+| **Referencias**       |   CU-07     |
+
+
+| **ID**                | CU-09                                           |
+|-----------------------|-------------------------------------------------|
+| **Nombre**            |    Identificar zonas no transitables     |
+| **Autor**             |    Toderic Ioan stefan     |
+| **Fecha**             |    16/12/2022     |
+| **Descripción**       |   El sistema es capaz de identificar aquellos recorridos intransitables (Zonas de alto tráfico, zonas con un accidente)     |
+| **Actores**           |    Sistema     |
+| **Precondiciones**    |   Ninguna |
+| **Flujo Normal**      |  1. El sistema toma información de la base de datos<br> 2. En base a la información de las incidencias recibidas y la información geográfica <br> 3.El sistema devuelve un resumen con las zonas intransitables|
+| **Flujo alternativo** |    3A. El sistema no encuentra zonas intransitables<br> 3A.1. El sistema devuelve un mensaje en el cual se especifica que todas las zonas están disponibles |
+| **Post Condiciones**  |   Ninguna   |
+| **Referencias**       |   Ninguna   |
+
+
+| **ID**                | CU-10                                           |
+|-----------------------|-------------------------------------------------|
+| **Nombre**            |    Visualizar alarmas     |
+| **Autor**             |    Daniel Pérez Escarcena     |
+| **Fecha**             |    16/12/2022     |
+| **Descripción**       |   El usuario puede ver las alarmas que informan todas las incidencias que han ocurrido
+     |
+| **Actores**           |    Usuario no registrado, Usuario registrado
+     |
+| **Precondiciones**    |   El usuario debe haber accedido a la aplicación |
+| **Flujo Normal**      |  1. El usuario accede al panel de avisos. <br> 2. El sistema muestra las alarmas que los administradores han activado. <br> 3. El usuario clica en una alarma para poder obtener más información de ella <br> 4. El sistema ofrece información detallada sobre la alarma, como el asunto, la fecha y la descripción de la misma.|
+| **Flujo alternativo** |    2b. No hay ninguna alarma disponible |
+| **Post Condiciones**  |   Ninguna   |
+| **Referencias**       |   Ninguna   |
+
+
+
+| **ID** | CU-11 |
+|--|--|
+| **Nombre**            | Listar horarios y servicios |
+| **Autor**             | Daniel Pérez Escarcena |
+| **Fecha**             | 16/12/2022 |
+| **Descripción**       | El usuario puede ver los horarios de los servicios disponibles |
+| **Actores**           | Usuario no registrado, Usuario registrado |
+| **Precondiciones**    | El usuario debe haber accedido a la aplicación |
+| **Flujo Normal**      | 1. El usuario entra dentro de la aplicación<br> 2. El usuario entra en la opción de horarios <br> 3.El sistema muestra todos los horarios disponibles en ese momento <br> 4. El usuario busca el horario del servicio que va a utilizar <br> 5. Acceder al horario seleccionado |
+| **Flujo alternativo** | 2b. No hay ninguna alarma disponible |
+| **Post Condiciones**  | Ninguna |
+| **Referencias**       | Ninguna |
+
+
+| **ID** | CU-12 |
+|--|--|
+| **Nombre**            | Ver sitios de interés |
+| **Autor**             | Toderic Ioan Stefan |
+| **Fecha**             | 16/12/2022 |
+| **Descripción**       | El sistema tiene itinerarios que pasan por sitios de interés y estos se podrán ver |
+| **Actores**           | Usuario no registrado, Usuario registrado |
+| **Precondiciones**    | Ninguna |
+| **Flujo Normal**      | 1. El usuario accede a la sección de sitios de interés <br> 2. El usuario selecciona un sitio entre todos los disponibles en el portal web <br> 3. El sistema le ofrece la posibilidad de ir <br> 4. El usuario aceptar e  ir <br> 5. El sistema abre una pestaña con el método de pago  <br> 6. El usuario introduce los datos pertinentes y envía el pago |
+| **Flujo alternativo** | 4. A El usuario decide no aceptar y selecciona “no” |
+| **Post Condiciones**  | Ninguna |
+| **Referencias**       | Ninguna |
+
+
+| **ID** | CU-13 |
+|--|--|
+| **Nombre**            | Ver lineas |
+| **Autor**             | Toderic Ioan Stefan  |
+| **Fecha**             | 16/12/2022
+ |
+| **Descripción**       | Le permite al usuario ver las líneas disponibles |
+| **Actores**           | Usuario no registrado, Usuario registrado |
+| **Precondiciones**    | El usuario debe haber accedido a la aplicación |
+| **Flujo Normal**      | 1. El usuario selecciona el apartado donde se muestran las líneas disponibles <br> 2. El sistema muestra todas las líneas <br> 3. El usuarios selecciona una de las líneas disponibles <br>4. El sistema devuelve la información de la línea sin detalle |
+| **Flujo alternativo** |  1.A El usuario hace click sobre en el botón ver más detalle de la línea <br> 1.A1 El sistema devuelve en una pestaña nueva toda la información     detallada de la línea seleccionada |
+| **Post Condiciones**  | Ninguna |
+| **Referencias**       | CU-14, CU-15, CU-16 |
+
+
+| **ID** | CU-14 |
+|--|--|
+| **Nombre**            | Ver información de la línea |
+| **Autor**             | Toderic Ioan Stefan |
+| **Fecha**             | 16/12/2022 |
+| **Descripción**       | Ofrece de manera detallada información sobre la línea seleccionada |
+| **Actores**           | Usuario no registrado, Usuario registrado |
+| **Precondiciones**    | El usuario debe haber accedido a la aplicación |
+| **Flujo Normal**      |  1. El usuario hace click sobre en el botón ver más detalle de la línea <br> 2. El sistema devuelve en una pestaña nueva toda la información       detallada de la línea seleccionada
+ |
+| **Flujo alternativo** | Ninguna |
+| **Post Condiciones**  | Ninguna |
+| **Referencias**       | CU-13 |
+
+
+| **ID** | CU-15 |
+|--|--|
+| **Nombre**            | Ver Posición de los transportes |
+| **Autor**             | Toderic Ioan Stefan |
+| **Fecha**             | 16/12/2022 |
+| **Descripción**       | Ofrece la posibilidad de ver la posición del transporte de esa línea en tiempo real |
+| **Actores**           | Usuario no registrado, Usuario registrado |
+| **Precondiciones**    | Ninguna |
+| **Flujo Normal**      | 1. El usuario hace clic sobre el botón de “Ver posición” <br> 2. El sistema dibuja en el mapa los medios transporte ofreciendo su ubicación en tiempo real |
+| **Flujo alternativo** | Ninguno |
+| **Post Condiciones**  | Ninguno |
+| **Referencias**       | CU-13 |
+
+
+| **ID** | CU-16 |
+|--|--|
+| **Nombre**            | Ver mapa |
+| **Autor**             | Toderic Ioan Stefan |
+| **Fecha**             | 16/12/2022 |
+| **Descripción**       | Brinda toda la información del mapa con las líneas disponibles |
+| **Actores**           | Usuario no registrado, Usuario registrado |
+| **Precondiciones**    | El usuario debe haber accedido a la aplicación |
+| **Flujo Normal**      | 1. El usuario entra en la sección de ver mapa <br> 2. El sistema ofrece la posibilidad de ver cartográficamente las líneas y las paradas con la posibilidad de ser seleccionadas (Opcionalmente) |
+| **Flujo alternativo** | 2.A El usuario se desplaza por el mapa <br> 2.B El usuarios selecciona una de las líneas disponibles <br> - 2.B2 El sistema devuelve la información de la línea sin detalle <br> 2.C El usuario selecciona una de las líneas disponibles <br> - 2.C1 El sistema devuelve la información de la línea sin detalle |
+| **Post Condiciones**  | Ninguna |
+| **Referencias**       | CU-13, CU-17 |
+
+
+| **ID** | CU-17 |
+|--|--|
+| **Nombre**            | Desplazarse por el mapa |
+| **Autor**             | Toderic Ioan Stefan |
+| **Fecha**             | 16/12/2022 |
+| **Descripción**       | Ofrece la posibilidad de desplazarse por el mapa, haciendo zoom in, zoom out |
+| **Actores**           | Usuario no registrado, Usuario registrado |
+| **Precondiciones**    | Ninguna |
+| **Flujo Normal**      | 1. El usuario se desplaza por el mapa |
+| **Flujo alternativo** | Ninguno |
+| **Post Condiciones**  | Ninguna |
+| **Referencias**       | CU-16 |
+
+
+| **ID** | CU-18 |
+|--|--|
+| **Nombre**            | Ver paradas |
+| **Autor**             | Toderic Ioan Stefan |
+| **Fecha**             | 16/12/2022 |
+| **Descripción**       | Brinda toda la información acerca de las paradas |
+| **Actores**           | Usuario no registrado, Usuario registrado |
+| **Precondiciones**    | El usuario debe haber accedido a la aplicación |
+| **Flujo Normal**      | 1. El usuario entra en la sección de paradas <br> 2. El sistema le ofrece la posibilidad de  ver las paradas en el mapa <br> 3. El usuario selecciona la opción de ver paradas dentro del mapa
+ |
+| **Flujo alternativo** | 2.A El sistema le ofrece la posibilidad de ver la informacion detallada de una parada |
+| **Post Condiciones**  | Ninguna |
+| **Referencias**       | CU-19 |
 
 
 | **ID**                | CU-20                                           |
@@ -849,6 +1001,70 @@ HOLA
 | **Post Condiciones**  |    El sistema guarda la valoración del itinerario.     |
 | **Referencias**       |    Ninguna       |
 
+| **ID**                | CU-25                                           |
+|-----------------------|-------------------------------------------------|
+| **Nombre**            |    Buscar contenido en el portal     |
+| **Autor**             |    Guillermo Morales Caparros     |
+| **Fecha**             |    16/12/2022     |
+| **Descripción**       |    Se muestra el contenido del portal de la página donde el usuario puede moverse libremente    |
+| **Actores**           |    Usuario registrado y No registrado     |
+| **Precondiciones**    |   El usuario debe haber accedido a la aplicación  |
+| **Flujo Normal**      |    1.El usuario accede al apartado de busqueda de la aplicación<br>2.El usuario introduce lo que quiere buscar<br>3.El usuario añade filtros de búsqueda para acortar esta misma y que le de opciones más precisas con respecto a lo que busca<br>4.El sistema le muestra las coincidencias de su búsqueda |
+| **Flujo alternativo** |   4A. No existen coincidencias con respecto a lo que busca     |
+| **Post Condiciones**  |    Ninguna     |
+| **Referencias**       |    Ninguna       |
+
+| **ID**                | CU-26                                           |
+|-----------------------|-------------------------------------------------|
+| **Nombre**            |    Ver calendario     |
+| **Autor**             |    Guillermo Morales Caparrós     |
+| **Fecha**             |    16/12/2022     |
+| **Descripción**       |    Se muestra el calendario en la fecha actual     |
+| **Actores**           |    Usuario registrado y No registrado     |
+| **Precondiciones**    |   El usuario debe acceder a la página Web    |
+| **Flujo Normal**      |    1.El usuario entra en la opción de calendario<br>2.El sistema le muestra los diferentes tipos de calendarios de la Web (fiestas, itinerarios, etc)<br>3.El usuario elige un calendario en específico<br>4.El sistema le muestra por pantalla el calendario |
+| **Flujo alternativo** |    Ninguno     |
+| **Post Condiciones**  |    Ninguna     |
+| **Referencias**       |    Ninguna       |
+
+| **ID**                | CU-27                                           |
+|-----------------------|-------------------------------------------------|
+| **Nombre**            |   Modificar contenido     |
+| **Autor**             |   David Hernández Carmona     |
+| **Fecha**             |    16/12/2022     |
+| **Descripción**       |    El administrador puede modificar cualquier dato que se muestre en la web     |
+| **Actores**           |    Usuario administrador     |
+| **Precondiciones**    |   Que el usuario administrador esté previamente logueado |
+| **Flujo Normal**      |    1.El administrador visualiza la web y sus contenidos<br>2.El administrador identifica un error o algún dato a corregir y lo selecciona<br>3.El administrador introduce en su lugar el dato que crea conveniente y lo almacena|
+| **Flujo alternativo** |    2b. El administrador modifica el error seleccionado     |
+| **Post Condiciones**  |   Las modificaciones se reflejan en la base de datos    |
+| **Referencias**       |   UC-28      |
+
+| **ID**                | CU-28                                           |
+|-----------------------|-------------------------------------------------|
+| **Nombre**            |    Gestionar contenido de la Web     |
+| **Autor**             |    Daniel Pérez Escarcena     |
+| **Fecha**             |    16/12/2022     |
+| **Descripción**       |    El administrador gestiona todo el contenido proporcionado en la web     |
+| **Actores**           |   Usuario administrador     |
+| **Precondiciones**    |  Que el usuario administrador esté previamente logueado    |
+| **Flujo Normal**      |    1.El administrador visualiza la web y sus contenidos<br>2.El administrador identifica un error o algún dato a corregir y lo selecciona<br>3.El administrador introduce en su lugar el dato que crea conveniente y lo almacena |
+| **Flujo alternativo** |    1b. El administrador crea una nueva sección dentro de la página Web<br>2b. El administrador modifica el error seleccionado<br>2c. El administrador elimina el contenido seleccionado dentro de la página Web |
+| **Post Condiciones**  |    Las modificaciones se reflejan en la base de datos     |
+| **Referencias**       |    Ninguna       |
+
+| **ID**                | CU-29                                           |
+|-----------------------|-------------------------------------------------|
+| **Nombre**            |    Eliminar contenido     |
+| **Autor**             |    Daniel Pérez Escarcena     |
+| **Fecha**             |    16/12/2022     |
+| **Descripción**       |    El administrador puede crear contenido en la Web     |
+| **Actores**           |    Usuario administrador     |
+| **Precondiciones**    |   Que el usuario administrador esté previamente logueado  |
+| **Flujo Normal**      |    1.El administrador visualiza la web y sus contenidos<br>2.El administrador identifica un error o algún dato a corregir y lo selecciona<br>3.El administrador introduce en su lugar el dato que crea conveniente y lo almacena |
+| **Flujo alternativo** |    2b. El administrador elimina el contenido seleccionado dentro de la página Web     |
+| **Post Condiciones**  |   Las modificaciones se reflejan en la base de datos     |
+| **Referencias**       |    CU-28       |
 
 | **ID**                | CU-30                                          |
 |-----------------------|-------------------------------------------------|
@@ -856,9 +1072,153 @@ HOLA
 | **Autor**             |    Daniel Pérez Escarcena     |
 | **Fecha**             |    16/12/2022     |
 | **Descripción**       |    El administrador puede crear contenido en la Web |
-| **Actores**           |    Usuario administrador     |
+| **Actores**           |    Administrador     |
 | **Precondiciones**    |   Que el usuario administrador esté previamente logueado     |
-| **Flujo Normal**      | 1. El administrador visualiza la web y sus contenidos <br> 2. El administrador identifica un error o algún dato a corregir y lo selecciona <br> 3. el admi   |
-| **Flujo alternativo** |    Ninguno     |
-| **Post Condiciones**  |    Ninguna     |
-| **Referencias**       |    CU-07       |
+| **Flujo Normal**      | 1. El administrador visualiza la web y sus contenidos <br> 2. El administrador identifica un error o algún dato a corregir y lo selecciona <br> 3. El administrador introduce en su lugar el dato que crea conveniente y lo almacena   |
+| **Flujo alternativo** |    1B. El administrador crea una nueva sección dentro de la página Web     |
+| **Post Condiciones**  |    Las modificaciones se reflejan en la base de datos     |
+| **Referencias**       |    CU-28       |
+
+| **ID** | CU-31 |
+|--|--|
+| **Nombre**            | Avisar de Alarma |
+| **Autor**             | Guillermo Morales Caparrós |
+| **Fecha**             | 15/12/2022 |
+| **Descripción**       | Esta función habilita al administrador informar sobre una alarma |
+| **Actores**           | Administrador |
+| **Precondiciones**    | El administrador debe estar dado de alta en el sistema |
+| **Flujo Normal**      | 1. El Administrador selecciona la opción de avisar <br> 2. Escribe un mensaje a modo de notificación <br> 3. En la web se muestra un icono de alarma <br> 4. Al colocar el ratón sobre el icono se muestra un cartelito con el mensaje que ha escrito el administrador |
+| **Flujo alternativo** | Ninguno |
+| **Post Condiciones**  | Ninguna |
+| **Referencias**       | Ninguna |
+
+| **ID** | CU-32 |
+|--|--|
+| **Nombre**            | Trasladar incidencias a la Web |
+| **Autor**             | Guillermo Morales Caparrós |
+| **Fecha**             | 15/12/2022 |
+| **Descripción**       | Esta función la desempeña el administrador para informar sobre las incidencias que le transmiten los conductores de las guaguas |
+| **Actores**           | Administrador |
+| **Precondiciones**    | El administrador debe estar dado de alta en el sistema. Recibir la información a través de un papel físico (informe de los conductores). |
+| **Flujo Normal**      | 1. El administrador solicita al sistema trasladar una incidencia a la web accediendo a la sección correspondiente para ello. <br> 2. El sistema solicita completar la información de la incidencia. <br> 3.El administrador introduce la información de la incidencia (nombre, fecha, lugar, línea, operador que la ha notificado). <br> 4. El administrador pulsa activar la incidencia en el sistema. <br> 5. El sistema hace visible la incidencia en la página web para el resto de usuarios. |
+| **Flujo alternativo** | 4A. Si el administrador no ha introducido ninguna información, el sistema se lo pedirá mediante un aviso. <br> 4B. Si la información introducida es errónea, el administrador será notificado del error. |
+| **Post Condiciones**  | El sistema guarda la incidencia en la base de datos. |
+| **Referencias**       | Ninguna. |
+
+| **ID** | CU-33 |
+|--|--|
+| **Nombre**            | Monitorizar estado de la red de transporte |
+| **Autor**             | Guillermo Morales Caparrós |
+| **Fecha**             | 15/12/2022 |
+| **Descripción**       | Se muestra por pantalla una serie de características actuales referentes al estado de la red de transportes junto con las cámaras. Si hay alguna línea bloqueada, si hay atrasos, si está correcto… |
+| **Actores**           | Administrador |
+| **Precondiciones**    | El administrador debe estar identificado |
+| **Flujo Normal**      | 1. El administrador accede al mapa de la red de Transporte. <br> 2. El sistema le muestra en tiempo real los movimientos que realizan cada vehículo <br> 3. El administrador puede seleccionar un transporte en concreto para ver la informacion de este. <br> 4. El sistema muestra una pantalla donde estan los detalles del estado de la red por la que conduce.
+ |
+| **Flujo alternativo** | Ninguno |
+| **Post Condiciones**  | Ninguna |
+| **Referencias**       | CU-34, CU-35, CU-36 |
+
+| **ID** | CU-34 |
+|--|--|
+| **Nombre**            | Visualizar video de las cámaras |
+| **Autor**             | Guillermo Morales Caparrós |
+| **Fecha**             | 15/12/2022 |
+| **Descripción**       | Se abre una pestaña en la que se pueden seleccionar los videos de las cámaras en tiempo real |
+| **Actores**           | Administrador |
+| **Precondiciones**    | El administrador debe estar identificado |
+| **Flujo Normal**      | 1. El administrador accede al mapa de transportes en tiempo real. <br> 2. El sistema le muestra los transportes que están operativos en ese momento <br> 3. El administrador selecciona el transporte que quiere ver <br> 4. El sistema le muestra las cámaras en tiempo real de ese transporte |
+| **Flujo alternativo** | Ninguno |
+| **Post Condiciones**  | Ninguna |
+| **Referencias**       | CU-33 |
+
+| **ID** | CU-35 |
+|--|--|
+| **Nombre**            | Simular la situación real |
+| **Autor**             | Guillermo Morales Caparrós |
+| **Fecha**             | 15/12/2022 |
+| **Descripción**       | Se muestran las características actuales del medio de transporte |
+| **Actores**           | Administrador |
+| **Precondiciones**    | El administrador debe estar identificado |
+| **Flujo Normal**      | 1. El administrador accede a la sección a la sección de simulación <br> 2. El administrador elige el transporte que quiere visualizar <br> 3. El sistema muestra la información en tiempo real del estado del transporte |
+| **Flujo alternativo** | 2B. El sistema muestra un mensaje de que el transporte no está en uso en este momento |
+| **Post Condiciones**  | Ninguna |
+| **Referencias**       | CU-33 |
+
+| **ID** | CU-36 |
+|--|--|
+| **Nombre**            | Comprobar cumplimiento de los servicios de los operadores |
+| **Autor**             | Guillermo Morales Caparrós |
+| **Fecha**             | 15/12/2022 |
+| **Descripción**       | El administrador podrá comprobar si los servicios de los operadores se cumplen correctamente. |
+| **Actores**           | Administrador |
+| **Precondiciones**    | El administrador debe estar identificado |
+| **Flujo Normal**      | 1. Se muestran los servicios de los Operadores para su comprobación y correcto funcionamiento |
+| **Flujo alternativo** | Ninguno |
+| **Post Condiciones**  | Ninguna |
+| **Referencias**       | CU-33 |
+
+| **ID** | CU-37 |
+|--|--|
+| **Nombre**            | Modificar diseño de la Web |
+| **Autor**             | Daniel Pérez Escarcena |
+| **Fecha**             | 15/12/2022 |
+| **Descripción**       | El administrador modifica el diseño de la Web |
+| **Actores**           | Administrador |
+| **Precondiciones**    | El administrador debe estar identificado |
+| **Flujo Normal**      | 1. El administrador accede a la configuración  de la página Web <br> 2. El administrador hace clic en la opción de modificar el diseño. <br> 3. El administrador carga la plantilla con la que se va a sustituir el diseño actual de la página Web. |
+| **Flujo alternativo** | 3b. El sistema muestra un mensaje de error “este diseño no es compatible con la página” |
+| **Post Condiciones**  | La página Web se ha cambiado correctamente con la plantilla seleccionada |
+| **Referencias**       | Ninguna |
+
+| **ID** | CU-38 |
+|--|--|
+| **Nombre**            | Ver la cartografía de la actividad de los operadores |
+| **Autor**             | Daniel Pérez Escarcena |
+| **Fecha**             | 15/12/2022 |
+| **Descripción**       | El administrador puede ver la actividad que han realizado los operadores dentro de la página Web |
+| **Actores**           | Administrador |
+| **Precondiciones**    | El usuario administrador está previamente logueado |
+| **Flujo Normal**      | 1. El administrador accede a la actividad dentro de la página Web <br> 2. El administrador va a la opción de operadores <br> 3. El administrador ve la gráfica con la actividad realizada por los operadores <br> 4. El administrador ve los informes con las situaciones que ameritan ese informe |
+| **Flujo alternativo** | 3b. Los operadores no realizaron actividad ese día por lo que la gráfica no aparece |
+| **Post Condiciones**  | Ninguna |
+| **Referencias**       | Ninguna |
+
+| **ID** | CU-39 |
+|--|--|
+| **Nombre**            | Registrar situaciones puntuales |
+| **Autor**             | Daniel Pérez Escarcena |
+| **Fecha**             | 15/12/2022 |
+| **Descripción**       | Registra situaciones que ocurren raramente dentro de la página Web |
+| **Actores**           | Administrador |
+| **Precondiciones**    | El usuario administrador está previamente logueado |
+| **Flujo Normal**      | 1. El administrador accede a la actividad dentro de la página Web <br> 2. El administrador accede a la opción de las situaciones <br> 3. El administrador ve los informes con las situaciones que ameritan ese informe |
+| **Flujo alternativo** | 3.b En caso de no haber situaciones, el sistema le muestra un mensaje “Sin incidencias” |
+| **Post Condiciones**  | Ninguna |
+| **Referencias**       | CU-38 |
+
+| **ID** | CU-40 |
+|--|--|
+| **Nombre**            | Registrar periodos continuos de tiempo |
+| **Autor**             | Daniel Pérez Escarcena |
+| **Fecha**             | 15/12/2022 |
+| **Descripción**       | El administrador puede ver la actividad que han realizado los operadores durante un periodo de tiempo |
+| **Actores**           | Administrador |
+| **Precondiciones**    | El usuario administrador está previamente logueado como administrador |
+| **Flujo Normal**      | 1. El administrador accede a la actividad dentro de la página Web <br> 2. El administrador va a la opción de operadores <br> 3. El administrador selecciona un rango de días para ver la gráfica con la actividad realizada por los operadores |
+| **Flujo alternativo** | 3b. Los operadores no realizaron actividad en el plazo seleccionado por lo que la gráfica no aparece |
+| **Post Condiciones**  | Ninguna |
+| **Referencias**       | CU-38 |
+
+| **ID** | CU-41 |
+|--|--|
+| **Nombre**            | Enviar factura de compra |
+| **Autor**             | Daniel Pérez Escarcena |
+| **Fecha**             | 15/12/2022 |
+| **Descripción**       | El servicio de correo electrónico envía una factura con la información de la compra que acaba de realizar |
+| **Actores**           | Servicio de correo electrónico |
+| **Precondiciones**    | El usuario ha efectuado una compra |
+| **Flujo Normal**      | 1. El correo electrónico visualiza la información del usuario <br> 2. El correo lee el correo electrónico del usuario <br> 3. El correo le envia la factura al correo del usuario |
+| **Flujo alternativo** | 2b. El usuario no tiene puesto el correo electrónico por lo que la aplicación le pedirá que introduzca el correo <br> - 2b1.El correo vuelve a intentar enviar el mail |
+| **Post Condiciones**  | El correo ha sido enviado |
+| **Referencias**       | Ninguna |

@@ -22,5 +22,8 @@
 
 ## **Proyecto** 📓
 ---
+1. **Especificación de los Requisitos del Software (ERS)** - [Ver](/Proyecto/proyecto.md)
+
+### ***Anexo***
+
 * [Preguntas y respuestas entrevista](/Proyecto/Preguntas%20y%20respuestas%20entrevista.pdf)
-* [Documento ERS](/Proyecto/ERS.pdf) 
