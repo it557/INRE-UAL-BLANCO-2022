@@ -22,23 +22,34 @@ El propósito de estas cuestiones es realizar una entrevista a Don Fran Blanco, 
 | 2 | **Pregunta 9**: ¿El usuario podrá notificar en el sistema incidencias del trayecto que se reflejen en tiempo real para el resto de usuarios? ¿Cómo sería el proceso de notificación de incidencias? <br> **Respuesta**: <br> Los usuarios no pueden reportar incidencias, solo los conductores mediante papel. Nosotros tendremos que contratar a un trabajador el cual traslade el escrito a la web. |
 | 2 | **Pregunta 10**: ¿Cómo obtendría la AUTGC realimentación sobre la calidad de su servicio por parte de los usuarios? ¿Sistema de valoración de la experiencia con el transporte? ¿Dividido por apartados? Por ejemplo: valorar al conductor del autobús <br> **Respuesta**: <br> Los usuarios podrán valorar un itinerario con un número de estrellas y añadiendo un comentario opcionalmente. |
 | 2 | **Pregunta 11**: ¿Consideraría integrar un sistema de sugerencias por parte de los usuarios? <br> **Respuesta**: <br> Cuando un usuario hace una búsqueda se le tendrá que dar a elegir el itinerario a escoger donde se le informara que tipo de ruta es. |
-|  | **Pregunta 12**:  <br> **Respuesta**: <br>  |
-|  | **Pregunta 13**:  <br> **Respuesta**: <br>  |
-|  | **Pregunta 14**:  <br> **Respuesta**: <br>  |
-|  | **Pregunta 15**:  <br> **Respuesta**: <br>  |
-|  | **Pregunta 16**:  <br> **Respuesta**: <br>  |
-|  | **Pregunta 17**:  <br> **Respuesta**: <br>  |
-|  | **Pregunta 18**:  <br> **Respuesta**: <br>  |
-|  | **Pregunta 19**:  <br> **Respuesta**: <br>  |
-|  | **Pregunta 20**:  <br> **Respuesta**: <br>  |
-|  | **Pregunta 21**:  <br> **Respuesta**: <br>  |
-|  | **Pregunta 22**:  <br> **Respuesta**: <br>  |
-|  | **Pregunta 23**:  <br> **Respuesta**: <br>  |
-|  | **Pregunta 24**:  <br> **Respuesta**: <br>  |
-|  | **Pregunta 25**:  <br> **Respuesta**: <br>  |
-|  | **Pregunta 26**:  <br> **Respuesta**: <br>  |
-|  | **Pregunta 27**:  <br> **Respuesta**: <br>  |
-|  | **Pregunta 28**:  <br> **Respuesta**: <br>  |
-|  | **Pregunta 29**:  <br> **Respuesta**: <br>  |
-|  | **Pregunta 30**:  <br> **Respuesta**: <br>  |
-|  | **Pregunta **:  <br> **Respuesta**: <br>  |
+| 1 | **Pregunta 12**: ¿Cómo será el proceso para solicitar asistencia por un fallo de la aplicación?  <br> **Respuesta**: <br> El entrevistado no sabe/no contesta. |
+| 2 | **Pregunta 13**: ¿Se tendrá la posibilidad de solicitar un servicio privado de reserva de un determinado medio de transporte? Por ejemplo: una escuela podrá reservar un autobús para realizar una excursión. <br> **Respuesta**: <br> No se prevé ningún tipo de servicio de reserva privado. |
+| 3 | **Pregunta 14**: ¿Qué es el título único del transporte? ¿Qué debería hacer el sistema de venta y gestión de dicho título? <br> **Respuesta**: <br> El título único del transporte es una tarjeta recargable disponible para todos los usuarios del transporte público. En relación con la página web, solo los usuarios registrados podrán consultar el saldo restante. Dicha tarjeta tendrá un número de identificación. |
+| 3 | **Pregunta 15**: ¿Se prevé una cooperación con Google Maps con respecto a la obtención de la información geográfica pertinentes? ¿Cuál sería el servicio de mapas que integraremos en el sistema? <br> **Respuesta**: <br> No se requiere el uso de GoogleMaps para la obtención de la información geográfica. El servicio a través del cual se integrarían los mapas en la página web tendría que ser gratuito, como, por ejemplo, OpenStreetMap. |
+| 3 | **Pregunta 16**: ¿Se podrá seleccionar en el mapa un sitio y mostrar las paradas cercanas? ¿El mapa debería hacer uso de la ubicación precisa del usuario? <br> **Respuesta**: <br> La página web tendrá un mapa grande, en donde se vea en tiempo real el movimiento de los medios de transporte, de modo que si seleccionamos, por ejemplo, una ruta o línea de autobús concreta se vea la posición en el mapa del autobús de esa línea. Esta función solo se plantea para los medios de transporte con ruta predefinida (los taxis se excluyen). |
+| 1 | **Pregunta 17**: ¿El sistema mostrará solamente la previsualización de la ruta o tendrá que guiar al usuario del transporte en tiempo real durante el trayecto? <br> **Respuesta**: <br> El mapa deberá ofrecer indicaciones al usuario para cumplir adecuadamente con la ruta del itinerario seleccionado. |
+| 1 | **Pregunta 18**: ¿Un usuario podrá saber si un autobús está lleno? En caso afirmativo, ¿cómo se muestra ese autobús en el sistema? <br> **Respuesta**: <br> No, no se monitorizan los usuarios del bus, el conductor debe de ser capaz de controlar eso. |
+| 3 | **Pregunta 19**: ¿Se podrá ver en cuánto tiempo llegará un autobús a una parada determinada? <br> **Respuesta**: <br> Sí, en los medios de transporte con itinerario específico en la web debe aparecer a qué hora llegará este medio siendo estos los autobuses, los barcos (si hubieran finalmente) y los carros remolcados por caballos. |
+| 2 | **Pregunta 20**: ¿Para qué servicios se podrán realizar pagos en el portal web? ¿Añadiremos un monedero digital donde el usuario podrá meter dinero para que sea más fácil el uso del transporte? <br> **Respuesta**: <br> Se podrán comprar los billetes en la página web, pero no habrá ningún monedero digital. |
+| 3 | **Pregunta 21**: ¿Cómo identificamos a un cliente que ya ha pagado para poder subirse al autobús? ¿Se le dará un billete a ese usuario? ¿Tendrá un código QR en la página una vez autentificado? <br> **Respuesta**: <br> El cliente va a recibir un documento PDF con un código QR tras comprar el itinerario que le será enviado vía email, en el cual se especificará la fecha, origen y la llegada. Gracias a esto, se podrá validar el pago del mismo. |
+| 1 | **Pregunta 22**: ¿Añadiremos una opción para poder planear la ruta que vas a tomar para poder pagar el precio final de una sola vez, incluyendo ya posibles transbordos, en un solo billete? <br> **Respuesta**: <br> Si, es posible, pero no se pueden modificar los itinerarios. |
+| 3 | **Pregunta 23**: *Se deberán incorporar herramientas de explotación (gestor de contenidos), independientes para cada tipo de información.* ¿Cuáles son los distintos tipos de información a los que se refiere? ¿Qué significa que el gestor de contenido sea independiente para cada uno de estos tipos? <br> **Respuesta**: <br> Deberá haber un gestor de contenidos que permita crear o introducir, modificar y eliminar noticias, líneas de transporte, itinerarios, mapas y cualquier otro tipo de información de la página web. Este gestor de contenidos será uno general con un apartado por cada tipo de contenido de la página. |
+|  | **Pregunta 24**: A la hora de buscar un itinerario, ¿tendremos una sección del menú destinada a ello (dentro del cual habrá una barra de búsqueda) o se podrá buscar utilizando el buscador de la página principal? <br> **Respuesta**: <br>  |
+| 1 | **Pregunta 25**: En cuanto a la introducción de los datos para consultar un itinerario ¿Qué ocurriría si se equivoca el usuario a la hora de especificar la hora de la consulta? <br> **Respuesta**: <br> Se tiene que poder reintroducir. Una vez comprado un billete no se puede ir hacia atrás, no hay reserva, pues se trata de una compra. |
+|  | **Pregunta 26**: *De acuerdo con los requerimientos de organización de los contenidos y servicios del portal y en consonancia con la imagen corporativa del proyecto, la empresa adjudicataria deberá presentar dos propuestas de home e interior.* ¿Qué diferencia hay entre home e interior? <br> **Respuesta**: <br>  |
+| 1 | **Pregunta 27**: ¿En qué sección de la web deberá aparecer la publicidad? ¿En qué posición (ex. arriba, abajo)? <br> **Respuesta**: <br> No tendrá publicidad, somos una entidad pública. |
+| 2 | **Pregunta 28**: ¿Se necesitará una sección de noticias en la página principal mediante la cual los usuarios sean informados sobre cualquier aspecto del servicio? <br> **Respuesta**: <br> La página publicará noticias que incluyan no solo avisos relacionados con el transporte, sino también sobre eventos culturales, etc. |
+| 1 | **Pregunta 29**: ¿Añadiremos un calendario dentro de la página para avisar de las festividades y otras fechas en las que los transportes no estarán disponibles? <br> **Respuesta**: <br> Si. |
+| 1 | **Pregunta 30**: ¿Se integrará en cada autobús una tablet en el salpicadero para que el conductor en este caso pueda visualizar la carga y monitorización del tráfico en cada parada? <br> **Respuesta**: <br> No se integrará tal dispositivo en los autobuses. |
+
+| **Resumen de la información** |
+|--|
+| * Vehículos: Guagua, Taxis, Carros de caballos. <br> * Usuarios: Registrados, No registrados, Administradores <br> * Admin y Gestor: Editar en la página web: <br>- rutas, horarios <br> - mapas <br> - noticias de eventos (Incluir fechas inicio y fin) <br> * Ubicaciones tiempo real: <br> - Usuarios: Uso propio (protegido ley datos) <br> - Vehículos rutas establecidas: Uso público <br> * Notificaciones: <br> - Eventos culturales <br> - Rutas temporales (Incluir fechas inicio y fin) <br> - Errores excepcionales (Fuera servicio, rutas cortadas…) |
+
+| **Observaciones** |
+|--|
+| Rutas marcadas por colores en el mapa para diferenciarlas entre sí. Vehículos con rutas concretas podrán monitorizarse en tiempo real en la aplicación. Compra del billete con código QR y pdf. |
+
+| **Evaluación**: | **Puntos a aclarar y método de obtención de nueva información** |
+|--|--|
+|  | Mediante una futura entrevista tendremos que obtener información para aclarar los siguientes aspectos: <br> * La inclusión de los barcos como medio de transporte en el sistema. <br> * ¿Cualquier usuario del transporte podrá valorar en la web su experiencia o solo los registrados? Por otro lado, ¿la página debería permitir valorar solo a los usuarios que realmente usaron el transporte? Si es así, ¿cómo se podría justificar el uso del transporte? <br> * El proceso para solicitar asistencia por un fallo de la aplicación |
