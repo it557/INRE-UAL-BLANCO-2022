@@ -626,11 +626,13 @@ Para identificar de manera más cómoda las funcionalidades del sistema, hemos r
 
 ### ***Diagramas de casos de uso***<br>
 - Sistema, Usuario registrado y Usuario no registrado.<br>
-![Diagrama de casos de uso de los actores Sistema, Usuario registrado y Usuario no registrado]()
+![Diagrama de casos de uso de los actores Sistema, Usuario registrado y Usuario no registrado](/Proyecto/src/DCU%20sistema%2C%20usuario%20registrado%20y%20usuario%20no%20registrado.svg)
+
 - Administrador<br>
-![Diagrama de casos de uso del actor Administrador]()
-- Servicio de correo
-![Diagrama de casos de uso del actor externo Servicio de correo]()
+![Diagrama de casos de uso del actor Administrador](/Proyecto/src/DCU%20administrador.svg)
+
+- Servicio de correo<br>
+![Diagrama de casos de uso del actor externo Servicio de correo](/Proyecto/src/DCU%20servicio%20de%20correo.svg)
 
 <br>
 
