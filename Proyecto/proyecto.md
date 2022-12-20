@@ -122,7 +122,7 @@ Se podrá visualizar las tablas con los requisitos funcionales y los diagramas d
 |**Autor**  | David Hernández Carmona |
 |**Referencias**  |  RF-06 |
 |**Descripción**  | Las empresas encargadas de proporcionar los vehículos al sistema de transporte  |
-|**Datos Especificos**  | - Identificador de empresa<br>- Nombre de la empresa <br>-  |
+|**Datos Especificos**  | - Identificador de empresa<br>- Nombre de la empresa <br>- Tipo de transporte <br> - Contacto |
 |**Importancia**  |  TBD |
 |**Estado**  | Obligatorio  |
 |**Comentarios**  |  Ninguno |
@@ -606,8 +606,7 @@ Se podrá visualizar las tablas con los requisitos funcionales y los diagramas d
 | RNF-11            | Gestión de edición en otros idiomas    |
 |-------------------|-------------|
 | **Requisitos asociados**  | RF-05   |
-| **Descripción**   | La edición en español debe de ofrecer la posibilidad de clonar de forma sencilla la página para la traducción a otros de los idiomas contemplados en el sitio. Todas las ediciones en los distintos idiomas deberán tener las mismas funcionalidades y gestionarse del mismo modo.(Ingles, aleman, frances y español)
-   |
+| **Descripción**   | La edición en español debe de ofrecer la posibilidad de clonar de forma sencilla la página para la traducción a otros de los idiomas contemplados en el sitio. Todas las ediciones en los distintos idiomas deberán tener las mismas funcionalidades y gestionarse del mismo modo.(Ingles, aleman, frances y español) |
 | **Comentarios**   | Ninguno   |
 
 | RNF-12            | Sistemas de pago y comercio electrónico    |
@@ -624,15 +623,14 @@ Se podrá visualizar las tablas con los requisitos funcionales y los diagramas d
 ### ***Lista de diagramas de casos de uso del modelo***
 Para identificar de manera más cómoda las funcionalidades del sistema, hemos realizado tres diagramas de casos de uso: uno que comprende las funcionalidades de los usuarios registrado y no registrado y el sistema, otro para el actor administrador y un último para el servicio externo de correo.
 
-<br>
 
 ### ***Diagramas de casos de uso***<br>
 - Sistema, Usuario registrado y Usuario no registrado.<br>
-HOLA
+![Diagrama de casos de uso de los actores Sistema, Usuario registrado y Usuario no registrado]()
 - Administrador<br>
-HOLA
+![Diagrama de casos de uso del actor Administrador]()
 - Servicio de correo
-HOLA
+![Diagrama de casos de uso del actor externo Servicio de correo]()
 
 <br>
 
@@ -807,10 +805,8 @@ HOLA
 | **Nombre**            |    Visualizar alarmas     |
 | **Autor**             |    Daniel Pérez Escarcena     |
 | **Fecha**             |    16/12/2022     |
-| **Descripción**       |   El usuario puede ver las alarmas que informan todas las incidencias que han ocurrido
-     |
-| **Actores**           |    Usuario no registrado, Usuario registrado
-     |
+| **Descripción**       |   El usuario puede ver las alarmas que informan todas las incidencias que han ocurrido |
+| **Actores**           |    Usuario no registrado, Usuario registrado |
 | **Precondiciones**    |   El usuario debe haber accedido a la aplicación |
 | **Flujo Normal**      |  1. El usuario accede al panel de avisos. <br> 2. El sistema muestra las alarmas que los administradores han activado. <br> 3. El usuario clica en una alarma para poder obtener más información de ella <br> 4. El sistema ofrece información detallada sobre la alarma, como el asunto, la fecha y la descripción de la misma.|
 | **Flujo alternativo** |    2b. No hay ninguna alarma disponible |
@@ -851,8 +847,7 @@ HOLA
 |--|--|
 | **Nombre**            | Ver lineas |
 | **Autor**             | Toderic Ioan Stefan  |
-| **Fecha**             | 16/12/2022
- |
+| **Fecha**             | 16/12/2022 |
 | **Descripción**       | Le permite al usuario ver las líneas disponibles |
 | **Actores**           | Usuario no registrado, Usuario registrado |
 | **Precondiciones**    | El usuario debe haber accedido a la aplicación |
@@ -927,8 +922,7 @@ HOLA
 | **Descripción**       | Brinda toda la información acerca de las paradas |
 | **Actores**           | Usuario no registrado, Usuario registrado |
 | **Precondiciones**    | El usuario debe haber accedido a la aplicación |
-| **Flujo Normal**      | 1. El usuario entra en la sección de paradas <br> 2. El sistema le ofrece la posibilidad de  ver las paradas en el mapa <br> 3. El usuario selecciona la opción de ver paradas dentro del mapa
- |
+| **Flujo Normal**      | 1. El usuario entra en la sección de paradas <br> 2. El sistema le ofrece la posibilidad de  ver las paradas en el mapa <br> 3. El usuario selecciona la opción de ver paradas dentro del mapa |
 | **Flujo alternativo** | 2.A El sistema le ofrece la posibilidad de ver la informacion detallada de una parada |
 | **Post Condiciones**  | Ninguna |
 | **Referencias**       | CU-19 |
@@ -980,9 +974,8 @@ HOLA
 | **Fecha**             |    16/12/2022     |
 | **Descripción**       |    Permite consultar el saldo disponible en la tarjeta (título único de transporte).     |
 | **Actores**           |    Usuario registrado     |
-| **Precondiciones**    |   El usuario debe estar dado de alta en el sistema.    |
-| **Flujo Normal**      |   1.El usuario accede a la sección de su perfil.<br>2.El usuario solicita al sistema consultar el saldo de su tarjeta.<br>3.El sistema consulta en la base de datos la tarjeta del usuario y su saldo.<br>4.El sistema muestra información sobre el saldo de la tarjeta
- |
+| **Precondiciones**    |   El usuario debe estar dado de alta en el sistema.|
+| **Flujo Normal**      |   1.El usuario accede a la sección de su perfil.<br>2.El usuario solicita al sistema consultar el saldo de su tarjeta.<br>3.El sistema consulta en la base de datos la tarjeta del usuario y su saldo.<br>4.El sistema muestra información sobre el saldo de la tarjeta |
 | **Flujo alternativo** |    2A. Si el usuario no tiene ninguna tarjeta registrada, el sistema notifica del error.     |
 | **Post Condiciones**  |    Ninguna     |
 | **Referencias**       |   Ninguna       |
@@ -992,11 +985,10 @@ HOLA
 | **Nombre**            |    Valorar un itinerario     |
 | **Autor**             |    Luca Daniel Gavriloaie     |
 | **Fecha**             |    16/12/2022     |
-| **Descripción**       |    Permite la valoración de la experiencia del usuario con un itinerario.     |
+| **Descripción**       |    Permite la valoración de la experiencia del usuario con un itinerario. |
 | **Actores**           |    Usuario registrado     |
-| **Precondiciones**    |   El usuario debe estar dado de alta en el sistema y debe haber usado el servicio de transporte en ese itinerario.     |
-| **Flujo Normal**      |    1.El usuario busca el itinerario que ha seguido introduciendo los mismos parámetros que usó para planificarlo.<br>2.El sistema muestra el itinerario.<br>3.El usuario solicita al sistema valorar el itinerario pulsando un botón.<br>4.El sistema solicita el justificante de compra del itinerario.<br>5.El usuario proporciona el justificante de compra del itinerario.<br>6.El sistema solicita al usuario introducir una valoración por escrito y una puntuación numérica.<br>7.El usuario introduce la valoración y la puntuación y la envía.
- |
+| **Precondiciones**    |   El usuario debe estar dado de alta en el sistema y debe haber usado el servicio de transporte en ese itinerario. |
+| **Flujo Normal**      |    1.El usuario busca el itinerario que ha seguido introduciendo los mismos parámetros que usó para planificarlo.<br>2.El sistema muestra el itinerario.<br>3.El usuario solicita al sistema valorar el itinerario pulsando un botón.<br>4.El sistema solicita el justificante de compra del itinerario.<br>5.El usuario proporciona el justificante de compra del itinerario.<br>6.El sistema solicita al usuario introducir una valoración por escrito y una puntuación numérica.<br>7.El usuario introduce la valoración y la puntuación y la envía. |
 | **Flujo alternativo** |    Ninguno     |
 | **Post Condiciones**  |    El sistema guarda la valoración del itinerario.     |
 | **Referencias**       |    Ninguna       |
@@ -1113,8 +1105,7 @@ HOLA
 | **Descripción**       | Se muestra por pantalla una serie de características actuales referentes al estado de la red de transportes junto con las cámaras. Si hay alguna línea bloqueada, si hay atrasos, si está correcto… |
 | **Actores**           | Administrador |
 | **Precondiciones**    | El administrador debe estar identificado |
-| **Flujo Normal**      | 1. El administrador accede al mapa de la red de Transporte. <br> 2. El sistema le muestra en tiempo real los movimientos que realizan cada vehículo <br> 3. El administrador puede seleccionar un transporte en concreto para ver la informacion de este. <br> 4. El sistema muestra una pantalla donde estan los detalles del estado de la red por la que conduce.
- |
+| **Flujo Normal**      | 1. El administrador accede al mapa de la red de Transporte. <br> 2. El sistema le muestra en tiempo real los movimientos que realizan cada vehículo <br> 3. El administrador puede seleccionar un transporte en concreto para ver la informacion de este. <br> 4. El sistema muestra una pantalla donde estan los detalles del estado de la red por la que conduce. |
 | **Flujo alternativo** | Ninguno |
 | **Post Condiciones**  | Ninguna |
 | **Referencias**       | CU-34, CU-35, CU-36 |
@@ -1222,3 +1213,7 @@ HOLA
 | **Flujo alternativo** | 2b. El usuario no tiene puesto el correo electrónico por lo que la aplicación le pedirá que introduzca el correo <br> - 2b1.El correo vuelve a intentar enviar el mail |
 | **Post Condiciones**  | El correo ha sido enviado |
 | **Referencias**       | Ninguna |
+
+## **3.3 Diagramas de clases asociados a los requisitos de información**
+
+![Diagrama de clases asociados a los requisitos de información]()
