@@ -1218,4 +1218,4 @@ Para identificar de manera más cómoda las funcionalidades del sistema, hemos r
 
 ## **3.3 Diagramas de clases asociados a los requisitos de información**
 
-![Diagrama de clases asociados a los requisitos de información]()
+![Diagrama de clases asociados a los requisitos de información](/Proyecto/src/ENTIDAD-RELACI%C3%93N%20base%20de%20datos.svg)
